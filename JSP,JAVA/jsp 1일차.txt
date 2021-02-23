@@ -1,0 +1,94 @@
+jsp,  spring 언어 
+
+----
+코드를 많이 짜보거나
+책을 많이 보는게 좋다. 
+
+youtube를 많이 본다고 늘지는 않는다. 
+많이 하는 것이 중요하다. 
+---
+
+oracle.com
+>Developer 
+>Developer Resouce Center
+>Download
+>Java SE
+
+JAVA SE 다운로드 
+(8 버전으로 다운로드)
+> 제목 링크를 클릭
+> JDK Download
+
+
+실제로 업무를 진행하는 곳의 
+자바 버전은 최신버전이 아니다. 7~6버전 정도. 
+
+OpenJDK 를 사용해도 무방 
+---
+
+환경변수 시스템 변수의 Path 설정
+제일 위에 java\bin 경로를 잡아서 넣고 저장
+
+--
+
+Java SE : Standard Edition  > 순수자바
+Java EE : Enterprise Edition > 웹 개발
+Java ME : Micro Edition > 소형 기기 
+
+--
+
+이클립스 다운로드
+old version으로 들어와서
+
+Neon을 선택해서 다운로드. 
+>제일 위에꺼 선택
+>Java EE Developers 다운로드 
+
+
+D:\workspace_jsp2 
+로 작업공간 만들기 
+---
+
+Preferences 수정
+
+General 
+>Appearance
+>Colors and Font 
+> Basic
+> Text Font > 크기를 조정? 
+> D2 코딩글꼴 설치. 
+
+>Editors
+>Text Editors 
+>Show line numbers 체크 되어있는지 확인 
+
+>Workspace
+>UTF-8로 변경
+
+>Java
+>Compiler
+>1.8 인지 확인.
+
+>Web
+>CSS 
+>HTML
+>JSP
+>> UTF-8로 변경
+---
+
+톰캣  8.5.63 버전으로 다운로드
+https://tomcat.apache.org/download-80.cgi
+
+Server Shutdown Port : 8003
+Connector Port : 8088 
+(* 8080으로 하면 Oracle이랑 충돌이 날 수 있다.) 
+
+다른 거는 건들지 말고 진행.
+
+
+C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin
+
+여기에 들어와서 
+Tomcat8w.exe를 실행하고
+start 버튼을 눌러준다. 그렇게 하면 서버가 실행된다. 
+
