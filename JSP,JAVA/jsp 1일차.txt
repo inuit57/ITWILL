@@ -92,3 +92,17 @@ C:\Program Files\Apache Software Foundation\Tomcat 8.5\bin
 Tomcat8w.exe를 실행하고
 start 버튼을 눌러준다. 그렇게 하면 서버가 실행된다. 
 
+localhost:8088 접속되는지 확인. 
+---
+
+다시 이클립스로.
+
+Dynamic Web Project 생성 
+
+> StudyJSP2
+>next > next
+> 마지막에 Generate web.xml 체크하고 finish
+
+실행
+> Tomcat 8.5 선택
+> 경로 잡아주기 (Tomcat폴더를 선택 , bin이 아니다) 
