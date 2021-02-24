@@ -1,0 +1,111 @@
+DB 
+
+- 운용체제 기초기술
+- 데이터베이스 기초기술
+ (모든 IT 국비교육에 다 있다고 보면 된다.)
+
+
+- SQL 활용
+- DB 구현
+
+많은 기업에서 Oracle을 사용한다.
+아무래도 기업은 돈이 있고 하니까. 
+------------
+
+Virtual Box. 
+사용해서 Linux 환경을 구축할 거다. 
+
+https://www.virtualbox.org/wiki/Downloads
+
+> Windosw hosts 로 선택해서 다운로드. 
+
+----
+
+Oracle12c_bk_guest 
+17G 용량 맞는지 확인. 
+
+이미지를 그대로 사용. 
+
+-- -
+
+데이터베이스가 필요한 이유
+1)보안 이슈
+2)많은 데이터를 효율적으로 관리 
+
+---
+
+<Transaction cotrol>
+저장하는 명령어 : commit
+rollback
+savepoint 
+
+<권한부여 관련 DCL>
+grant : 권한을 부여한다. DB에 접속할 수 있는.
+revoke : 권한을 박탈한다. DB에 접속할 수 있는. 
+---
+
+1)Linux
+2) Oracle 12c Software
+3) Database 생성 "ORCL" 
+
+--
+가상머신 환경설정 - 호스트키 조합
+> Ctrl + Shift로 변경 
+
+
+---
+
+집에서 설치할 때? 
+
+17.1 GB 파일을 가져가야한다...? 
+(usb를 가져오거나 외장형 하드를 가져올 것?) 
+> 아니면 노트북을 가져오거나. 
+
+가져오기로 해서 아무것도 건들지 말고 그냥 진행.
+
+oracle
+----
+
+<Linux User>
+- root (pw : oracle01) - 관리자 권한을 가진 계정
+- oracle (pw : oracle) - /home/oracle 디렉토리 권한
+		   - /u01/app/oracle 디렉토리 권한
+		 
+<Oracle User>
+- sys (pw : oracle) : SYSDBA 권한 (DBA + DB생성 + DB시작/종료)
+- system (pw : oracle) : DBA 권한 
+- hr (pw : hr) : 일반유저 / Object를 운영할 수 있는 권한
+(* Object : Table, View , Index 등) 
+
+
+***
+리스너를 켜고 DB를 켜줘야 한다. 
+(이 서버 컴퓨터에서 동작을 시킨다고 한다면.)
+
+> 만약 서버가 여러 개라면 
+DB를 운영하는 서버에만 리스너를 켜주면 된다. 
+그러면 다른 서버에서 해당 DB에 접근하는 것이 가능?
+
+
+---
+리스너 구동
+
+lsnrctl start
+(리스너 lsnr + 컨트롤ctl ) 
+
+
+SQL PLUS 구동
+> 리눅스 환경에서 sql을 사용하기 위해서 사용하는 프로그램
+(sql 문 사용하는 프로그램이라고 보면 될 듯) 
+
+> GUI 방식이 아니다. 터미널 방식. 
+
+> sqlplus /nolog 로 실행. 
+> connect /as sysdba (sys로 접속) : connect /as (권한명)
+Connected to an idle instance. : 꺼져있는 DB에 접속되었습니다.
+> show user : 사용자 확인
+> startup : 데이터베이스 구동
+
+
+> conn hr/hr : conn (아이디)/(비번) 
+>>  ORA-28002  : 비밀번호 변경하라는 소리. 
