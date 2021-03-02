@@ -100,3 +100,11 @@ null & undefined 데이터
 
 null : 값이 없음 -> 주로 변수를 초기화할 때 사용 (예 / var a = null ) ;
 undefined : 값이 정의되지 않음 . 
+
+
+---
+
+type 확인 
+-> typeof 변수/데이터 
+
+로 확인가능. 
