@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//중첩 if 문 
+	/*
+	if(조건문){
+		
+		if(조건문){
+			//...
+		}
+	}
+	
+	
+	//로그인 로직 
+	
+	// 아이디 입력 O -> 비밀번호 비교
+	// 		비밀번호 비교 O -> 로그인 성공 
+	// 		비밀번호 비교 X -> 비밀번호 오류 -> 비밀번호 찾기 
+	// 아이디 입력 X -> 비회원 -> 회원가입 로직
+	
+	var userID = "itwill001"; 
+	var userPW = "1234"; 
+	
+	
+	var inputID = prompt("ID를 입력하세요", "");
+	
+	if(inputID === userID){
+		var inputPW = prompt("비밀번호를 입력하세요", ""); 
+		if (inputPW === userPW){
+			alert(inputID + "님 환영합니다.");
+		}
+		else{
+			alert("비밀번호 오류<br>");
+			location.reload(); 
+		}
+	}else{
+		//document.write("비회원입니다.<br>");
+		confirm("비회원입니다. 회원가입 하시겠습니까?");
+		location.reload(); 
+	}
+	*/
+	
+	
+ 	/* var num = prompt("숫자를 입력하세요", ""); 
+	
+	num = parseInt(num); 
+	switch(num){ //숫자 (실수 포함), 문자 (영어, 한글)
+	
+	case 1.11 :
+		alert("정답 - 1.11"); 
+		break; 
+	case 10 : 
+		alert("정답! -10"); 
+		break; 
+	case 9 : 
+		alert("정답! -9");
+		break;
+		
+	case 8 :
+		alert("정답!- 8"); 
+		break; 
+	default :
+		alert("해당사항 없음!"); 
+	} */
+	
+	var score = parseInt(prompt("성적을 입력하세요")); 
+	
+	console.log(score);
+	console.log(Math.floor(score/10));
+	
+	var result = null ;
+ 	switch(Math.floor(score/10)){
+	case 10:
+	case 9 :
+		result = 'A'; 
+		//alert("A");  // +0
+		break; 
+	case 8 :
+		result = 'B';
+		//alert("B");  // +1
+		break;
+	case 7:
+		result = 'C';
+		//alert("C");  // +2
+		break;
+	case 6:
+		result = 'D';
+		//alert("D");  // +3
+		break;
+	default :
+		result = 'F';
+		//alert("F");  //  +4				
+	} 
+	
+ 	alert(result); 
+	// alert을 한번만 사용? 
+	// 변수에 저장? 
+	// alert(('A'+ ???)) 이런 식으로 접근? 
+
+	
+
+	
+	
+	
+
+</script>
+
+</head>
+<body>
+
+	<h1>WebContent/js1/test6.html</h1>
+</body>
+</html>
