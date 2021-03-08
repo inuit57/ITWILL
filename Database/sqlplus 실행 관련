@@ -1,0 +1,25 @@
+>lsnrctrl start
+
+>sqlplus /nolog
+
+> conn sys/oracle as sysdba
+// conn : 연결 (== connect 명령어)
+// sys/oracle : 아이디 / 비밀번호
+// as sysdba : 권한 (이거를 적어줘야 에러 안난다.)
+// 항상 sys로 로그인해야 DB 시작 가능
+
+> conn system/oracle
+> conn hr/hr 
+// 다른 일반사용자의 경우 그냥 이렇게 하면 된다. 
+
+>startup 
+// DB 시작 
+
+
+> ORA-28002 
+// 비밀번호 기한 7일 남았다고 바꾸라는 메시지 
+
+> alter user hr
+   identified by (새로운 패스워드) ; 
+// 비밀번호 변경
+
