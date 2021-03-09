@@ -1,0 +1,17 @@
+주로 배열이나 ArrayList의 원소들을 출력할 때 사용 
+
+주의할 점이라면 index 원소를 사용하지 않는다. 
+
+
+<사용법>
+
+for(<T> tmep : ArrayList<T> ) {
+  //수행할 문장. 
+}
+
+(예시)
+int[] temp = { 1,2,3,4,5} ; 
+
+for(int i : temp ) {
+  System.out.println(i) ; // temp[i] 가 아닌 것에 유의. 
+}
