@@ -1,0 +1,11 @@
+// 전역변수 
+
+var val = 200; 
+function valueFun(){
+  var val = 300; 
+}
+
+valueFun(); 
+
+document.write(val); // 200 이 출력된다. 
+
