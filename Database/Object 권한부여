@@ -1,0 +1,18 @@
+다른 사용자가 소유한 테이블을 조회할 경우
+
+1) "소유자명.테이블명" 으로 가져와야 한다. 
+2) 해당 테이블의 소유자에게 권한을 부여받아야 한다. 
+
+<Object 권한 부여>
+grant select , update
+on employees 
+to demo; 
+
+grant <DML명>
+on <권한을 줄 테이블명> 
+to <사용자명> 
+
+<Object 권한 회수>
+revoke <DML명>
+on <권한을 회수할 테이블명>
+from <사용자명>
