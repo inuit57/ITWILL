@@ -1,0 +1,14 @@
+var obj = new Object(); 
+
+obj.value1 = 1; 
+obj.func1 = function(){
+  //내용 작성; 
+}
+
+이런 식으로 선언해서 사용할 수 있는 모양이다. 
+
+사용법은 
+obj.func1(); 
+obj.value ; 
+
+하는 식으로 쓰면 된다. 
