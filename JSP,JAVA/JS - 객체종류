@@ -1,0 +1,15 @@
+	// 자바스크립트
+	// - 내장객체 
+	// => 기본적으로 제공되는 객체들 (예 / String, Date(날짜), Array (배열), Math... )
+	// - 브라우저 객체 모델(BOM : Browser Object Model)
+	// => 브라우저에 내장되어 있는 객체들 (document, window , screen, location, history, ...)
+	
+	// document : 브라우저 안에 출력되는 내부공간  
+	// window : 전체 브라우저창. 
+	// location : 주소창
+	// 
+	
+	
+	// - 문서 객체 모델(DOM : Document Object Model)
+	// => HTML 코드로 구성되어있는 객체 
+	// 태그도 객체다. <body>도 객체 <head>도 객체 
