@@ -1,0 +1,40 @@
+마우스 이벤트의 종류
+
+
+
+click : 마우스를 클릭할 때 발생
+
+dbclick : 마우스를 더블 클릭할 때 발생
+
+mousedown : 마우스 버튼을 누를 때 발생
+
+mouseup : 마우스 버튼을 뗄 때 발생
+
+mouseenter : 마우스가 요소의 경계 외부에서 내부로 이동할 때 발생
+
+mouseleave : 마우스가 요소의 경계 내부에서 외부로 이동할 때 발생
+
+mousemove : 마우스를 움직일 때 발생
+
+mouseout : 마우스가 요소를 벗어날 때 발생
+
+mouseover : 마우스를 요소 안에 들어올 때 발생
+
+
+
+
+
+
+
+mouseover, mouseout 과 mouseenter, mouseleave의 차이점은 자식 요소까지 인식하는가의 차이에 있다.
+
+mouseover, mouseout는 자식 요소에 접근해도 동작을 하지만,
+
+mouseenter, mouseleave는 자식 요소에는 동작하지 않는다.
+
+
+회복맨님의 블로그에 마우스를 움직여보며 쉽게 이해할 수 있는 예제가 준비되어 있다.
+
+
+
+https://recoveryman.tistory.com/51
