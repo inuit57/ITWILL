@@ -1,0 +1,7 @@
+	document.write("결과 : " + msg2.slice(6, 12)); // 시작점 , 종료점-1 
+	document.write("결과2 : " + msg2.charAt(8) + "<br>"); 
+	document.write("결과3 : " + msg2.substring(2, 5)+"<br>"); // 시작점 , 종료점-1  -> slice와 동일함 
+	document.write("결과4 : " + msg2.substr(2,5) + "<br>"); // 시작점 , 갯수 -> 2번째부터 5개 가져오기 
+	document.write("결과5 : " + msg2.substr(2) + "<br>"); // 시작점 부터 끝까지. 
+  
+  
