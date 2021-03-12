@@ -1,0 +1,14 @@
+	
+	//문자열의 데이터 찾기 
+	document.write("결과 : " + msg2.indexOf("요") + "<br>"); // 해당 문자의 index 번호를 리턴한다. 
+	document.write("결과 : " + msg2.indexOf("안녕") + "<br>"); // 여러 글자를 한다면 시작index를 리턴한다.   
+	document.write("결과 : " + msg2.indexOf("!") + "<br>"); //  -1 을 리턴하네. 없다면  
+	
+	
+	document.write("결과 : " + msg2.lastIndexOf("요")+"<br>");  // 마지막으로 나온 것의 index를 리턴한다.
+	document.write("결과 : " + msg2.lastIndexOf("i")+"<br>");  // 대소문자는 구분해서 검색된다. 
+	document.write("결과 : " + msg2.lastIndexOf("I")+"<br>");  // 대소문자는 구분해서 검색된다. 
+	
+	document.write("결과 : " + msg2.split(" ", 3)+ "<br>");  // 공백으로 해서 3개 잘라서 보여준다.
+	document.write("결과 : " + msg2.split(" ") + "<br>");  
+	document.write("결과 : " + msg2.split(" ")[1] + "<br>");  // Array 로 변환해서 준다는 걸 알 수 있다. 
