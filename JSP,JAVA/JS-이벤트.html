@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- <script type="text/javascript">
+
+	document.getElementById("btn").onclick = function() {
+		alert("자바스크립트 실행!"); 
+		
+	} 
+</script> 
+위에 적으니까 멍청하게 안된다. 
+-->
+</head>
+<body>
+
+	<input type= "button" value ="버튼" onclick="alert('test')"> 
+	<button  onclick="alert('안녕')">버튼2</button>
+	<button id="btn">버튼!</button>
+	<button id="test_btn" onclick="itwill()">버튼2</button>
+
+	<button id="test_btn2" ondblclick=" console.log('로그 테스트')">더블 클릭 버튼</button>
+	
+	<input type="button" value = "2개 이상 이벤트 사용" 
+		onclick="alert('이벤트2')"
+		ondblclick="alert('이벤트3')"> 
+		<!--  이벤트2만 출력된다. 이벤트3까지 못간다.  -->
+		<!--  이런 경우만 제외한다면 다른 이벤트는 중첩 된다.  -->
+	<input type="button" value = "2개 이상 이벤트 사용" 
+		onclick="alert('이벤트2')"
+		onmouseover="alert('이벤트3')"> <!--  마우스가 위로 이동할 경우 이벤트가 발생  -->
+		
+		
+	<input type = "text" 
+		onkeyup ="console.log('test')"
+	> 
+	<!--  onkeypress="console.log('키 입력됨')" 
+		onkeyup 을 쓰는 것을 권장. 누르고 뗀 순간에 들어가는 거라서 정확한 편. 
+		onkeypress나 onkeydown은 동시에 입력이 들어간다던가 할 수 있다.  -->
+		 	
+		 	
+	<hr>
+	
+	<table border ="1">
+		<tr bgcolor="white"  onmouseover="style.background='yellow'" onmouseleave="style.background='white'" >
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>	
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>2</td>
+			<td>3</td>
+		</tr>
+	</table>
+		 	
+<script type="text/javascript">
+
+	document.getElementById("btn").onclick = function() {
+		alert("자바스크립트 실행!"); 
+		
+	} 
+	
+	function itwill(){
+		document.write("아이티윌 함수 테스트!"); //아예 새로 적어버리네. 
+	}
+	 
+	
+	
+</script>
+</body>
+</html>
