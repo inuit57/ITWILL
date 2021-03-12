@@ -1,0 +1,21 @@
+document.write(arr2 +"<br>");  // 4,2,6,7,3,4,6,8 이란 형태로 출력됨 
+
+document.write(arr2.join()+"<br>"); // 4,2,6,7,3,4,6,8 이란 형태로 출력됨
+document.write(arr2.join('!')+"<br>"); // 4!2!6!7!3!4!6!8 이란 형태로 출력됨
+
+//join("구분자") : 배열의 요소를 구분자를 사용해서 연결
+//구분자 없이 사용할 경우 ','를 사용해서 구분한다. 
+
+arr2.reverse(); 
+document.write(arr2 + "<br>"); 
+//배열 뒤집기
+
+arr2.sort() ;
+//오름차순 정렬
+document.write(arr2 + "<br>"); 
+
+// arr2.slice(from,to)
+// 배열 자르기 
+// slice(시작인덱스, 끝인덱스-1) 
+// 끝인덱스 -1 까지 잘라온다는 점에 유의할 것. 
+document.write(arr2.slice(3,5)) ; 
