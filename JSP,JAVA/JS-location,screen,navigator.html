@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	// BOM - location 객체 : 브라우저의 주소창에 해당 
+	
+	// href : 주소줄에 접근한다. <a> 태그의 속성 값으로 썼었다. 
+	// protocol : 통신규약
+	// hostname : 호스트명
+	// port : 포트 번호
+	// host : 호스트 정보? 
+			
+	function func1(){
+		document.write(document.location.href);
+		document.write("<br>");
+		document.write(document.location.protocol);
+		document.write("<br>");
+		document.write(document.location.hostname);
+		document.write("<br>");
+		document.write(document.location.port);
+		document.write("<br>");
+		document.write(document.location.host);	
+	}
+	/*
+	http://localhost:8088/StudyJSP2/js3/test4.html
+	http:
+	localhost
+	8088
+	localhost:8088
+	*/
+	
+	func1();
+
+	function func2(){
+		
+		//document.location = "http://localhost:8088/StudyJSP2/js3/test1.html";
+		// 특정 페이지로 이동  => 페이지의 주소가 변경 => location.href값이 변경 
+		location.href="test1.html";
+		
+	}
+	
+	// location.reload();  //페이지를 다시 불러오는 함수
+	// 특정 동작을 해서 새로고침이 필요할 때만 사용할 것 .
+	
+	// location.replace("test1.html"); // href ="test1.html"과 동일(속성을 변경)
+	// 페이지 이동
+	
+	//-----------------------------------------------
+	
+	//window.screen 객체 : 사용자의 모니터 정보
+	
+	function fun3(){
+		document.write("width : " + screen.width +"<br>"); 
+		document.write("height : " + screen.height +"<br>");
+		document.write("availwidth : " + screen.availWidth +"<br>");
+		document.write("availheight : " + screen.availHeight +"<br>"); // screen.height - 작업표시줄 높이 
+	}
+	
+	// navigator 객체  : 현재 방문자의 브라우저 정보 + OS 정보 제공 
+	
+	function fun4(){
+		document.write( window.navigator.appCodeName +"<br>");
+		document.write( navigator.appName + "<br>");
+		document.write( navigator.appVersion + "<br>");
+		document.write( navigator.platform + "<br>"); 
+		
+		document.write(navigator.userAgent + "<br>");
+	}
+	/*
+		Mozilla
+		Netscape
+		5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36
+		Win32
+		Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.82 Safari/537.36
+	*/
+	
+</script>
+</head>
+<body>
+
+	<h3> 버튼 클릭시 test1.html 페이지로 이동 </h3>
+	
+	<input type="button" name="btn1" value="test1로 이동" onclick="func2()">
+	<input type="button" name="btn2" value="screen 정보" onclick="fun3()">
+	<input type="button" name="btn2" value="navigator 정보" onclick="fun4()">
+</body>
+</html>
