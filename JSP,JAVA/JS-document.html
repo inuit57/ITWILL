@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST_ITWILL22</title>
+
+<script type="text/javascript">
+
+	//브라우저 객체 모델 - document 객체
+	
+	//window.document.속성(); 
+	//window.document.함수(); 
+	
+	//객체의 정보 확인방법
+	// => 간단한 정보(값이 바로 화면에 출력 가능) - documnet.wirte() , alert() 을 통해서 출력 
+	// => 복잡한 정보(값이 화면에 바로 출력이 불가능) - console.log() 를 통해서 출력
+	document.write(window.document); //[object HTMLDocument]
+	//alert(window.document); //[object HTMLDocument]
+	console.log(window.document); // #document , 열어보면 여기 현재 html 페이지를 찍어준다. 
+	
+	document.write("<br>");
+	//속성 정보
+	document.write(window.document.title);
+	
+	document.title= "TEST_ITWILL";
+	
+	
+	function fun1(){
+		alert("title: "+document.title);
+		alert("location: "+window.document.location); 
+		alert("bgcolor : " + window.document.bgColor); // background color
+		alert("fgcolor : " + window.document.fgColor); // font color
+	}
+	
+	function fun2(){
+		if( document.bgColor !== "Yellow" ){
+			document.bgColor = "YeLloW"; //대소문자 구분은 상관없다 
+		}else{
+			document.bgColor ="";  // 기본 white? 
+		}
+	}
+	function fun3(){
+		if( document.fgColor !== "Red" ){
+			document.fgColor = "Red"; 
+		}else{
+			document.fgColor =""; // 기본 black ? 
+		}
+	}
+</script>
+</head>
+<body>
+
+	<h1>WebContent/js3/test3.html</h1>
+	
+	<input type="button" value="document 속성확인" onclick="fun1()">
+	
+	<h3> 배경색을 Yellow 로 변경 </h3>
+	<input type="button" value="document 배경 색 변경" onclick="fun2()">
+	
+	
+	<h3> 글자색을 Red 로 변경 </h3>
+	<input type="button" value="document 글자 색 변경" onclick="fun3()">
+</body>
+</html>
