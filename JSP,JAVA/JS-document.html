@@ -40,11 +40,31 @@
 		}
 	}
 	function fun3(){
-		if( document.fgColor !== "Red" ){
-			document.fgColor = "Red"; 
+		//document.bgColor = "black"; 
+		
+				    // 0 <= random <= 1 
+				    // 0 <= random <= 7 
+		var color = ["red","blue","yellow","white","orange","green"];
+		var rand = (Math.floor(Math.random()*color.length) ) ;  
+		
+		
+		//if (rand > 5) rand = rand - 5; 
+		  
+		
+		var setColor = color[rand]; 
+		document.fgColor = setColor;
+		/* 
+		if( document.fgColor != setColor ){
+			document.fgColor = setColor;
+			
 		}else{
 			document.fgColor =""; // 기본 black ? 
 		}
+		*/
+	}
+	
+	function func4(color){
+		document.bgColor = color;
 	}
 </script>
 </head>
@@ -57,8 +77,16 @@
 	<h3> 배경색을 Yellow 로 변경 </h3>
 	<input type="button" value="document 배경 색 변경" onclick="fun2()">
 	
+	<h3>배경색 변경 (radio 버튼)</h3>
+	<p> 라디오버튼 : name 속성 값으로 버튼의 그룹화 </p>
+	<p> 그룹으로 묶인 라디오버튼 중에서는 1개만 선택이 가능</p>
+	<p> 뒤에다가 내용을 적어주면 된다.</p>
+	<input type="radio" name="myColor" onclick="func4('pink')"> pink
+	<input type="radio" name="myColor" onclick="func4('orange')"> orange
+	<input type="radio" name="myColor" onclick="func4('purple')"> purple
 	
-	<h3> 글자색을 Red 로 변경 </h3>
+	
+	<h3> 글자색을 랜덤하게 변경 </h3>
 	<input type="button" value="document 글자 색 변경" onclick="fun3()">
 </body>
 </html>
