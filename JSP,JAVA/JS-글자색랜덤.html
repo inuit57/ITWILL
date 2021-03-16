@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>TEST_ITWILL22</title>
+
+<script type="text/javascript">
+
+	
+	function fun3(){
+		rand = (Math.ceil(Math.random()*10 +1) ) ;  
+		if (rand > 5) rand = rand - 5;  // 최대 5까지니까. 넘어가면 -5 해서 배열 안으로 집어넣어주기.
+		var color = ["red","blue","yellow","white","black","green"];  
+		
+		var setColor = color[rand]; 
+		document.fgColor = setColor;
+		/* 
+		if( document.fgColor != setColor ){
+			document.fgColor = setColor;
+			
+		}else{
+			document.fgColor =""; // 기본 black ? 
+		}
+		*/
+	}
+</script>
+</head>
+<body>
+
+	<h1>WebContent/js3/test3.html</h1>
+
+	<h3> 글자색을 Red 로 변경 </h3>
+	<input type="button" value="document 글자 색 변경" onclick="fun3()">
+</body>
+</html>
