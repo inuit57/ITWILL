@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>test5</title>
+<script type="text/javascript">
+
+	//history 객체 : 사용자가 방문한 페이지 중 이전에 방문한 페이지를 접근가능한 객체
+	//현재 창이 닫히지 않은 상태에서만 가능
+	//브라우저 왼쪽 상단의 앞/뒤로가기 에 저장된 정보에 접근 
+	
+	// 속성 : length - 저장된 목록의 개수
+	// 기능 : back() : 뒤로 가기 (== go(-1))
+	// 기능 : forward() : 앞으로 가기 (== go(+1))
+	// 기능 : go(+1), go(-1) : +n은 앞으로 n번 가기, -n은 뒤로 n번 가기
+	
+	// 페이지 진행 중에 문제가 생기거나 했을 때
+	// 생기기 전으로 돌아가는 용도로 주로 사용하게 된다. 
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+<h1> WebContent/js3/test5.html </h1>
+
+
+<h3> <a href="test5_1.html"> 5_1로 이동 </a></h3>
+<input type="button" name=forward1 value="앞으로" onclick="history.forward()">
+<input type="button" name=back1 value="뒤로" onclick="history.back()">
+
+
+
+</body>
+</html>
