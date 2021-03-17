@@ -27,6 +27,16 @@
 		alert(window.document.images[0].src); 
 		//정상 작동
 	}
+	
+	function f2() {
+		document.images[1].src="2.jpg";
+		document.images[1].width ="200"; 
+		document.images[1].height="200"; 
+		document.img2.border="3";  // 테두리도 설정이 가능하다. 
+	}
+	
+	// shift + F5 : 
+	// 강력한 새로고침. 브라우저 캐시까지 다 지워버리고 새로고침을 해준다. 
 </script>
 
 </head>
@@ -37,6 +47,11 @@
 <img src="1.png" width="200" height="300" name="img1"  >
 
 <input type="button" value="이미지 정보 확인" onclick="f1()">
+
+<img src="1.jpg" width="150" height="150" name="img2" >
+
+<input type="button" value="이미지 변경" onclick="f2()">
+
 
 </body>
 </html>
