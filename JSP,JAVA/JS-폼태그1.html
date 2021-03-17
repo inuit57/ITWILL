@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//BOM - document.form 객체 
+	// => 정보를 입력받은 후 정보를 전달(다른 페이지로)
+	// => form 태그의 정보를 배열로 저장한다. (이미지처럼)
+	// 이름(name) 정보가 없어도 배열처럼 접근이 가능하다. 
+	
+	//document.forms[0].속성
+	//document.forms[0].기능()
+	
+	//document.폼태그이름.속성
+	//document.폼태그이름.기능()
+	
+	
+	function func1() {
+		
+		alert("action(정보를 전달하는 페이지) : "+ document.forms[0].action);
+		
+		alert("name : "+document.forms[0].name);
+		
+		alert("method(전달방식) :" + document.fr.method);
+	}
+	
+	var num = 0; 
+	function func2(){
+		//해당 버튼 클릭시 
+		//폼태그의 정보를 get방식으로 test.html 페이지에 전달 
+		alert("test1");
+		
+		
+		if(num == 100){
+			alert("test2");
+			document.fr.action = "test.html"; 
+			document.fr.method="get";
+			
+		}else{
+			alert("test3");
+			return false;  
+			//특정 경우에 submit()이 동작하지 않도록 하는 방법
+			// form태그 안의 onsubmit=" return func2()">
+		}
+		alert("test4");
+		//폼태그의 정보를 저장해서 페이지 이동 => submit() 
+		//document.fr.submit(); 
+		
+		
+	}
+</script>
+</head>
+<body>
+
+	<h1> WebContent/js4/test1.html </h1>
+	
+	<!--  폼 태그는 input 태그의 정보를 가지고 특정페이지(action)로 이동 -->
+	<!--  전달하고자 하는 속성의 정보가 1개 이상인 경우 & 값을 사용해서 전달 -->
+	<fieldset>
+		<!-- 일반적으로는 form 태그만으로는 안 보이는데
+			<fieldset> 태그로 감싸주면 보인다.
+		 -->
+		 <legend> 폼 태그 제목</legend>
+		 <!--  <form action="" name="" method="get" > 
+		 		기본적으로 쓰는 속성들
+		  -->
+		<form action="itwill.html" name="fr" method="get"  onsubmit=" return func2()">
+			<label> 아이디 : </label>
+			<input type="text" name = "ID"> <br>
+			<!-- input 란에 값을 입력하고 엔터를 치면 ?가 주소 마지막에 붙는다.
+				페이지가 이동했다는 거다. action=이동할 주소를 넣는다면 된다.
+				
+				http://localhost:8088/StudyJSP2/js4/itwill.html?ID=14125
+				
+			 -->
+			  비밀번호 : <input type="password" name="pwd"><br>			
+			<input type="submit" value="전송" >
+			
+			 <!-- 
+			 	엔터키를 누른 것과 동일한 효과 
+			 	submit은 기본적으로 submit() 함수를 내장. 
+			 	클릭이벤트와는 별도로 같이 동작하게끔 해두었다.
+			 	따라서 onclick 이벤트는 같이 안 쓰는 것을 권장.
+			 	
+			 	대신 submit 시점에 동작해야 하는 일이 있을 경우
+			 	form 태그에 onsubmit 에 함수를 등록해서 사용 	
+			 --> 
+		
+			<input type="button" value="폼태그 속성 확인" onclick="func1()">
+			
+			<input type="button" value="폼태그 속성 전달" onclick="func2()">
+			
+		</form>
+	</fieldset>
+	
+	<br>
+	<h2> 페이지 전달방식 (get / post) </h2>
+	<p>
+		<h3> get 방식 / get 메서드</h3>
+		전송할 데이터를(파라미터) URL의 정보에 붙여서 전송<br> 
+		
+		body가 필요없기 때문에 빠른 전송속도<br>
+		데이터의 길이제약이 존재함 (256byte)<br>
+		적은 량의 파라미터, 일반적인 데이터를 전달할 때 사용<br>
+		(* 일반적인 데이터 : 노출되더라도 크게 문제없는 데이터)<br>
+		파라미터가 주소줄(URL)에 모두 보여진다. => 보안상 취약 <br>
+	</p>
+	
+	<p>
+		<h3> post 방식 / post 메서드</h3>
+		전송할 데이터를(파라미터) URL에 전달 X, 본문에 body에 붙여서 전송<br>
+		body 생성, 많은 량의 데이터를 전달하기 때문에 get방식에 비해서 상대적으로 처리속도가 느리다.<br>
+		파라미터의 길이 제약이 없음 => 파일 업로드 등에 적합 <br>
+		파라미터가 주소줄(URL)에 전달 X => 보안적으로도 상대적으로 우수<br>
+		개인정보, 중요데이터를 전달하는 데 사용<br> 
+	
+	</p>
+	
+	
+	
+	
+</body>
+</html>
