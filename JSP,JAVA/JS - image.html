@@ -32,9 +32,33 @@
 		document.images[1].src="2.jpg";
 		document.images[1].width ="200"; 
 		document.images[1].height="200"; 
-		document.img2.border="3";  // 테두리도 설정이 가능하다. 
+		document.img2.border="3"; 
 	}
 	
+	
+	function f3(change_img){
+		document.img2.src = change_img; 
+	} 
+	
+	function func3(){
+		document.img3.src = "5.jpg";
+	}
+	
+	function func4(){
+		document.img3.src = "4.jpg";
+	}
+	
+	// 인자를 넘기지 말고 처리할 수 있는 방법
+	// 바깥에 flag를 선언해서 처리. 호출 할 때마다 flag 값을 반전.
+	var upDown = true; 
+	function func5(){
+		if( upDown){
+			func3(); 
+		}else{
+			func4(); 
+		}
+		upDown= !upDown; 
+	}
 	// shift + F5 : 
 	// 강력한 새로고침. 브라우저 캐시까지 다 지워버리고 새로고침을 해준다. 
 </script>
@@ -45,12 +69,21 @@
 <h1> WebContent/js3/test5.html </h1>
 
 <img src="1.png" width="200" height="300" name="img1"  >
-
+<hr>
 <input type="button" value="이미지 정보 확인" onclick="f1()">
-
-<img src="1.jpg" width="150" height="150" name="img2" >
-
+<hr>
+<img src="1.jpg" width="150" height="150" name="img2" 
+	onmouseover="f3('3.jpg')" 
+	onmouseout="f3('1.jpg')"
+>
+<hr>
 <input type="button" value="이미지 변경" onclick="f2()">
+<hr>
+<img src="4.jpg" width="150" height="150" name="img3" 
+	onmouseover="func5(1)" 
+	onmouseout="func5(2)"
+>
+
 
 
 </body>
