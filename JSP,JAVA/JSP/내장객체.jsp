@@ -93,7 +93,21 @@ http 헤더(connection) : <%= request.getHeader("connection") %> <br>
 세션 ID : <%= session.getId() %> <br>
 <!--  세션 ID : BAE676E47595FBC3198A06F7BCBEF92F -->
 세션 생성 시간 : <%= session.getCreationTime() %> <br>
-<!--  세션 생성 시간 : 1616556761579 -->
+<!--  세션 생성 시간 : 1616556761579  , 밀리세컨드 단위-->
+세션 최종 접속 시간 : <%= session.getLastAccessedTime() %> <br>
+<!--  밀리세컨드 단위로 리턴.  -->
+<!--  위의 2개의 값을 이용해서 얼마나 머물렀는지를 계산가능 -->
+
+세션 유지 시간 : <%= session.getMaxInactiveInterval() %> <br>
+<!-- 1800, 단위 : 초   -->
+<!-- 기본적으로 설정된 세션 유지 시간은 30분. 변경가능  -->
+
+<%
+	session.setMaxInactiveInterval(30); //30초로 변경
+	//초 단위로 값을 넣어서 변경 가능.
+%>
+
+변경된 세션 유지 시간 : <%= session.getMaxInactiveInterval() %> <br>
 
 </body>
 </html>
