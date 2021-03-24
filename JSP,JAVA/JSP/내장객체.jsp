@@ -70,10 +70,14 @@
 
 <hr>
 http 헤더(user-agent) : <%= request.getHeader("user-agent") %> <br>
-<!--  
-Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36
- -->
- 
+<!-- Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.90 Safari/537.36 -->
+http 헤더(accept-language) : <%= request.getHeader("accept-language") %> <br>
+<!-- ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 -->
+http 헤더(host) : <%= request.getHeader("host") %> <br>
+<!--  localhost:8088 -->
+http 헤더(connection) : <%= request.getHeader("connection") %> <br>
+<!-- keep-alive -->
+
 
 
 </body>
