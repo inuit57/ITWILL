@@ -78,7 +78,22 @@ http 헤더(host) : <%= request.getHeader("host") %> <br>
 http 헤더(connection) : <%= request.getHeader("connection") %> <br>
 <!-- keep-alive -->
 
+<h3> response 내장 객체 </h3>
 
+<%
+
+	//response.setHeader("해더이름", 값);  //해더 변경
+	//response.addCookie("쿠키값");  //쿠키 등록 
+	//response.sendRedirect("URL 주소");  // URL 변경 (페이지 이동)
+	//response.setContentType("MIME 타입"); // ContentType을 변경가능.
+%>
+
+<h3> session 내장 객체 </h3>
+
+세션 ID : <%= session.getId() %> <br>
+<!--  세션 ID : BAE676E47595FBC3198A06F7BCBEF92F -->
+세션 생성 시간 : <%= session.getCreationTime() %> <br>
+<!--  세션 생성 시간 : 1616556761579 -->
 
 </body>
 </html>
