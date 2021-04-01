@@ -11,6 +11,12 @@
 
 <%
 	String id = (String)session.getAttribute("id");
+	
+
+	// id가 없는 경우 로그인 페이지로 이동.
+	if (id == null){
+		response.sendRedirect("sessionLoginForm.jsp"); 
+	}
 
 %>
 
