@@ -36,17 +36,15 @@
 > 확인해보면 charset이 latin1로 되어있다. 한글 다 깨지니까 수정이 필요하다. <br>
 
 # 기본 설정
-- C:\Program Data\MySQL\MySQL Server 5.7
+- C:\ProgramData\MySQL\MySQL Server 5.7 (만약 안보인다면 숨김파일도 보이도록 설정할 것)
 - my.ini 파일 열기 
 ```
  [mysqld] 밑에 작성 (메모장에 적고 복사해서 옮기기)
  character-set-server=utf8
- #collection-server=utf8
- #default-character-set=utf8
- skip-character-set-client-handshake
  ```
  
  # 서비스 재실행
  - "서비스" 프로그램 실행
  - 현재 실행중인 서비스 중에서 하나 선택하고 M 누르고 
  - Mysql57 더블클릭 > 서비스 상태 중지 > 시작 
+ - 다시 MySQL5.7 Command Line Client 실행하고 status 로 charset이 utf8이 되었는지 확인
