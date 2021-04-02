@@ -63,12 +63,13 @@
 - status : Mysql DB 기본 설정 값 조회 
 
 
-# DB 생성, 삭제, 선택, 목록 조회 (* TABLE이 아니다.)
+# DB 생성, 삭제, 선택, 목록 조회 
 1) 목록 조회 
     > show databases ; 
 2) DB 생성
     > create database [db명] ;
     - create database itwill ; 
+    - create database jspdb ; //수업 진행 하는 동안 사용할 DB
 
 3) DB 선택
     > use [db명];
