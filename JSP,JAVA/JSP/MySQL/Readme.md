@@ -110,3 +110,5 @@
 5) 실습
     - create table itwill ( idk int ) ; 
     - desc itwill ;
+    - drop table itwill; 
+    - show tables; 
