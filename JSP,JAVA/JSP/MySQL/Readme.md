@@ -47,4 +47,4 @@
  - "서비스" 프로그램 실행 ( Window키 + R > services.msc )
  - 현재 실행중인 서비스 중에서 하나 선택하고 M 누르고 
  - Mysql57 더블클릭 > 서비스 상태 중지 > 시작 
- - 다시 MySQL5.7 Command Line Client 실행하고 <b> status </b> 로  characterset utf8이 되었는지 확인
+ - 다시 MySQL5.7 Command Line Client 실행하고 <b> status </b> 로  characterset이 utf8이 되었는지 확인
