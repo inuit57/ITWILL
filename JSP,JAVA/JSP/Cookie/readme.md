@@ -39,7 +39,7 @@
 # 쿠키 객체 생성 (쿠키 값 생성) - 서블릿API 활용 
 (이 밖에도 쿠키를 만드는 방법은 다양하게 있다.)
 ```	
-	//Cookie cookie = new Cookie("key", "value") ; 
+	//Cookie cookie = new Cookie("name", "value") ; 
 	Cookie cookie = new Cookie("CookName", "cookie_value") ;
 	
 	cookie.setMaxAge(600) ; // 단위 : 초 
