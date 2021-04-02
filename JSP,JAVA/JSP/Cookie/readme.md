@@ -43,15 +43,27 @@
  
  # 쿠키 값 삭제 
  ```
- 	Cookie[] cookies = request.getCookies();
+Cookie[] cookies = request.getCookies(); 
+// 쿠키 값 한번에 다 받아오기.
 
-	if ( cookies != null){
-		for(Cookie c : cookies){
-			if (c.getName().equals("CookName")){
-				System.out.println("쿠키 삭제"); 
-				c.setMaxAge(0); // 이렇게 죽여야한다. 생존 시간을 0으로 만들어서.
-				response.addCookie(c) ; // 이러고 다시 담아서 보내줘야 죽는다.
-			}
+if ( cookies != null){
+	for(Cookie c : cookies){
+		if (c.getName().equals("CookName")){
+			System.out.println("쿠키 삭제"); 
+			c.setMaxAge(0); // 이렇게 죽여야한다. 생존 시간을 0으로 만들어서.
+			response.addCookie(c) ; // 이러고 다시 담아서 보내줘야 죽는다.
 		}
 	}
+}
 ```
+
+# 쿠키 값(Value) 변경
+- 만약 Name이 같다면 새로 쿠키를 만들고 Value만 바꾼 새 쿠키를 만들고 넣는 것만으로도 변경된다.
+```
+// 기존에 있던 쿠키 value를 braveCookie로 바꾸는 예제. 
+Cookie cookie = new Cookie("CookieName", "braveCookie") ;
+
+//cookie.setMaxAge(600) ; // 단위 : 초 
+response.addCookie(cookie) ; 
+```
+
