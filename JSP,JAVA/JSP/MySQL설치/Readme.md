@@ -25,3 +25,8 @@
 -  [excute] -> [Finish] 
 -  [next]  ... 
 -  설치 완료 후 뭐 실행할 거냐고 하는 체크박스 있는데 풀어주기. 
+
+
+# 실행
+- MySQL5.7 Command Line Client 실행 
+  -  root 계정으로 로그인 (pwd : 1234) 
