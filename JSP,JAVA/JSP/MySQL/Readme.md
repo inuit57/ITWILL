@@ -30,3 +30,17 @@
 # 실행
 - MySQL5.7 Command Line Client 실행 
   -  root 계정으로 로그인 (pwd : 1234) 
+
+- mysql> status 
+> 상태정보 확인  <br>
+> 확인해보면 charset이 latin1로 되어있다. 한글 다 깨지니까 수정이 필요하다. <br>
+
+- C:\Program Data\MySQL\MySQL Server 5.7
+- my.ini 파일 열기 
+```
+ [mysqld] 밑에 작성 (메모장에 적고 복사해서 옮기기)
+ character-set-server=utf8
+ collection-server=utf8
+ default=character-set=utf8
+ skip-character-set-client-handshake
+ ```
