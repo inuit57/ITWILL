@@ -79,3 +79,30 @@
     > drop database [db명]; 
     - drop database itwill; 
     - show database 로 확인해보면 사라진 것을 확인할 수 있다. 
+
+----
+
+# Table 생성, 삭제, 조회, 구조 확인 
+
+1) 테이블 생성
+   > create table [테이블명] (  <br>
+   >  필드명1 데이터타입 {제약조건} , <br>
+   >  필드명1 데이터타입 {제약조건} , <br>
+   >  필드명1 데이터타입 {제약조건} , <br>
+   >  필드명1 데이터타입 {제약조건} , <br> 
+   >  ....<br>
+   >  ); 
+   - 문자데이터
+        - VARCHAR2(오라클)
+        - VARCHAR(MYSQL)
+    - 숫자데이터
+        - NUMBER(오라클)
+        - INT(MYSQL)
+2) 테이블 조회
+  > show tables; 
+
+3) 테이블 삭제
+  > drop table [테이블명]; 
+
+4) 테이블 구조 확인 
+  > desc [테이블명] ; 
