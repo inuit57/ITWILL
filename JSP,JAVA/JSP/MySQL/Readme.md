@@ -58,4 +58,23 @@
 
 # CMD 창에서 mysql 접속
 - mysql -u root -p 
+> mysql -u 계정명 -p -h[서버주소] [db명]
 - 비밀번호 입력 (1234) 
+- status : Mysql DB 기본 설정 값 조회 
+
+
+# DB 생성, 삭제, 선택, 목록 조회 (* TABLE이 아니다.)
+1) 목록 조회 
+    > show databases ; 
+2) DB 생성
+    > create database [db명] ;
+    - create database itwill ; 
+
+3) DB 선택
+    > use [db명];
+    - use itwill; 
+    - status 입력해보면 Current  database 값이 변경된 것을 확인 가능.
+4) DB 삭제
+    > drop database [db명]; 
+    - drop database itwill; 
+    - show database 로 확인해보면 사라진 것을 확인할 수 있다. 
