@@ -54,3 +54,8 @@
 - 환경변수 편집 > 시스템 변수 > Path 더블클릭 
 - C:\Program Files\MySQL\MySQL Server 5.7\bin 을 추가하고 확인 누르기. 
 - 명령프롬프트 (Window+R > cmd 실행)  > mysql 입력 후 결과가 출력되면 설정완료된 것. 
+
+
+# CMD 창에서 mysql 접속
+- mysql -u root -p 
+- 비밀번호 입력 (1234) 
