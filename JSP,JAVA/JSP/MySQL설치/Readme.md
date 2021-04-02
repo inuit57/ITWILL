@@ -1,5 +1,4 @@
-# 설치 사이트 
-- https://dev.mysql.com/downloads/file/?id=500616
+# [설치 사이트](https://dev.mysql.com/downloads/file/?id=500616)
 - 위 사이트에서 각자 환경에 맞도록 설치 
 
 # 설치 과정
