@@ -27,3 +27,17 @@
 3) 쿠키 설정 값 지정
 4) 웹 페이지에 응답 정보를 사용해서 쿠키를 전달
 5) 쿠키 이름을 사용해서 쿠키의 값을 거내서 사용 
+
+
+
+# 쿠키 객체 생성 (쿠키 값 생성) - 서블릿API 활용 
+(이 밖에도 쿠키를 만드는 방법은 다양하게 있다.)
+```	
+	//Cookie cookie = new Cookie("key", "value") ; 
+	Cookie cookie = new Cookie("CookName", "cookie_value") ;
+	
+	cookie.setMaxAge(600) ; // 단위 : 초 
+	
+	//response.addCookie(cookie); 
+	response.addCookie(cookie) ; 
+ ```
