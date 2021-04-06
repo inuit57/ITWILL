@@ -11,4 +11,4 @@
 # 2) 압축 풀기 
 
 # 3) 프로젝트폴더/WEB-INF/lib 안에 넣어주기 
-- mysql-connector-java-5.1.49.jar 파일을 복사해서 넣어줄 것. 
+- mysql-connector-java-5.1.49-bin.jar 파일을 복사해서 넣어줄 것. 
