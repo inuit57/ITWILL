@@ -16,8 +16,10 @@ create table test1(
 - null을 넣어도 알아서 들어간다.
 
 ```
-이미 만든 테이블에 자동증가 옵션을 넣고 싶을 때 
-ALTER TABEL 'TEST' MODIFY 'num' INT NOT NULL AUTO_INCREMENT;
+이미 만든 테이블에 자동증가 옵션을 넣고 싶을 때에는 "KEY"인 경우에만 해당 설정을 추가해줄 수 있다. 
+(Incorrect table definition; there can be only one auto column and it must be defined as a key)
+ALTER TABEL [테이블명] MODIFY [컬럼명] [자료형] PRIMARY KEY; 
+ALTER TABEL [테이블명] MODIFY [컬럼명] [자료형] AUTO_INCREMENT;
 ```
 
 ```
