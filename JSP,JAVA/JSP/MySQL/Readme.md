@@ -112,3 +112,32 @@
     - desc itwill ;
     - drop table itwill; 
     - show tables; 
+
+## 테이블 데이터 추가/삭제/조회/갱신
+
+1) 추가
+```
+insert into [table명]  ( 컬럼명1, 컬럼명2, 컬럼명3 ... ) 
+values ( 값1, 값2 , 값 3 ... ) ; 
+
+//앞에 적은 컬럼명에 맞춰서 값들을 넣어주기
+```
+```
+insert into [table명] 
+values (값1 , 값2 , 값3 , 값4 ... ) ; 
+
+//컬럼명 없이 사용하는 경우
+//모든 컬럼명에 해당되게 값을 다 적어넣어야 한다. 
+```
+
+2) delete 문 (삭제)
+```
+delete from [테이블명] {where 조건} 
+// where 조건을 안 넣고 사용할 경우, 테이블의 데이터가 다 삭제된다. 
+```
+
+3) select 문
+```
+select [컬럼명] from [테이블명] where [조건] 
+```
+5) update 문
