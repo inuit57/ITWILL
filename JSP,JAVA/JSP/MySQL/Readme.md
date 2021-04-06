@@ -138,6 +138,9 @@ delete from [테이블명] {where 조건}
 
 3) select 문
 ```
-select [컬럼명] from [테이블명] where [조건] 
+select [컬럼명] from [테이블명] where [조건] ;
 ```
 5) update 문
+```
+update [테이블명] set [컬럼명] = [변경할 값] where [조건] ; 
+```
