@@ -36,4 +36,17 @@ create table test2(
 만약 중간 숫자가 사용자의 실수로 삭제된다면 그것을 채우지 않고 마지막 숫자에서 증가시킨다. <br>
 예를 들어서 10개를 만들고 중간의 5번을 지우고 하나를 추가할 때 그것이 부여받게 되는 값은 5가 아닌 11이 된다. <br> 
 
+#### AUTO_INCREMENT 현재 값 변경하기
+```
+AUTO_INCREMENT 현재 기준값을 변경하고 싶은 경우 ALTER TABLE AUTO_INCREMENT = 값 을 이용합니다.
+ALTER TABLE productTbl                                                                        
+AUTO_INCREMENT = 100;
+```
+
+#### AUTO_INCREMENT 증가 값 변경하기
+```
+AUTO_INCREMENT 증가값을 변경하고 싶은 경우 다음과 같이 쿼리합니다.
+SET @@auto_increment_increment=3;  -- 3씩 증가하는 경우           
+```
+[출처](https://dololak.tistory.com/383)
 
