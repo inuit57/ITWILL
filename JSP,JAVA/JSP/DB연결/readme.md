@@ -6,20 +6,23 @@
 ## 1) 드라이버 로드 
 ```
 Class.forName("com.mysql.jdbc.Driver") ; 
-// java.sql.DriverManager"
 ```
 ## 2) DB 연결 
 ```
+// import =  "java.sql.Connection"
+// import = "java.sql.DriverManager"
+
 Connection conn = DriverManager.getConnection(DBURL, DBID , DBPW) ; 
 // DBURL : "jdbc:mysql://ip주소:port번호/접속할 DB명
 // 예) "jdbc:mysql://localhost:3306/jspdb"
-// "java.sql.Connection"
+
 ```
 
 ## 3) SQL 구문 작성 
 ### 3-1) Statement 방식 
 ```
-//"java.sql.Statement"
+// import =  "java.sql.Statement"
+
 String sql = "insert into itwill_member (name, gender,age, jumin) values('테스트','남',10,'901123-1111112')" ;   
 //"insert into itwill_member (name, gender,age, jumin) values('" + name + "',"+ gender+"'," + age +" ,'" + jumin + " ')"  ;  
 
@@ -30,7 +33,8 @@ stmt.executeUpdate(sql);
 
 ### 3-2) PreparedStatement 방식
 ```
-// "java.sql.PreparedStatement"
+// import = "java.sql.PreparedStatement"
+
 String sql = "insert into itwill_member (name, gender,age, jumin) values(? , ? , ? , ? )" ; // ?로 값을 대체해서 넣는다. 
 
 PreparedStatement pstmt = conn.prepareStatement(sql);
