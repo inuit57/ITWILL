@@ -103,6 +103,24 @@ while(rs.next()) {
 
 + 전체데이터 조회 
 ```
+while(rs.next()){	 
+	int idx = rs.getInt("idx") ; 
+	String name = rs.getString("name") ;
+	String gender = rs.getString("gender");
+	int age = rs.getInt("age"); 
+	String jumin = rs.getString("jumin"); 
+
+
+	out.println("  번호 : " + idx) ;
+	out.println("  사용자 이름 : " + name) ;
+	out.println("  성별 : " + gender) ;
+	out.println("  나이 : " + age) ;
+	out.println("  주민번호 : " + jumin + "<br>") ;
+
+}
+```
++ 다른 방법
+```
 	while(rs.next()){
 		for(int i =1 ; i<= 5; i++ ){
 			out.print(rs.getString(i) + " ");
