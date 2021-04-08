@@ -66,3 +66,47 @@ pstmt.excuteUpdate() ;
 stmt.executeQuery(sql); 
 pstmt.executeQuery() ;
 ```
+
+----- 
+
+## Select문 
+
+### 5) 데이터 처리 
+
+#### 5-1) 결과 저장 
+```
+ResultSet rs = pstmt.excuteQuery() ; 
+// Select문으로 나오는 결과값을 ResultSet에 받아와야 한다. 
+```
+
+#### 5-2) 결과 처리  
+```
+// rs.getXXX("컬럼명") 또는 rs.getXXX(컬럼인덱스); 
+// XXX에는 컬럼의 데이터 타입을 넣어준다. (예 / String, int 등등) 
+// 인덱스로 조회하는 것이 속도가 더 빠르다. 
+```
+
++ 특정 컬럼(name)을 한줄로 출력
+```
+int col_index = rs.findColumn("name") ; 
+// 컬럼명으로 컬럼 인덱스를 조회한다. 
+
+while(rs.next()) { 	
+	String name = rs.getString(col_index) ; 
+	// String name = rs.getString("name"); 
+	// 컬럼명 또는 컬럼 인덱스로 조회하는 것이 가능하다. 
+	// 다만 컬럼 인덱스로 조회하는 것이 성능면에서 더 빠르다. 
+	
+	out.println("사용자 이름 : "+ name + "<br>") ; //테스트용 출력. 
+}
+```
+
++ 전체데이터 조회 
+```
+	while(rs.next()){
+		for(int i =1 ; i<= 5; i++ ){
+			out.print(rs.getString(i) + " ");
+		}
+		out.println("<br>");
+	}
+```
