@@ -57,7 +57,10 @@ pstmt.setInt(2, idx);
 ``` 
 // Update, delete,  insert문 : DB 내부 값이 변경되는 경우. 
 stmt.executeUpdate(sql); 
+
 pstmt.excuteUpdate() ; 
+// PreparedStatement의 경우 만들 때 sql문장을 가져가기 때문에 
+// pstmt.excuteUpdate(sql); 을 사용하지 않는다. 
 
 // select 문 : DB 내부 값이 변경되지 않는 경우. 
 stmt.executeQuery(sql); 
