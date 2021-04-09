@@ -9,7 +9,13 @@
   <error-code>404</error-code>
   <location>/error/404page.jsp</location> 
 </error-page> 
+<!-- 400 에러 : 없는 페이지 --> 
 
+<error-page>
+  <error-code>500</error-code>
+  <location>/error/500page.jsp</location> 
+</error-page> 
+<!-- 500 에러 : 자바 문법 오류 페이지 --> 
 ```
 
 - 에러코드를 적고 이동하게 될 주소를 location에 적어준다.
