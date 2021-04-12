@@ -11,3 +11,10 @@ where employee_id = &{변수명} ; (엔터 입력)
 Enter value for {변수명} :  값 입력 (엔터 입력)
 // 조회 결과가 실행된다. 
 ```
+- 문자나 날짜 값을 받아야하는 변수의 경우 작은 따옴표로 묶어서 작성해야 한다. 
+- '&string_data' 
+```
+select * 
+from employees
+where job_id = '&job_id' ; 
+```
