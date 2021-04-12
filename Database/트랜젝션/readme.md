@@ -17,3 +17,17 @@
     - DDL 또는 DCL 구문 실행 시 (auto commit) 
     - SQL 프로그램 정상 종료시 ( auto commit ) 
     - 시스템 장애로 프로그램 강제 종료될 경우 (auto ROLLBACK) 
+
+## SAVEPOINT A 
+- rollback시에 지정해서 돌아갈 수 있는 특정 시점을 만들 수 있다. 
+```
+insert into AAA values(...) 
+slect * from AAA ; 
+
+SAVEPOINT A ; 
+delete from AAA; 
+
+rollback to savepoint A ; // A로 돌아간다. insert문, select * from AAA 는 수행된다. 
+
+rollback ; // 이렇게 쓸 경우 insert, select문을 하기 이전으로 돌아간다. 
+```
