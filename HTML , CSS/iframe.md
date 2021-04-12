@@ -11,4 +11,5 @@
   - src : 프레임 안에 보여줄 내용물
   - width : 가로
   - height : 세로 
-  
+  - name : 다른 iframe과 구분할 수 있는 값을 준다.
+    - 만약 a 태그의 target으로 iframe의 name을 넣어줄 경우, 해당 iframe안에서  열리게 된다. 
