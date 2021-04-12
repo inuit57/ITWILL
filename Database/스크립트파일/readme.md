@@ -21,3 +21,6 @@ save /home/oracle/test.sql
 @search_emp.sql 
 // 현재 폴더 위치에 있는 sql 스크립트를 실행하는 경우, 경로명 생략가능.
 ```
+
+## 덮어쓰기
+- save {경로/파일명} replace
