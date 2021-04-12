@@ -16,4 +16,4 @@
     - commit 또는 rollback 실행 시 
     - DDL 또는 DCL 구문 실행 시 (auto commit) 
     - SQL 프로그램 정상 종료시 ( auto commit ) 
-    - 시스템 장애로 프로그램 강제 종료될 경우 (auto commit) 
+    - 시스템 장애로 프로그램 강제 종료될 경우 (auto ROLLBACK) 
