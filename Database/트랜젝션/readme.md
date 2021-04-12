@@ -20,6 +20,9 @@
 
 ## SAVEPOINT A 
 - rollback시에 지정해서 돌아갈 수 있는 특정 시점을 만들 수 있다. 
+- 생성 : savepoint (세이브포인트명)
+- 사용 : rollback to savepoint (세이브포인트명)
+- 예시
 ```
 insert into AAA values(...) 
 slect * from AAA ; 
@@ -31,3 +34,6 @@ rollback to savepoint A ; // A로 돌아간다. insert문, select * from AAA 는
 
 rollback ; // 이렇게 쓸 경우 insert, select문을 하기 이전으로 돌아간다. 
 ```
+- 주의사항
+    - 세이브포인트명은 DB에 따로 저장되는 것이 아니기에 만든 이가 기억해야한다.
+    - 한번 rollback으로 사용된 세이브 포인트는 사라진다. 하나의 세이브 포인트를 2번 사용할 수는 없다. 
