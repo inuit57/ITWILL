@@ -23,17 +23,56 @@
 	
 	Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jspdb", "root", "1234"); 
 	
-	String sql = "select count(*) from itwill_member where id=? and pw=? " ; 
-	
+	String sql = "select pw from itwill_member where id=? "; 
+	// select count(*) from itwill_member where id=? and pw=? ; 
 	PreparedStatement pstmt = conn.prepareStatement(sql); 
 	
 	pstmt.setString(1, memberBean.getId()); 
-	pstmt.setString(2, memberBean.getPw()); 
+	//pstmt.setString(2, memberBean.getPw()); 
 
 	ResultSet rs = pstmt.executeQuery();
 	
+	// sql injection 이라는 것을 막기 위해서
+	// if문을 넣는 식으로 안전하게 만든다. 
 	if(rs.next()){
-		out.println("로그인 성공!") ; 
+		
+		if(memberBean.getPw().equals(rs.getString("pw"))){
+			
+			out.println("로그인 성공!") ;
+			
+			session.setAttribute("id", memberBean.getId());
+			%>
+			<script>
+				alert("로그인 성공"); 
+				location.href= "main.jsp" ; 
+			</script>
+			<%
+			//response.sendRedirect("main.jsp"); 
+		}else{
+			//회원이지만 비밀번호 오류. 
+			%>
+			<script type="text/javascript">
+				alert("비밀번호 오류!"); 
+				
+				//location.href="loginForm.jsp";
+				history.back();  // 뒤로 가기 
+			</script>
+			<%
+		}
+		
+	}else{
+		// 비회원
+		if ( memberBean.getId() == null){
+			response.sendRedirect("loginForm.jsp");
+		}
+		%>
+			<script type="text/javascript">
+				
+				alert("비회원입니다!"); 
+				//location.href="loginForm.jsp";
+				history.back();  // 뒤로 가기 
+			</script>
+		<%
 	}
 %>
 
