@@ -1,6 +1,6 @@
 # 자바빈 객체 생성 
 ```
-jsp:useBean id="객체명(레퍼런스명)" class="클래스의 위치(패키지명)" />
+< jsp:useBean id="객체명(레퍼런스명)" class="클래스의 위치(패키지명)" />
 
 name == id
 param에 쓴 값을 property에 넣겠다. 
