@@ -2,6 +2,11 @@
 ```
 < jsp:useBean id="객체명(레퍼런스명)" class="클래스의 위치(패키지명)" />
 
+// 이 때 사용되는 클래스는 getter/setter, 기본생성자가 있어야 한다. 
+```
+
+# 객체에 값 넣기 
+```
 name == id
 param에 쓴 값을 property에 넣겠다. 
 // jbAction.setId(request.getParameter(arg0)) 을 한번에 사용한 것
@@ -15,4 +20,9 @@ param에 쓴 값을 property에 넣겠다.
   
 <jsp:setProperty property="*" name="jbAction" />
 //"*"로 알아서 다 넣도록 할 수도 있다.
+```
+
+# 객체에서 값 읽기 
+```
+<jsp:getProperty property="email" name="member"/>
 ```
