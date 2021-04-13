@@ -62,15 +62,21 @@
 		
 	}else{
 		// 비회원
-		if ( memberBean.getId() == null){
+		/* if ( memberBean.getId() == null){
 			response.sendRedirect("loginForm.jsp");
-		}
+		} */
 		%>
 			<script type="text/javascript">
 				
 				alert("비회원입니다!"); 
+	
+				if( confirm("회원 가입하시겠습니까?") ){
+					location.href="insertForm.jsp";
+				}else{
+					history.back();  // 뒤로 가기
+				}
 				//location.href="loginForm.jsp";
-				history.back();  // 뒤로 가기 
+				 
 			</script>
 		<%
 	}
