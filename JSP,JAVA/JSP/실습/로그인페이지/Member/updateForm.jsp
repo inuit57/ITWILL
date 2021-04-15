@@ -46,8 +46,9 @@
 	ResultSet rs = pstmt.executeQuery(); 
 	// 5. 데이터 처리. 
 
-	MemberBean mb = new MemberBean();
+	MemberBean mb = null ; 
 	if(rs.next()){
+		mb = new MemberBean();
 		mb.setId(rs.getString("id")); 
 		mb.setAge(rs.getInt("age")); 
 		mb.setEmail(rs.getString("email")); 
@@ -64,6 +65,7 @@
 
 <fieldset>
 <legend>정보 수정</legend>
+	<% if( mb != null){  %>
 	<form action="updatePro.jsp" method="get">
 		아이디 : <input type="text" name="id" readonly="readonly" value=<%=mb.getId() %>> <br>
 		비밀번호 : <input type="text" name="pw" readonly="readonly" value=<%=mb.getPw() %>> <br>
@@ -74,7 +76,9 @@
 		성별 : 남
 		<input type="radio" name="gender" value="남" 
 		<%
-			if(id != null && mb.getGender().equals("남")){
+			if(mb.getGender().equals("남")){ 
+				// 여기에서 그냥 놓아두면 null 과 String을 비교하려는 에러가 난다.
+				// 그래서 form 태그를 전체적으로 감싸는 if문을 넣어서 처리. 
 				%>
 				checked="checked"
 				<%
@@ -84,7 +88,7 @@
 		여
 		<input type="radio" name="gender" value="여"
 		<%
-			if(id != null && mb.getGender().equals("여")){
+			if(mb.getGender().equals("여")){
 				%>
 				checked="checked"
 				<%
@@ -94,6 +98,7 @@
 		이메일 : <input type="email" name="email" value=<%=mb.getEmail() %>> <br>
 		<input type="submit" value="전송">
 	</form>
+	<%  }	%>
 </fieldset>
 
 </body>
