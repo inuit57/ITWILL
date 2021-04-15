@@ -16,5 +16,5 @@
 
 
 ### 참고자료 
-[출처1](https://webisfree.com/2016-07-06/[sql]-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%95%88%EC%9D%98-%EC%BB%AC%EB%9F%BC-%EA%B0%92-%EB%B3%80%EA%B2%BD-%EC%88%98%EC%A0%95-update) 
-[출처2](https://dongdongfather.tistory.com/114)
+- [출처1](https://webisfree.com/2016-07-06/[sql]-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%95%88%EC%9D%98-%EC%BB%AC%EB%9F%BC-%EA%B0%92-%EB%B3%80%EA%B2%BD-%EC%88%98%EC%A0%95-update) 
+- [출처2](https://dongdongfather.tistory.com/114)
