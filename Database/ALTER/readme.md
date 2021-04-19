@@ -56,12 +56,13 @@ SQL > alter table 테이블명
          drop primary key CASCADE; 
 ```
 CASCADE 를 같이 적어주게 될 경우 참조하고 있는 FK들도 같이 모두 삭제되게 된다. 
+
 ---
 
 ## 컬럼명 변경
-
+- 
 ## 제약조건명 변경
-
+- 
 ## 테이블명 변경
-
+- 
 
