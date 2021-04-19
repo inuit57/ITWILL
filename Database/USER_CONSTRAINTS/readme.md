@@ -18,7 +18,8 @@ desc user_constraints ;
   - C : 일반적인 
 ## TABLE_NAME 
 - 테이블 이름. 
-- 어떤 식으로 저장되어있을지 모르므로 upper나 lower함수를 사용해서 맞춰주고 select를 하는 게 좋다. 
+- 대문자로 저장되어있다. 비교할 경우 ''로 묶고 테이블명을 대문자로 해서 조회할 것.
+(혹은 LOWER() 또는 UPPER() 함수를 사용할 것.) 
 
 ## SEARCH_CONDITION 
 
