@@ -43,3 +43,9 @@ SQL > alter table 테이블명
 SQL > alter table 테이블명
         drop constraint 제약조건명 
 ```
+
+```
+// PK 제약조건은 제약조건명 없이도 삭제 가능.
+SQL > alter table 테이블명
+         drop primary key ; 
+```
