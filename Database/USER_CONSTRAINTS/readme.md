@@ -10,20 +10,22 @@ desc user_constraints ;
 # 각각의 컬럼에 대한 간단한 설명
 ## CONSTRAINT_NAME 
 - 제약조건명
+
 ## CONSTRAINT_TYPE 
 - 제약조건 타입 
   - P : PK
   - U : UNIQUE
   - R : REFERENCE의 약자, FK 제약조건
-  - C : 일반적인 
+  - C : 일반적인 제약조건 (NOT NULL, CHECK) 
+  
 ## TABLE_NAME 
 - 테이블 이름. 
 - 대문자로 저장되어있다. 비교할 경우 ''로 묶고 테이블명을 대문자로 해서 조회할 것.
 (혹은 LOWER() 또는 UPPER() 함수를 사용할 것.) 
 
 ## SEARCH_CONDITION 
-
-## SEARCH_CONDITION_VC 
+- CONSTRAINT_TYPE에서 "C"로 나오는 것이 어떤 조건인지 확인할 수 있다.
+- 자세한 조건을 확인할 수 있다. NOT NULL 인지 CHECK 제약조건인지. 
 
 ## R_CONSTRAINT_NAME 
 - FK에 해당될 때 참조하는 곳의 제약조건명을 알려준다. 
