@@ -44,8 +44,18 @@ SQL > alter table 테이블명
         drop constraint 제약조건명 
 ```
 
+6. PK 제약조건 삭제
 ```
 // PK 제약조건은 제약조건명 없이도 삭제 가능.
 SQL > alter table 테이블명
          drop primary key ; 
 ```
+
+하지만 FK로 해당 PK를 참조하고 있는 경우 삭제가 안된다. 
+```
+SQL > alter table 테이블명
+         drop primary key CASCADE; 
+```
+CASCADE 를 같이 적어주게 될 경우 참조하고 있는 FK들도 같이 모두 삭제되게 된다. 
+
+
