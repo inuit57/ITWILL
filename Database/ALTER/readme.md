@@ -36,3 +36,10 @@ SQL > alter table 테이블명
 SQL > alter table 테이블명
         modify 컬럼명 constraint 제약조건명 제약조건유형 ; 
 ```
+
+
+5. 제약조건 삭제 
+```
+SQL > alter table 테이블명
+        drop constraint 제약조건명 
+```
