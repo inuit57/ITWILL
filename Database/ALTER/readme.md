@@ -72,5 +72,7 @@ SQL > alter table 테이블명
 ```
 
 ## 테이블명 변경
-- 
+```
+SQL > rename 기존테이블명 to 새 테이블명 ; 
+```
 
