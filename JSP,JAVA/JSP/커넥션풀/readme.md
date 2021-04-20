@@ -45,3 +45,25 @@
 	/>
 </context>
 ```
+
+## 사용
+```
+		try {
+			//Context 객체를 생성 
+			Context initCTX  = new InitialContext();
+			
+			// DB 연동 정보를 불러오기 (context.xml) 
+			//initCTX.lookup("java:comp/env/" + context.xml에 적었던 name ); 
+			DataSource ds =
+			(DataSource)initCTX.lookup("java:comp/env/jdbc/mysqlDB");
+			
+			try {
+				conn = ds.getConnection();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+			
+		} catch (NamingException e) {
+			e.printStackTrace();
+		} 
+```
