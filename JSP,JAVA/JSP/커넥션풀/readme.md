@@ -57,6 +57,11 @@
 			//initCTX.lookup("java:comp/env/" + context.xml에 적었던 name ); 
 			DataSource ds =
 			(DataSource)initCTX.lookup("java:comp/env/jdbc/mysqlDB");
+			/*
+				//참고 : 아래의 2가지의 동작을 하나로 합친 것이 위의 문장
+				Context envCTX = (Context) intiCTX.lookup("java:comp/env"); 
+				DataSource ds = (DataSource)envCTX.lookup("jdbc/mysqlDB"); 
+			*/
 			
 			try {
 				conn = ds.getConnection();
