@@ -31,9 +31,10 @@
 - 서버 중지 시키기 (톰켓 서버 중지) 
 - META-INF/context.xml 파일 만들기
 	- 디비연결에 필요한 정보를 작성 
+	- 주의! Resource다. resource가 아니다. 
 ```
 <context>
-	<resource
+	<Resource
 		name=" 해당 연결의 이름 " // 외부에서 알아볼 수 있는 이름 : 예) jdbc/mysqlDB
 		auth=" 컨테이너 자원 관리자 : Application 또는 Container "
 		type=" javax.sql.DataSource 객체 타입 "
