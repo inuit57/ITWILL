@@ -26,3 +26,22 @@
 	- [DBCP 2.8](http://commons.apache.org/proper/commons-dbcp/download_dbcp.cgi)
 	- [Pool 2.9](https://commons.apache.org/proper/commons-pool/download_pool.cgi) 
 - .jar 파일을 WEB-INF/lib 폴더 안에 복사해서 넣어주기.
+
+## 프로젝트 설정 변경
+- 서버 중지 시키기 (톰켓 서버 중지) 
+- META-INF/context.xml 파일 만들기
+	- 디비연결에 필요한 정보를 작성 
+```
+<context>
+	<resource
+		name=" 해당 연결의 이름 " // 외부에서 알아볼 수 있는 이름 : 예) jdbc/mysqlDB
+		auth=" 컨테이너 자원 관리자 : Application 또는 Container "
+		type=" javax.sql.DataSource 객체 타입 "
+		driverClassName=" 드라이버 이름 "
+		username=" 사용자명(DBID) "
+		password=" 사용자비밀번호(DBPW)"
+		url=" DB접속 URL "
+		maxWait=" 5000 " //최대로 기다릴 시간, 단위 : ms (1/1000초) 
+	/>
+</context>
+```
