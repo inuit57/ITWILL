@@ -20,8 +20,9 @@
 ```
 ## 다운로드 
 - bin 파일 다운로드
-- JAVA 버전(8.0)에 맞춰서 다운로드 진행하기. 
+	- JAVA 버전(8.0)에 맞춰서 다운로드 진행하기. 
 
-- [commons-collections4.4](http://commons.apache.org/proper/commons-collections/download_collections.cgi)
-- [DBCP 2.8](http://commons.apache.org/proper/commons-dbcp/download_dbcp.cgi)
-- [Pool 2.9](https://commons.apache.org/proper/commons-pool/download_pool.cgi) 
+	- [commons-collections4.4](http://commons.apache.org/proper/commons-collections/download_collections.cgi)
+	- [DBCP 2.8](http://commons.apache.org/proper/commons-dbcp/download_dbcp.cgi)
+	- [Pool 2.9](https://commons.apache.org/proper/commons-pool/download_pool.cgi) 
+- .jar 파일을 WEB-INF/lib 폴더 안에 복사해서 넣어주기.
