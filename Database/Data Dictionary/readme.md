@@ -35,13 +35,24 @@
           // account_status : 현재 계정 상태 
           // created : 생성된 날짜.
        ```
-       - 예 ) user_objects : 현재 사용자가 접근/사용할 수 있는 모든 object 조회 
+       - 예) user_objects : 현재 사용자가 접근/사용할 수 있는 모든 object 조회 
        ```
          select object_name, object_type, created, status 
          from user_objects 
          order by object_type; 
        ```
-       
+       - 예) user_constraint : 현재 사용자에 저장된 제약조건들을 조회
+       ```
+         select constraint_name, constraint_type, search_condition, r_constraint_name
+         from user_constraint 
+         where lower(table_name) = lower('&t_name') ; 
+       ```
+       - 예) user_cons_columns : 현재 사용자에 저장된 제약조건을 컬럼명까지 조회
+       ```
+         select column_name, constraint_name 
+         from user_cons_columns
+         where table_name = upper('&t_name') ; 
+       ```
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
     - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 실시간 반영 X
