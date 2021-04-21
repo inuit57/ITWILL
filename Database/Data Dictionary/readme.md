@@ -60,3 +60,11 @@
     - 실시간으로 업데이트 된다.  
       - 예 ) v$datafile  
       - 예2) v$session  : 현재 DB에 접속되어 있는 유저 정보 확인 가능
+
+## 정보 확인
+```
+select * 
+from dictionary 
+where table_name = 'USER_TABLES' ; 
+//보통 where절에 table_name을 검색해서 comments 정보를 확인하는 식으로 사용한다. 
+```
