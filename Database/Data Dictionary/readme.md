@@ -20,7 +20,7 @@
        ```
        - 예) user_views : 현재 사용자가 소유한 view 정보 조회 가능 
        ```
-       select view_name, text from user_views
+       select view_name, text from user_views ;
        // view_name : 뷰 이름
        // text : 뷰를 만들 때 사용한 서브쿼리 정보 
        ```
