@@ -10,7 +10,8 @@
 ## 자주 사용되는 View들
 
 1) user_xxx
-    - def : 
+    - 현재 사용자가 소유한 object 정보 조회 가능
+    - 예) user_tables : 현재 사용자가 소유한 table 정보 조회 가능 
 2) all_xxx
     - def : 
 3) dba_xxx 
