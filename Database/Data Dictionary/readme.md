@@ -13,8 +13,7 @@
       - 3,4 : DBA (4번은 DBA가 실시간으로 정보를 확인해야할 때 주로 사용) 
 
 1) user_xxx
-    - 현재 사용자가 소유한 object 정보 조회 가능
-    - 실시간 반영 X
+    - 현재 사용자가 소유한 object 정보 조회 가능 , 실시간 반영 X
        - 예) user_tables : 현재 사용자가 소유한 table 정보 조회 가능 
        ``` 
          select table_name, tablespace_name from user_tables; 
@@ -45,8 +44,7 @@
        
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
-    - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 
-    - 실시간 반영 X
+    - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 실시간 반영 X
        - 예) all_tables , all_views
        ```
           select owner , table_name, tablespace_name 
