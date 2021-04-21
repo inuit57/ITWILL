@@ -22,6 +22,10 @@ alter sequence 시퀀스명
 [ {cycle | (nocycle) } ] 
 [ {cache n | nocache } ]  
 ```
+## 삭제 (drop) 
+```
+drop sequence 시퀀스명; 
+```
 
 ### 기본값 정리 
 ```
