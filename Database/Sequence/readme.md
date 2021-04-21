@@ -1,7 +1,9 @@
 # 정의
 - 자동으로 고유한 번호를 반환해주는 번호 생성기 같은 Object 
+
+## 생성 (create)
 ```
-create sequence sequnce 
+create sequence 시퀀스명  
 
 [increment by n ] //default = 1,  증가하는 수치
 [start with n] // defualt = 1 , 시작 위치 
@@ -10,8 +12,18 @@ create sequence sequnce
 [ {cycle | (nocycle) } ] // 최댓값/최솟값을 찍고나면 순환하는 것이 cycle, 오류메시지를 띄워주는 것이 nocycle
 [ {cache n | nocache } ]  // 미리 n개만큼 계속 만들어놓는 것. 캐시메모리 사용여부 
 ```
+## 수정 (alter) 
+- 시퀀스 시작값 변경 불가 (start with N) 
+```
+alter sequence 시퀀스명
+[increment by n ] 
+[ {maxvlue n | (nomaxvlaue) } ] 
+[ {minxvlue n | (nominvlaue) } ] 
+[ {cycle | (nocycle) } ] 
+[ {cache n | nocache } ]  
+```
 
-## 기본값 정리 
+### 기본값 정리 
 ```
 create sequence 시퀀스명 
 ==
