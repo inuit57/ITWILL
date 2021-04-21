@@ -36,6 +36,15 @@
        
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
+    - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 
+    - 예) all_tables , all_views
+    ```
+       select owner , table_name, tablespace_name 
+       from all_tables ; 
+       
+       selec owner, view_name, text from all_views ; 
+       // owner : 소유자명 
+    ```
 3) dba_xxx 
     - def : 
 4) v$xxx 
