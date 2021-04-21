@@ -12,6 +12,7 @@
 
 1) user_xxx
     - 현재 사용자가 소유한 object 정보 조회 가능
+    - 실시간 반영 X
        - 예) user_tables : 현재 사용자가 소유한 table 정보 조회 가능 
        ``` 
          select table_name, tablespace_name from user_tables; 
@@ -37,6 +38,7 @@
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
     - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 
+    - 실시간 반영 X
        - 예) all_tables , all_views
        ```
           select owner , table_name, tablespace_name 
@@ -48,6 +50,9 @@
 3) dba_xxx 
     - DB의 모든 정보 조회 
     - DBA만 사용 가능하다. 
+    - 실시간 반영 X
       - 예) dba_tables, dba_users 
 4) v$xxx 
-    - def : 
+    - DB의 모든 정보 조회 
+    - DBA만 사용 가능하다. 
+    - 실시간으로 업데이트 된다.  
