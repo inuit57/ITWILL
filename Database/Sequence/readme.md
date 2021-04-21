@@ -43,3 +43,5 @@ select dep_seq.currval
 from dual ; 
 ```
 
+## 주의사항
+- nextval 로 증가시킨 시퀀스번호는 rollback으로 되돌아가지 않는다. 
