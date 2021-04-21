@@ -41,13 +41,13 @@
          from user_objects 
          order by object_type; 
        ```
-       - 예) user_constraint : 현재 사용자에 저장된 제약조건들을 조회
+       - 예) user_constraint : 현재 사용자에 저장된 제약조건들을 조회 (컬럼명은 조회 불가)
        ```
          select constraint_name, constraint_type, search_condition, r_constraint_name
          from user_constraint 
          where lower(table_name) = lower('&t_name') ; 
        ```
-       - 예) user_cons_columns : 현재 사용자에 저장된 제약조건을 컬럼명까지 조회
+       - 예) user_cons_columns : 현재 사용자에 저장된 제약조건의 컬럼명을 조회 (다른 정보는 user_constraint를 사용해야한다.)
        ```
          select column_name, constraint_name 
          from user_cons_columns
