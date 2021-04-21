@@ -53,6 +53,11 @@
          from user_cons_columns
          where table_name = upper('&t_name') ; 
        ```
+       - 예) user_sequences : 현재 사용자에 저장된 sequence 정보를 조회
+       ```
+         select sequence_name, min_value , max_value , increment_by , last_number
+         from user_sequences ; 
+       ```
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
     - 누구나 select 가능, 하지만 사용자별로 보여지는 정보가 다르다. 실시간 반영 X
