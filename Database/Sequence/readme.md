@@ -37,5 +37,9 @@ cache 20
 (예)
 insert into departments 
 values ( dep_seq.nextval , 'Test1', 100,1700) ; 
+
+(예2) : 현재 시퀀스 값 확인
+select dep_seq.currval
+from dual ; 
 ```
 
