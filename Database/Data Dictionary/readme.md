@@ -36,6 +36,12 @@
           // account_status : 현재 계정 상태 
           // created : 생성된 날짜.
        ```
+       - 예 ) user_objects : 현재 사용자가 접근/사용할 수 있는 모든 object 조회 
+       ```
+         select object_name, object_type, created, status 
+         from user_objects 
+         order by object_type; 
+       ```
        
 2) all_xxx
     - 현재 사용자가 소유하거나 접근가능한 object 정보 조회 
