@@ -22,6 +22,7 @@ for(int i = 0 ; i < list.size() ; i++){
 ### Vector 
 - Vector v = new Vector(size) ; // 크기 지정이 필요 
 - ArrayList 처럼 가변길이 배열이다. 
-- v.add(data) ; //add 메서드로 뒤에 추가 가능 
+  - v.add(data) ; //add 메서드로 뒤에 추가 가능 
+  - v.get(index); //get 메서드로 특정 위치에 있는 값을 읽어올 수 있다.
 - ArrayList와는 달리 항상 동기화된다는 차이점이 있다. 
 (이로 인하여 성능 상 ArrayList보다는 조금 떨어진다는 단점을 가지고 있지만 멀티스레드 환경에서 안전하다.)
