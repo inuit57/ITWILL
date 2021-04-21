@@ -45,3 +45,13 @@ from dual ;
 
 ## 주의사항
 - nextval 로 증가시킨 시퀀스번호는 rollback으로 되돌아가지 않는다. 
+- 이러한 것을 Gap이라고 말한다. 
+```
+insert 340 ;
+insert 350 ; 
+commit ; 
+insert 360 ; 
+insert 370 ; 
+rollback ; 
+insert 시퀀스명.nextval ; // 380이 된다. 
+```
