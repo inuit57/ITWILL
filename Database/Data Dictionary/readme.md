@@ -51,8 +51,9 @@
     - DB의 모든 정보 조회 
     - DBA만 사용 가능하다. 
     - 실시간 반영 X
-      - 예) dba_tables, dba_users 
+      - 예) dba_tables, dba_users , dba_data_files 
 4) v$xxx 
     - DB의 모든 정보 조회 
     - DBA만 사용 가능하다. 
     - 실시간으로 업데이트 된다.  
+      - 예 ) v$datafile
