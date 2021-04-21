@@ -35,11 +35,14 @@ class Clock {
 		clockName = name ; 
 	}
 	
+	// nanoTime(), currentTimeMills() 
+	// 둘다 현재시간을 Long 값으로 리턴하지만 단위에서 차이가 있다.
+	// 전자의 경우 ns(nano second) , 후자의 경우 ms(millisecond)를 사용한다. 
 	public void clockStart() { 
-		startTime = System.nanoTime(); //System.currentTimeMillis();  
+		startTime = System.nanoTime(); //System.currentTimeMillis();
 	}
 	public void clockEnd() {
-		endTime = System.nanoTime();  //System.currentTimeMillis(); //System.nanoTime(); 
+		endTime = System.nanoTime();  //System.currentTimeMillis(); 
 		leadTime = endTime - startTime; 
 	}
 	
