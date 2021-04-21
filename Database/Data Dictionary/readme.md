@@ -62,9 +62,16 @@
       - 예2) v$session  : 현재 DB에 접속되어 있는 유저 정보 확인 가능
 
 ## 정보 확인
-```
-select * 
-from dictionary 
-where table_name = 'USER_TABLES' ; 
-//보통 where절에 table_name을 검색해서 comments 정보를 확인하는 식으로 사용한다. 
-```
+- dictionary 테이블을 조회한다. 
+- dict 라고 줄인 동의어를 사용해서 조회해도 된다. 
+   - 예시
+   ```
+   select * 
+   from dictionary 
+   where table_name = 'USER_TABLES' ; 
+   //보통 where절에 table_name을 검색해서 comments 정보를 확인하는 식으로 사용한다. 
+
+   select table_name, comments 
+   from dict 
+   where table_name = 'USER_USERS' ; 
+   ```
