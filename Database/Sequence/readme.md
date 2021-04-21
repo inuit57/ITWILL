@@ -29,5 +29,13 @@ cache 20
 - 성능이 더 좋은 것은 캐시. 기본값 cache 20 
 - 캐시에 저장된 것을 사용하면 새로 만들어놓는다. 
 
+## 사용방법
+```
+시퀀스명.nextval -> 다음으로 사용될 시퀀스값
+시퀀스명.currval -> 마지막으로 사용된 시퀀스값(현재)
 
+(예)
+insert into departments 
+values ( dep_seq.nextval , 'Test1', 100,1700) ; 
+```
 
