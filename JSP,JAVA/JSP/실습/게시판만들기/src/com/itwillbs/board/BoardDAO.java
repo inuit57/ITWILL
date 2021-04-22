@@ -266,9 +266,11 @@ public class BoardDAO {
 		// 글 정보를 정렬 - re_ref 값을 최신글 위쪽으로 정렬. (내림차순) 
 		// 				  - re_seq 값을 사용 (오름차순) 
 		
-		sql = "select * from itwill_board order by re_ref desc , re_seq asc limit ? , ? ";
-		//sql = "select * from itwill_board order by re_ref desc , re_seq asc limit ? offset ? ";
+		sql = "select * from itwill_board "
+				+"order by re_ref desc , re_seq asc "
+				+"limit ? , ? ";
 		// limit a, b 
+		// a : 시작 지점 , b : 개수 
 		// a부터 b 개수만큼 잘라서 가져온다. 
 		
 		try {
