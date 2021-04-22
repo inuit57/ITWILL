@@ -1,5 +1,6 @@
 # 개요 
-- 가변길이 배열. 
+- 가변길이 배열.(동적배열)
+- List 계열 ( 순서를 기억(index) , 중복 허용 ) 
 - 만약 생성시에 제네릭 타입을 지정해주지 않는 경우 ArrayList<Object>로 생성된다. 
 - 일반적으로는 제네릭 타입을 넣어준다. 예) ArrayList<Integer> 
 
@@ -26,3 +27,7 @@ for(int i = 0 ; i < list.size() ; i++){
   - v.get(index); //get 메서드로 특정 위치에 있는 값을 읽어올 수 있다.
 - ArrayList와는 달리 항상 동기화된다는 차이점이 있다. 
 (이로 인하여 성능 상 ArrayList보다는 조금 떨어진다는 단점을 가지고 있지만 멀티스레드 환경에서 안전하다.)
+
+### 다른 컬렉션(Collection) 개체들
+- Map 
+- HashMap
