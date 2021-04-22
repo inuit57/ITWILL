@@ -2,7 +2,12 @@
 - 가변길이 배열.(동적배열)
 - List 계열 ( 순서를 기억(index) , 중복 허용 ) 
 - 만약 생성시에 제네릭 타입을 지정해주지 않는 경우 ArrayList<Object>로 생성된다. 
-- 일반적으로는 제네릭 타입을 넣어준다. 예) ArrayList<Integer> 
+- 일반적으로는 제네릭 타입으로 Wrapper 클래스를 넣어준다. 예) ArrayList<Integer> 
+
+## 참고 
+- Wrapper Class : 기본형 8가지 데이터 타입을 참조형으로 변경한 것.
+- 데이터 타입의 첫글자만 대문자로 바꾼 형태라고 생각하면 된다. java.lang밑에 있다. 
+- Integer, Long, Boolean, Character, Double , Float , Short , Byte  
 
 
 # 예시 
