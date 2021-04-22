@@ -58,6 +58,8 @@
 
 # CMD 창에서 mysql 접속
 - mysql -u root -p 
+- mysql -u root -p --port (포트번호)
+(port 번호가 기본 3306으로 되어있는데 만약 다르게 잡았다면 다른 포트번호로 접속할 것)
 > mysql -u 계정명 -p -h[서버주소] [db명]
 - 비밀번호 입력 (1234) 
 - status : Mysql DB 기본 설정 값 조회 
