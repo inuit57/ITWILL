@@ -47,6 +47,22 @@
 </context>
 ```
 
+(예)
+```
+<context>
+	<Resource
+		name=" jdbc/mysqlDB" 
+		auth="Container"
+		type=" javax.sql.DataSource"
+		driverClassName="com.mysql.jdbc.Driver"
+		username="root"
+		password="????"
+		url="jdbc:mysql://localhost:3308/itwill"
+		maxWait="5000"  
+	/>
+</context>
+```
+
 ## 사용
 - DAO 파일에서 디비 연결 동작 
 ```
