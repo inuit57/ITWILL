@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 import javax.naming.Context;
 import javax.naming.InitialContext;
@@ -154,7 +155,7 @@ public class BoardDAO {
 			pstmt.setString(4, bb.getSubject());
 			pstmt.setString(5, bb.getContent());
 			pstmt.setInt(6, bb.getReadcount());
-			pstmt.setInt(7, bb.getRe_ref());
+			pstmt.setInt(7, num) ; // bb.getRe_ref()); //답글 작성용? num와 동일하게 
 			pstmt.setInt(8, bb.getRe_lev());
 			pstmt.setInt(9, bb.getRe_seq());
 			pstmt.setString(10, bb.getIp());
@@ -213,5 +214,103 @@ public class BoardDAO {
 		}
 		return cnt ; 
 	}
-
+	// getBoardCnt() 
+	
+	//getBoardList()
+	public ArrayList getBoardList(){
+		ArrayList boardList = new ArrayList<>();
+		conn = getConnection(); 
+		System.out.println("드라이버 로드! DB 연결 성공!");
+		System.out.println(conn);
+		
+		sql = "select * from itwill_board"; 
+		try {
+			pstmt = conn.prepareStatement(sql);
+			ResultSet rs = pstmt.executeQuery();
+			BoardBean bb = null ; 
+			while(rs.next()){
+				bb = new BoardBean(); 
+				
+				bb.setNum(rs.getInt("num"));
+				bb.setName(rs.getString("name"));
+				bb.setPass(rs.getString("pass"));
+				bb.setSubject(rs.getString("subject"));
+				bb.setContent(rs.getString("content"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setDate(rs.getDate("date"));
+				bb.setIp(rs.getString("ip"));
+				bb.setFile(rs.getString("file"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+				
+			
+				boardList.add(bb); 
+			}// while 끝. 
+			System.out.println("게시판 모든 정보 저장 완료");
+			System.out.println("총 "+ boardList.size() + "개" );
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally{
+			dbClose(); 
+		}
+		 
+		return boardList ; 
+	}
+	
+	public ArrayList getBoardList(int startRow, int pageSize){
+		conn = getConnection(); 
+		System.out.println("연결 성공!");
+		
+		ArrayList boardList = new ArrayList() ; 
+		// 글 정보를 정렬 - re_ref 값을 최신글 위쪽으로 정렬. (내림차순) 
+		// 				  - re_seq 값을 사용 (오름차순) 
+		
+		sql = "select * from itwill_board order by re_ref desc , re_seq asc limit ? , ? ";
+		//sql = "select * from itwill_board order by re_ref desc , re_seq asc limit ? offset ? ";
+		// limit a, b 
+		// a부터 b 개수만큼 잘라서 가져온다. 
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, startRow-1);
+			pstmt.setInt(2, pageSize);
+			
+//			sql = "select * from itwill_board order by re_ref desc , re_seq asc limit ? offset ? ";
+			//offset을 쓰게 될 경우 순서를 바꿔준다.
+//			pstmt.setInt(1, pageSize);
+//			pstmt.setInt(2, startRow-1);
+			
+			ResultSet rs = pstmt.executeQuery();
+			BoardBean bb = null ; 
+			while(rs.next()){
+				bb = new BoardBean(); 
+				
+				bb.setNum(rs.getInt("num"));
+				bb.setName(rs.getString("name"));
+				bb.setPass(rs.getString("pass"));
+				bb.setSubject(rs.getString("subject"));
+				bb.setContent(rs.getString("content"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setDate(rs.getDate("date"));
+				bb.setIp(rs.getString("ip"));
+				bb.setFile(rs.getString("file"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+				
+			
+				boardList.add(bb); 
+			}// while 끝. 
+			System.out.println("게시판 모든 정보 저장 완료");
+			System.out.println("총 "+ boardList.size() + "개" );
+		} catch (SQLException e) {			
+			e.printStackTrace();
+		} finally{
+			dbClose(); 
+		}
+		 
+		return boardList ; 
+	 
+	}
 }
