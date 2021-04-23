@@ -3,9 +3,12 @@
 
 
 ## Boxing 
+- new 를 활용한 방법
+- ValueOf()를 활용한 방법
 
 ```
-Integer it = Integer.ofValue(1) ; 
+Charater ch = new Charater('c'); 
+Integer it = Integer.valueOf(1) ; 
 ```
 
 ## UnBoxing 
