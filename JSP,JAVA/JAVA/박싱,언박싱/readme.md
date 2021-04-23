@@ -4,7 +4,7 @@
 
 ## Boxing 
 - new 를 활용한 방법
-- ValueOf()를 활용한 방법
+- alueOf()를 활용한 방법
 
 ```
 Charater ch = new Charater('c'); 
