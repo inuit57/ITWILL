@@ -7,7 +7,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>List</title>
 </head>
 <body>
 
@@ -67,7 +67,7 @@
 	%>
 	<tr>
 		<td><%=bb.getNum() %></td>
-		<td><a href="updateForm.jsp?num=<%=bb.getNum()%>"><%=bb.getSubject() %></a></td>
+		<td><a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %></a></td>
 		<td><%=bb.getName() %></td>
 		<td><%=bb.getDate() %></td>
 		<td><%=bb.getReadcount() %></td>
@@ -97,9 +97,32 @@
 			endPage = pageCount ; 
 		}
 		
-		// 이전 버튼
-		 %>
+		%>
 		
+		<%-- 
+		<%
+	     	// 이전 (해당 페이지블럭의 첫번째 페이지 호출)
+    	if(startPage > pageBlock){
+    		%>
+    		<a href="list.jsp?pageNum=<%=startPage-pageBlock%>">[이전]</a>
+    		<%
+    	}   	
+    	
+    	// 숫자  1....5
+    	for(int i=startPage;i<=endPage;i++){
+    		%>
+    		    <a href="list.jsp?pageNum=<%=i%>">[<%=i %>]</a> 
+    		<%    		
+    	}
+    	
+    	// 다음 (기존의 페이지 블럭보다 페이지의 수가 많을때)
+    	if(endPage < pageCount){
+    		%>
+    		<a href="list.jsp?pageNum=<%=startPage+pageBlock%>">[다음]</a>
+    		<%
+    	}
+    	%> 
+    	--%>
 		<script type="text/javascript">
 			function pageMovePre() {
 				var link = <%=(startPage-1) %> ;
@@ -116,7 +139,6 @@
 				location.href="list.jsp?pageNum="+link ;
 				
 			}
-			
 			function pageMovePost() {
 				var link = <%=(endPage+1) %> ; 
 				var curr = <%=(currentPage) %> ;
@@ -131,30 +153,22 @@
 				location.href="list.jsp?pageNum="+link ; 	
 			}
 		</script>
+
 		<input type="button" value="이전" onclick="pageMovePre()">
-		<%-- <a href="list.jsp?pageNum=<%=(startPage-1) %>">이전</a> --%>
 		<%
+
 		// 숫자 버튼
 		for(int i = startPage ; i <=endPage ; i++){
 			%>
 			<a href="list.jsp?pageNum=<%=i %>"><%=i %></a>
 			<%
 		}
-		
 		// 다음 버튼 
-		 %>
+		%>
 		 <input type="button" value="다음" onclick="pageMovePost()">
-			<%-- <a href="list.jsp?pageNum=<%=(endPage+1) %>">다음</a> --%>
-		<%
 		
-		// 개선점. 
-		// 이전 버튼을 눌렀을 때 바로 이전으로 넘어가고 
-		// 페이지 블럭의 처음일 때 누르면 이전 페이지 블럭으로.
-		
-		// 다음도 마찬가지로 수정... 
-	}
-
-
+	<%
+	}//글이 있을 때 표시 
 %>
 
 <%-- 
