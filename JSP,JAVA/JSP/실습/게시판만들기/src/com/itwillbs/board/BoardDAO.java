@@ -314,5 +314,94 @@ public class BoardDAO {
 		 
 		return boardList ; 
 	 
+	}//getBoardList
+	
+	//getBoard()
+	public BoardBean getBoard(int num){
+		BoardBean bb = null ;
+		
+		try {
+			conn = getConnection(); 
+			System.out.println("DB 연결 성공!");
+			
+			String sql = "select * from itwill_board where num = ?";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, num);
+			ResultSet rs = pstmt.executeQuery() ;
+			
+			if (rs.next()){
+				bb = new BoardBean(); 
+				bb.setNum(rs.getInt("num"));
+				bb.setName(rs.getString("name"));
+				bb.setPass(rs.getString("pass"));
+				bb.setSubject(rs.getString("subject"));
+				bb.setContent(rs.getString("content"));
+				bb.setReadcount(rs.getInt("readcount"));
+				bb.setDate(rs.getDate("date"));
+				bb.setIp(rs.getString("ip"));
+				bb.setFile(rs.getString("file"));
+				bb.setRe_lev(rs.getInt("re_lev"));
+				bb.setRe_ref(rs.getInt("re_ref"));
+				bb.setRe_seq(rs.getInt("re_seq"));
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}  finally{
+			dbClose();
+		}
+		 
+		return bb; 
 	}
+	//getBoard()
+	
+	//updateReadCount(int num); 
+	public void updateReadCount(int num){
+		
+		try {
+			conn = getConnection(); 
+			System.out.println("DB 연결 완료! 업데이트 준비중");
+			String sql = "update itwill_board "+
+						 "set readcount= readcount+1 " + 
+						 "where num = ?" ;
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setInt(1, num);
+			pstmt.executeUpdate(); 
+			
+			System.out.println("업데이트 완료!");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally{
+			dbClose();
+		}
+	}//updateReadCount(int num);
+	
+	
+	//updateBoard() 
+	public void updateBoard(BoardBean bb){
+		try {
+			conn = getConnection(); 
+			
+			String sql = "update itwill_board " +
+						 "set subject=? , content=? " + 
+						 "where num=?"; 
+			
+		
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, bb.getSubject());
+			pstmt.setString(2, bb.getContent());
+			pstmt.setInt(3, bb.getNum());
+			
+			pstmt.executeUpdate(); 
+			System.out.println("업데이트 완료!!");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		
+	} //updateBoard() 
+	
 }
