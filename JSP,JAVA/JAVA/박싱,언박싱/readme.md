@@ -4,7 +4,7 @@
 
 ## Boxing 
 - new 를 활용한 방법
-- alueOf()를 활용한 방법
+- valueOf()를 활용한 방법
 
 ```
 Charater ch = new Charater('c'); 
@@ -12,6 +12,7 @@ Integer it = Integer.valueOf(1) ;
 ```
 
 ## UnBoxing 
+- 기본자료형Value() ; 
 
 ```
 int i = it.intValue() ; 
