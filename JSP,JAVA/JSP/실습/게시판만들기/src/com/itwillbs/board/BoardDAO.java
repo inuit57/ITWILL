@@ -49,6 +49,7 @@ public class BoardDAO {
 			//initCTX.lookup("java:comp/env/" + context.xml에 적었던 name ); 
 			DataSource ds =
 			(DataSource)initCTX.lookup("java:comp/env/jdbc/mysqlDB");
+			// mysqlDB : 여기 부분이 사용할 테이블명. 
 			
 			try {
 				conn = ds.getConnection();
