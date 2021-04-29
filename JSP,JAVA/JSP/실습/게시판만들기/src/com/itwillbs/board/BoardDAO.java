@@ -426,6 +426,7 @@ public class BoardDAO {
 			// -> re_ref (같은 그룹) 안에서 re_seq(순서)를 정렬
 			// 			기존의 순서 값보다 큰 값이 있다면 순서를 1 증가 
 			
+			// re_ref 값을 최신글 위쪽으로 정렬. (내림차순) 
 			sql = "update itwill_board set re_seq = re_seq+1 "
 					+" where re_ref = ? and re_seq > ? "; 
 			
