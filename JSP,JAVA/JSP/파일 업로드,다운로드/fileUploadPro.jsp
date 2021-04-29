@@ -24,7 +24,7 @@
 	int maxSize = 10 * ( 1 << 20) ; 
 	
 	// 파일 업로드 => Multipart 객체를 생성
-	MultipartRequest mp = new MultipartRequest(
+	MultipartRequest multi = new MultipartRequest(
 							request, // => jsp 내장객체(파라미터)
 							path, // => 실제 파일이 저장될 위치
 							maxSize, // => 파일의 최대 크기
@@ -33,6 +33,26 @@
 							); 
 	
 	System.out.println("파일 업로드 완료!"); 
+	
+	// 이전 페이지에서 전달해준 정보를 출력 
+	/* 
+	// null 만 출력된다. 
+	// 파일 업로드 폼으로 넘겼기 때문에 다르게 뽑아내야 한다.
+	String name = request.getParameter("name"); 
+	String subject = request.getParameter("subject"); 
+	String filename= request.getParameter("filename"); 
+	*/
+
+	String name = multi.getParameter("name"); 
+	String subject = multi.getParameter("subject"); 
+	String filename = multi.getFilesystemName("filename");
+	
+	String oFileName = multi.getOriginalFileName("filename"); // 원본파일 이름 , 자동으로 바뀌어진 이름이 아닌 파일 자체 이름.
+	// 이렇게 적어주면 값들을 확인 가능하다. 
 	%>
+	이름 : <%=name%> <br>
+	제목 : <%=subject %><br>
+	파일 : <%=filename %><br>
+	파일(원본) : <%=oFileName %><br> 
 </body>
 </html>
