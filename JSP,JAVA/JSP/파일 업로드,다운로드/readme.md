@@ -6,6 +6,7 @@
 - servlets.com 사이트로 이동
 - COS File Upload Library 버튼
 - [다운로드](http://servlets.com/cos/cos-20.08.zip)
+- 압축 풀고 lib 폴더 안에 있는 cos.jar 파일을 WEB-INF/lib 에 넣어주기.
 
 
 ## 파일 업로드 
