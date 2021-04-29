@@ -10,6 +10,13 @@
 
 - upload 폴더를 WebContent 아래에 생성
 
+- DB에는 파일 이름(또는 경로)만 저장한다. 
+- 실제 파일은 내 컴퓨터(서버 컴퓨터)의 물리적 공간에 저장. 
+
+- (가상 경로 : 외부에서 접근 가능한 폴더)
+  - D:\workspace_jsp2\StudyJSP2\WebContent\upload
+- (실제 경로 : 외부에선 접근 불가능한 폴더)
+  - D:\workspace_jsp2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\StudyJSP2\upload
 ## 파일 업로드 
 - input type="file"로 해서 만들어서 넘겨준다. 
 - form 태그에 반드시 enctype을 명시해야 한다. 
