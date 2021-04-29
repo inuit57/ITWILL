@@ -50,7 +50,6 @@ public class BoardDAO {
 			DataSource ds =
 			(DataSource)initCTX.lookup("java:comp/env/jdbc/mysqlDB");
 			
-			
 			try {
 				conn = ds.getConnection();
 			} catch (SQLException e) {
@@ -404,5 +403,68 @@ public class BoardDAO {
 		}
 		
 	} //updateBoard() 
-	
+
+	public void reInsertBoard(BoardBean bb){
+		int num = 0 ; 
+		try {
+			// 1) 답글 작성 번호 (num) 계산
+			// 1,2, 디비 연결
+			conn = getConnection(); 
+			
+			sql = "select max(num) from itwill_board"; // num 부여하기 위해서 최댓값 구해오기
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			rs = pstmt.executeQuery(); 
+			
+			if(rs.next()){
+				num = rs.getInt(1) + 1; 
+			}
+			System.out.println("답글 번호 계산 완료 : "+num);
+						
+			// 2) 답글 순서 재배치 (정렬)
+			// -> re_ref (같은 그룹) 안에서 re_seq(순서)를 정렬
+			// 			기존의 순서 값보다 큰 값이 있다면 순서를 1 증가 
+			
+			sql = "update itwill_board set re_seq = re_seq+1 "
+					+" where re_ref = ? and re_seq > ? "; 
+			
+			pstmt = conn.prepareStatement(sql); 
+			pstmt.setInt(1, bb.getRe_ref());
+			pstmt.setInt(2, bb.getRe_seq());
+			
+			pstmt.executeUpdate(); 
+			
+			System.out.println(" 답글 정렬 완료! ");
+			
+			// 3 답글 쓰기
+			sql = "insert into itwill_board(num, name,pass,subject,content," 
+					+ "readcount, re_ref , re_lev , re_seq , date, ip, file) "
+					+ "values( ? , ? , ? , ? , ? ,"
+							+ " ? , ? , ? , ?, now() ,"
+							+ " ? , ?  )  ";
+			pstmt = conn.prepareStatement(sql); 
+			pstmt.setInt(1, num);
+			pstmt.setString(2, bb.getName());
+			pstmt.setString(3, bb.getPass()); 
+			pstmt.setString(4, bb.getSubject());
+			pstmt.setString(5, bb.getContent());
+			pstmt.setInt(6, bb.getReadcount());
+			pstmt.setInt(7, bb.getRe_ref()); // re_ref  (원글의 그룹번호)
+			pstmt.setInt(8, bb.getRe_lev()+1 ); //re_lev + 1 (원글의 lev + 1)
+			pstmt.setInt(9, bb.getRe_seq()+1 ); //re_seq + 1 (원글의 seq + 1) 
+			pstmt.setString(10, bb.getIp());
+			pstmt.setString(11, bb.getFile());
+			
+			pstmt.executeUpdate(); 
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally{
+			dbClose();
+		}
+		
+		// 3) 답글 쓰기 
+		
+	}// reInsertBoard() 
 }
