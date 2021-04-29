@@ -1,4 +1,3 @@
-<%@page import="com.itwillbs.board.BoardBean"%>
 <%@page import="com.itwillbs.board.BoardDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -9,39 +8,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>contentPro.jsp</h2>
 
 <%
+	// 전달되는 파라미터 값 저장
 	request.setCharacterEncoding("UTF-8"); 
-//	String name = request.getParameter("name");
-// 액션 태그 사용
 %>
 <jsp:useBean id="bb" class="com.itwillbs.board.BoardBean"></jsp:useBean>
 <jsp:setProperty property="*" name="bb"/>
+
 <%
-	System.out.println("수정할 정보 : " + bb); 
-	int num = Integer.parseInt(request.getParameter("num")); 
+	//bb.toString() ;  
+	System.out.println(bb);   
+	//bb.setIP(request.getRemoteAddr());
 	
-	
-	System.out.println(num); 
-	
+	bb.setIp(request.getRemoteAddr()); 
+
+	// BoardDAO() 객체 작성
 	BoardDAO bDao = new BoardDAO(); 
-	bDao.updateBoard(bb);
 	
-	 
+	bDao.reInsertBoard(bb); 
 	
-	
-	//System.out.println("업데이트 완료!") ; 
-	%>
-	 
-	<script type="text/javascript">
-		alert("업데이트 완료?"); 
-		location.href= "list.jsp"; 
-	</script> 
-	
-	<%
-	//response.sendRedirect("list.jsp"); 
+	response.sendRedirect("list.jsp"); 
 %>
+
+
+
 
 </body>
 </html>

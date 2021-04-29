@@ -28,7 +28,7 @@
 	// 게시판 페이징 처리 : DB에서 원하는 만큼만 글 가져오기 
 	
 	// 한 페이지당 보여줄 글의 갯수 
-	int pageSize = 2 ; //10 ; 
+	int pageSize = 10 ; //10 ; 
 	
 	// 현재 페이지 번호 확인 
 	String pageNum = request.getParameter("pageNum"); 

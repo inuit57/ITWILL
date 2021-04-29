@@ -11,9 +11,9 @@
 
 function update(num, pageNum) {
 	
-	var psChk = prompt("비밀번호 입력",""); 
+	//var psChk = prompt("비밀번호 입력",""); 
 	
-	location.href = "updateForm.jsp?num="+num+"&pageNum="+pageNum+"&ps="+psChk; 
+	location.href = "updateForm.jsp?num="+num+"&pageNum="+pageNum ; //+"&ps="+psChk; 
 	
 }
 </script>
@@ -76,10 +76,11 @@ function update(num, pageNum) {
 	</tr>
 	<tr>
 		<td colspan="4">
-			<input type="button" value="수정하기" onclick="update(<%=bb.getNum()%>,<%=pageNum %>)">	  
+			<input type="button" value="수정하기" onclick="update(<%=bb.getNum()%>,<%=pageNum %>);">	  
 	    	<input type="button" value="삭제하기" onclick="" >
-	    	<input type="button" value="답글 쓰기" onclick="">
-	    	<input type="button" value="목록으로" onclick="location.href='list.jsp?pageNum=<%=pageNum %>'">
+	    	<input type="button" value="답글 쓰기" 
+	    			onclick="location.href='reWriteForm.jsp?num=<%=bb.getNum()%>&re_ref=<%=bb.getRe_ref()%>&re_lev=<%=bb.getRe_lev()%>&re_seq=<%=bb.getRe_seq()%>';">
+	    	<input type="button" value="목록으로" onclick="location.href='list.jsp?pageNum=<%=pageNum %>';">
 		</td>
 	</tr>
 	
