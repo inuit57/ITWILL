@@ -67,7 +67,22 @@
 	%>
 	<tr>
 		<td><%=bb.getNum() %></td>
-		<td><a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>"><%=bb.getSubject() %></a></td>
+		<td>
+			<a href="content.jsp?num=<%=bb.getNum()%>&pageNum=<%=pageNum%>">
+				<% 
+				int wid = 0 ; 
+				if(bb.getRe_lev()>0){
+					wid = 10 * bb.getRe_lev(); 	
+				
+				%>
+					<!-- RE: -->
+					<!-- &nbsp; -->  
+					<img src="level.gif" height="15" width="<%=wid%>">
+					<img src="re.gif">
+				<%}%>
+				<%=bb.getSubject() %>
+			</a>
+		</td>
 		<td><%=bb.getName() %></td>
 		<td><%=bb.getDate() %></td>
 		<td><%=bb.getReadcount() %></td>
