@@ -36,3 +36,17 @@ Vector vec2 = new Vector(20, 3) ;
 		System.out.println(obj);
 	}
 ```		
+
+## 탐색하기 
+```
+int index = vec.indexOf( searchData ) ; 
+// searchData 가 vec 안에 있다면 저장되어있는 위치의 index를 반환. (0부터 탐색해서 처음 만나는)
+// 만약 찾지 못하였다면 -1을 반환한다. 
+```
+
+## 삭제하기 
+```
+vec.remove(index); // index 위치에 있는 값을 찾아서 삭제한다. 
+vec.remove(obj) ; // obj와 같은 값을 찾아서 삭제한다. 
+
+```
