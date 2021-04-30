@@ -16,23 +16,23 @@ Vector vec2 = new Vector(20, 3) ;
 
 ## 내용물 출력하기
 ```
-    System.out.println("출력방식 1 : Enumeration");
-		Enumeration e = vec.elements(); 
-		while(e.hasMoreElements()) {
-			System.out.println(e.nextElement());
-		}
-		
-		System.out.println("----------------");
-		System.out.println("출력방식 2 : Iterator");
-		Iterator iter = vec.iterator(); 
-		
-		while(iter.hasNext()) {
-			System.out.println(iter.next());
-		}
-		System.out.println("----------------");
-		System.out.println("출력방식 3 : Vector");
-		
-		for(Object obj : vec) {
-			System.out.println(obj);
-		}
+	System.out.println("출력방식 1 : Enumeration");
+	Enumeration e = vec.elements(); 
+	while(e.hasMoreElements()) {
+		System.out.println(e.nextElement());
+	}
+
+	System.out.println("----------------");
+	System.out.println("출력방식 2 : Iterator");
+	Iterator iter = vec.iterator(); 
+
+	while(iter.hasNext()) {
+		System.out.println(iter.next());
+	}
+	System.out.println("----------------");
+	System.out.println("출력방식 3 : Vector");
+
+	for(Object obj : vec) {
+		System.out.println(obj);
+	}
 ```		
