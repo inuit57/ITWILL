@@ -35,4 +35,12 @@
     - Large Pool
     - Java Pool 
 ### Background Process
-- 
+- 필수 요소
+   - PMON
+   - SMON
+   - DBWR(DB writer)
+   - LGWR(log writer)
+   - CKPT(check point) 
+- 옵션 요소
+    - ARC (Archive)
+    - 이외에도 많다.  
