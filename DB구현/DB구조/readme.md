@@ -13,10 +13,10 @@
     - Data files 
         -  실제 Data 파일들이 저장된 곳
         -  Data Dictionary 가 저장된 곳
-        -  사용자별로 분류해서 저장한다. 
+        -  분류해서 저장한다. 
         -  Datafile 정보 조회 : v$datafile , v$tempfile 테이블을 조회하기.
             -  select name, bytes from v$datafile ; // 이름, 크기 조회
-            -  select name from v$tempfile ; // 이름 조회
+            -  select name from v$tempfile ; //  v$tempfile : 임시데이터가 저장되는 공간
     - Control file 
         - 
     - Redolog files 
