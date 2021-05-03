@@ -23,6 +23,16 @@
 ```
 ### 인스턴스 구조
 - SGA 라는 메모리 구조와 여러 개의 background 프로세스로 구성되어있다.
-
 - 모든 작업은 SGA 라는 메모리 구조에서 이뤄진다. (select , insert 등등)
-- SGA : 실제 작업공간
+
+#### SGA : 실제 작업공간
+- 필수 요소
+    - Shared Pool 
+    - DB Buffer Cache
+    - Redo Log Buffer   
+- 옵션 요소 (알고만 있자) 
+    - Streams Pool
+    - Large Pool
+    - Java Pool 
+#### Background Process
+- 
