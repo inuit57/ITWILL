@@ -34,7 +34,9 @@
         - DB에서 발생된 변경작업(DDL,DML,DCL)의 로그 정보(Redo data)가 기록된 곳 
         - 주 목적 : Datafile Recovery(데이터 파일 복구) 
             - 날아간 기간동안 일어난 변경작업 목록을 읽어서 다시 진행하는 것으로 복구를 진행할 수 있다. 
-        - 순환형으로 관리된다.
+        - 순환형으로 관리된다. 
+            - 한 Redo log group에 log가 가득찰 경우, 다른 Redo log group으로 넘어간다.
+            - 만약 모든 Redo log group에 log가 가득찰 경우, 제일 처음 작성한 Redo log group에 덮어쓰면서 작성한다. 
         - DB당 최소 2개 이상의 Redo log group이 존재해야 한다.
         - Redo log group에는 최소 1개 이상의 member가 존재해야 한다. 
 
