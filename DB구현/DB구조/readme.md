@@ -41,8 +41,8 @@
         - DB당 최소 2개 이상의 Redo log group이 존재해야 한다.
         - Redo log group에는 최소 1개 이상의 member가 존재해야 한다. 
         - 정보 조회 : v$log , v$logfile
-            - select group# , members from v$log ; 
-            - 
+            - select group# , members from v$log ; // 그룹3개, 멤버 각각 2개 : Oracle에서 권장하는 구조
+            - select group# , member from v$logfile order by group# ; // 이렇게 조회할 경우 member의 파일 위치를 확인가능하다. 
     - ----
     - Parameter file
     - Password file
