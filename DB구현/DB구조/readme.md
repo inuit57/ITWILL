@@ -10,9 +10,15 @@
 ## Database 물리적 구조
 
 - 필수 요소
-    - Data files : 실제 데이터 파일들이 저장된 공간
-    - Control file :
-    - Redolog files :
+    - Data files 
+        -  실제 Data 파일들이 저장된 곳
+        -  Data Dictionary 가 저장된 곳
+        -  사용자별로 분류해서 저장한다. 
+        -  Datafile 정보 조회 : v$datafile , v$tempfile 을 조회하기.
+    - Control file 
+        - 
+    - Redolog files 
+        - 
     <br> // 위의 3개는 필수요소 중에서도 꼭 필요한 것들
     
     - Parameter file
