@@ -31,7 +31,9 @@
             - 다중화를 하려고 한다면 디스크 공간을 다르게 두어서 저장하는 것이 좋다. 
         - 정보 조회 : v$controlfile 
     - Redolog files 
-        - ㅇㅇㅇ
+        - DB에서 발생된 변경작업(DDL,DML,DCL)의 로그 정보(Redo data)가 기록된 곳 
+        - 주 목적 : Datafile Recovery(데이터 파일 복구) 
+        - 날아간 기간동안 일어난 변경작업 목록을 읽어서 다시 진행하는 것으로 복구를 진행할 수 있다. 
     <br> // 위의 3개는 필수요소 중에서도 꼭 필요한 것들
     
     - Parameter file
