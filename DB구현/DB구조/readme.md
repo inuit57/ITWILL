@@ -37,6 +37,7 @@
         - 순환형으로 관리된다. 
             - 한 Redo log group에 log가 가득찰 경우, 다른 Redo log group으로 넘어간다.
             - 만약 모든 Redo log group에 log가 가득찰 경우, 제일 처음 작성한 Redo log group에 덮어쓰면서 작성한다. 
+            - 보관 기간을 늘이고 싶다면 Redo log group의 갯수를 늘이거나 크기를 늘이는 수 밖에 없다. (영구보관은 불가능)
         - DB당 최소 2개 이상의 Redo log group이 존재해야 한다.
         - Redo log group에는 최소 1개 이상의 member가 존재해야 한다. 
 
