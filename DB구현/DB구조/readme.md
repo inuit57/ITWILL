@@ -8,9 +8,17 @@
 
 
 ### Database 물리적 구조
-- 필수 요소들이 갖춰져야만 DB가 생성되었다고 볼 수 있다.
+#### 필수 요소
 - Data files : 실제 데이터 파일들이 저장된 공간
+- Control file
+- Redolog files
 
+- Parameter file
+- Password file
+
+#### 옵션 요소
+- Archived log files
+- 이외에도 많지만 이것 정도만 기억하기
 
 ### 인스턴스 구조
 - SGA 라는 메모리 구조와 여러 개의 background 프로세스로 구성되어있다.
