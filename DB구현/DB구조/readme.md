@@ -17,10 +17,14 @@
         -  Datafile 정보 조회 : v$datafile , v$tempfile 테이블을 조회하기.
             -  select name, bytes from v$datafile ; // 이름, 크기 조회
             -  select name from v$tempfile ; //  v$tempfile : 임시데이터가 저장되는 공간
+    
     - Control file 
-        - 
+        - DB의 무결성을 유지/관리할 수 있는 모든 동기화 정보가 기록된 곳
+          (DB의 논리적/물리적 구조 정보, 마지막 작업 번호 등등 ) 
+        - 또 하나의 작은 DB라고 봐도 될 정도로 많은 정보를 가지고 있다.
+          (Control file 없이 DB를 운영하는 것은 불가능할 정도)
     - Redolog files 
-        - 
+        - ㅇㅇㅇ
     <br> // 위의 3개는 필수요소 중에서도 꼭 필요한 것들
     
     - Parameter file
