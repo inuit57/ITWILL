@@ -37,7 +37,7 @@
         - 순환형으로 관리된다.
         - DB당 최소 2개 이상의 Redo log group이 존재해야 한다.
         - Redo log group에는 최소 1개 이상의 member가 존재해야 한다. 
-    <br> // 위의 3개는 필수요소 중에서도 꼭 필요한 것들
+
     
     - Parameter file
     - Password file
