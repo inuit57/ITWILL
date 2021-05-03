@@ -11,9 +11,10 @@
 
 - 필수 요소
     - Data files : 실제 데이터 파일들이 저장된 공간
-    - Control file
-    - Redolog files
-
+    - Control file :
+    - Redolog files :
+    <br> // 위의 3개를 Big 3라고 해서 꼭 필요한 것들이라고 말한다.
+    
     - Parameter file
     - Password file
 
