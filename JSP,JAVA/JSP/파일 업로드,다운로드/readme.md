@@ -16,7 +16,7 @@
 - (가상 경로 : 외부에서 접근 가능한 폴더)
   - D:\workspace_jsp2\StudyJSP2\WebContent\upload
 - (실제 경로 : 외부에선 접근 불가능한 폴더)
-  - D:\workspace_jsp2\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\StudyJSP2\upload
+  - D:\workspace_jsp2\.metadata\.plugins\ **org.eclipse.wst.server.core** \tmp0\wtpwebapps\StudyJSP2\upload
 
 - 참고 : [MIME 타입](https://developer.mozilla.org/ko/docs/Web/HTTP/Basics_of_HTTP/MIME_types) 
 
