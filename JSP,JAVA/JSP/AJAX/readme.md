@@ -14,7 +14,7 @@
 		$.ajax({
 			url: "전송페지이(form태그의 action 페이지)" ,
 			type: "전송방식(get/post)",
-			data: "전송할 데이터", 
+			data: {key :"value" , ...},  //전송할 데이터
 			dataType:"요청한 데이터타입(페이지 갔다왔을 때 데이터타입)",
 					 "(html, xml, json, text .... )" , 
 			success:  function(result){ // result : 페이지 갔다왔을 때 가져올 데이터가 들어있다. 
