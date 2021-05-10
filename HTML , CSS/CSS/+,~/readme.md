@@ -3,9 +3,13 @@
 
 - 예)
 ```
+<!-- 아래의 태그는 모두 형제다. -->
 <div class="n01">n01</div>
 <div class="n02">n02</div>
 <div class="n03">n03</div>
+<b class="b01"> b01 </b>
+<b class="b02"> b02 </b>
+
 ```
 
 ## +
