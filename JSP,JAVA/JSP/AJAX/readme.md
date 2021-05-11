@@ -4,6 +4,7 @@
 - https://jsonformatter.curiousconcept.com/#
 - 잘 찾아보면 다른 형태로 바꿔주는 것도 있다. 
 
+## 사용법 
 ```
 // 비동기방식 처리 
 		// Ajax (Asynchronous JavaScript And XML)
@@ -35,6 +36,23 @@
 			}
 			
 		}); 
+```
+
+## 보낸 데이터를 받는 법
+```
+
+//Ajax로 데이터를 {key : "value"} 형태로 보냈을 경우. 
+
+String value = request.getParameter("key"); 
+//이런 식으로 각각의 key마다 getParameter를 써서 받아오면 된다. 어렵지 않다. 
+
+```
+
+## JSON 형태로 보내주기 
+```
+1) 상단에 test/html 되어있는 것을 application/json 으로 변경
+2) <% %> 으로 내부적으로 잘 처리하기
+3) <%=JSON 객체 %> 하는 식으로 아래에 찍어주기 
 ```
 
 ## JSON-simple 
