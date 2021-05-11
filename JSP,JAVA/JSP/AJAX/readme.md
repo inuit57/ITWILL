@@ -1,3 +1,7 @@
+## JSON 문법 체크
+- https://jsonlint.com/
+- JSON은 문법 틀리면 이도 저도 안되니까 한번 이런 걸로 검사해보는 것도 좋다. 
+
 ```
 // 비동기방식 처리 
 		// Ajax (Asynchronous JavaScript And XML)
