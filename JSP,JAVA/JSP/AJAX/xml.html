@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	
+		$.ajax({
+			url:"xml.jsp",
+			type: "post", 
+			success: function(data) {
+				
+				console.log(data); 
+				
+				// 데이터 가져왔을 때 person 태그 정보를 사용해서 화면에 출력
+				$(data).find("person").each(function(){
+					// person 태그에 있는 정보를 가져와서 화면에 출력
+					
+					console.log($(this).find('name').text());
+					var name = $(this).find('name').text(); 
+					var gender = $(this).find('gender').text();
+					var hobby = $(this).find('hobby').text();
+					
+					// 화면에 출력 
+					$("body").append(name+" "+gender+" "+hobby+"<br>"); 
+					
+				}); 
+			}
+		})
+		
+	});
+</script>
+
+</head>
+<body>
+<h1>xml.html</h1>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// 비동기방식 처리 
+		// Ajax (Asynchronous JavaScript And XML)
+		// -> 비동기 방식의 javascript , xml
+		
+		// * xml : 데이터 타입 - 데이터를 태그의 형태로 저장 , 의미 단위로 되어있다. 옛날방식->JSON으로 발전
+		// * 비동기 방식 : 화면 전환 없이 클라이언트,서버 간에 데이터를 교환하는 방식 
+		// => 페이지 이동횟수 감소 , 깔끔한 동작의 구현 
+		// => 페이지 이동 O (화면에 표시 X) , 한 페이지에 여러 개의 비동기방식은 처리효율이 떨어질 수 있다.
+		
+		//$.ajax() : 비동기방식의 페이지 이동을 하는 함수 
+		
+/*
+		$.ajax({
+			url: "전송페지이(form태그의 action 페이지)" ,
+			type: "전송방식(get/post)",
+			data: "전송할 데이터", 
+			dataType:"요청한 데이터타입(페이지 갔다왔을 때 데이터타입)",
+					 "(html, xml, json, text .... )" , 
+			success:  function(result){ // result : 페이지 갔다왔을 때 가져올 데이터가 들어있다. 
+				//페이지 이동 성공시 실행되는 코드 
+				
+			}, 
+			error: function(){
+				// 페이지 이동 실패 시에 실행하는 코드 
+			}, 
+			complete: function(){
+				//ajax가 완전히 실행된 이후 실행하는 코드 
+			}
+			
+		}); 
+*/
+		
+		$.ajax('string1.jsp' , {
+			success: function (result) {
+				console.log(result); // html 코드만 가지고 돌아왔다.
+				
+				$("body").append(result);
+				//alert("정상처리 완료!");
+			}
+		});
+		
+		
+		
+		
+		
+	});
+</script>
+</head>
+<body>
+	<h1>string.html</h1>
+
+</body>
+</html>

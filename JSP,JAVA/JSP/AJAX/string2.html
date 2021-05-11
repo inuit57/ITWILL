@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+		// 비동기 방식으로 string2.jsp 페이지에 데이터 전달
+		
+		// 주소줄에 표시는 되지 않지만 데이터 주고 받기가 된다. 
+		
+		var myNmae="아이티윌"; 
+		$.ajax({
+			url:"string2.jsp",
+			type: "post", 
+			data: {name:myNmae , age:20} , //데이터 전송시에 {}로 감싸서 보내기 
+			success: function(data) {
+				//alert("비동기 처리 완료"); 
+				//alert(data);
+				$("#test").val(data);
+			}
+		})
+		
+	});
+</script>
+
+</head>
+<body>
+
+<h1>string2.html</h1>
+
+<input type="text" id="test">
+
+
+</body>
+</html>
