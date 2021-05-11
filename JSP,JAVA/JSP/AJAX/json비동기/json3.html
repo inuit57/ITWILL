@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="../js/jquery-3.6.0.js"></script>
+<script type="text/javascript">
+
+	//비동기 방식으로 처리가능.
+	$(document).ready(function(){
+		$.getJSON('json3.jsp' , function (data) {
+			
+			$.each(data, function(index,item ){
+				var t = ""; 
+				t+="<tr>"; 
+				t+="<td>"+ item.id +"</td>";
+				t+="<td>"+ item.name +"</td>"; 
+				t+="<td>"+ item.email +"</td>";
+				t+="</tr>"; 
+				$('table').append(t);
+			})
+		})
+	})
+</script>
+</head>
+<body>
+
+
+<table border="1">
+	<tr>
+		<td>ID</td>
+		<td>name</td>
+		<td>email</td>
+	</tr>
+</table>
+</body>
+</html>
