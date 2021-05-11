@@ -31,6 +31,12 @@
 		}); 
 ```
 
+## JSON-simple 
+- https://code.google.com/archive/p/json-simple/downloads
+- 1.1.1 버전 jar 파일을 다운받아서 프로젝트에 넣어주면 된다. 
+
+
+
 ## 추가로 공부할 것
 - form 에 있는 데이터들을 ajax로 한번에 던져주는 방법
 - 가져갈 데이터를 주는 방법?
