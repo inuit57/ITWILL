@@ -2,6 +2,10 @@
 국비교육 배운 거 정리
 
 
+## [AJAX](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSP/AJAX)
+
+## [JQuery](https://jquery.com/)
+
 # Javascript 정보 찾기 좋은 사이트 
 : https://ko.javascript.info/ <br>
 각종 문법 등을 확인 가능. 한글화됨.  <br>
