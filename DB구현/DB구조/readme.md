@@ -109,6 +109,14 @@
             - 여기에서 hit 되면 정보수집 과정이 skip 된다.  
             - 불필요한 쿼리구문을 날리지 않는 것이 성능향상에 도움이 된다. 
     - DB Buffer Cache
+        - Data Block 이 저장되어 있다. 
+        ```
+        참고 : DB Block.
+            DB 생성할 시에 {2,4,7,16,32}K 중에서 DB block 크기를 설정한다.(이후 변경 불가)
+            보통 중간 크기에 해당되는 8K 로 설정한다. 
+        ```
+        - 쿼리 작업에 필요한 행이 있는 block이 있는지 먼저 찾아본다. 
+        - 있다면 hit 되고 넘어간다. 만약 없다면 Data dictionary Cache에서 정보수집한 것을 바탕으로 Datafiles 에서 찾아온다.
     - Redo Log Buffer   
 - 옵션 요소 (알고만 있자) 
     - Streams Pool
