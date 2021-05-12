@@ -48,6 +48,7 @@
         - instance정의 정보가 기록된 곳 ( SGA 할당 정보 등 ) 
         - DB의 여러 설정 정보가 기록된 곳 , 반드시 하나만 존재하는 파일.(위치도 고정)
         - 위치 : $ORACLE_HOME/dbs ( $ORACLE_HOME : Oracle Software가 설치된 물리적인 경로)
+            - cd $ORACLE_HOME 해서 이동 가능. 
         - 이름 : spfile{SID}.ora  (ex / spfileorc1.ora ) 
     - Password file
 
