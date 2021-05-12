@@ -77,6 +77,8 @@
 - SGA 라는 메모리 구조와 여러 개의 background 프로세스로 구성되어있다.
 - 모든 작업은 SGA 라는 메모리 구조에서 이뤄진다. (select , insert 등등)
 
+- SQL 실행 속도(응답속도) = 실행계획(Library cache) + 정보수집(Data dictionary cache) + 실행 
+
 ### SGA : 실제 작업공간
 - 필수 요소
     - Shared Pool
@@ -94,6 +96,13 @@
             - 여기에서 hit가 많이 발생할 수록 응답속도가 빨라져서 좋다. 
             - 그래서 hit를 많이 발생할 수 있도록 관리해줘야 한다. 
         2) Data dictionary cache  
+            - 최근에 사용된 DB 정의 정보가 저장된 곳 
+            ``` 
+            예) object, user, file , 제약조건 , 권한  등등 
+            ```
+            - Datafiles 에서 가져온 것을 저장해놓는다. 
+            - LRU 알고리즘으로 관리 
+            - 여기에서 hit 되면 정보수집 과정이 skip 된다.  
     - DB Buffer Cache
     - Redo Log Buffer   
 - 옵션 요소 (알고만 있자) 
