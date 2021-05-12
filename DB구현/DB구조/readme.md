@@ -50,7 +50,13 @@
         - 위치 : $ORACLE_HOME/dbs ( $ORACLE_HOME : Oracle Software가 설치된 물리적인 경로)
             - cd $ORACLE_HOME 해서 이동 가능. 
         - 이름 : spfile{SID}.ora  (ex / spfileorc1.ora ) 
+        - 이진파일로 되어있으므로 읽거나 수정하려고 하지 말 것. (자동생성 관리되는 파일) 
     - Password file
+        -  DB를 시작/종료할 수 있도록 인증해주는 곳 
+        -  Parameter file과 마찬가지로 하나만 존재하는 파일
+        -  위치 : $ORACLE_HOME/dbs ( $ORACLE_HOME : Oracle Software가 설치된 물리적인 경로)
+        -  이름 : orapw{SID} (ex / orapworc1 ) , 확장자는 따로 없다. 
+        
 
 - 옵션 요소
     - Archived log files
