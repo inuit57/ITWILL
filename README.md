@@ -18,3 +18,5 @@
 
 # Database
 - Oracle 
+
+## [Data Dictionary](https://github.com/inuit57/ITWILL/tree/main/Database/Data%20Dictionary#%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C)
