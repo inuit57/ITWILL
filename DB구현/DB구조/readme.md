@@ -79,7 +79,21 @@
 
 ### SGA : 실제 작업공간
 - 필수 요소
-    - Shared Pool 
+    - Shared Pool
+        1) Library cache 
+            - 최근에 실행된 SQL과 실행계획이 저장된 곳
+            - 대소문자, 공백까지 일치해야 hit 된다. 
+            ```
+             예를 들어서 
+             select * from emp where emp_id = 100 ; 
+             SELECT * FROM EMP WHERE EMP_ID = 100 ; 
+             결과값은 동일한 쿼리 구문 2개이지만 대소문자를 구분하기 때문에 hit되지 않는다.
+             따라서 가능하다면 개발자들끼리 쿼리 작성할 때 규칙을 정하고 사용하는 것이 좋다. 
+             ```
+             
+            - 여기에서 hit가 많이 발생할 수록 응답속도가 빨라져서 좋다. 
+            - 그래서 hit를 많이 발생할 수 있도록 관리해줘야 한다. 
+        2) Data dictionary cache  
     - DB Buffer Cache
     - Redo Log Buffer   
 - 옵션 요소 (알고만 있자) 
