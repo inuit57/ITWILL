@@ -20,3 +20,5 @@
 - Oracle 
 
 ## [Data Dictionary](https://github.com/inuit57/ITWILL/tree/main/Database/Data%20Dictionary#%EA%B5%AC%EC%84%B1%EC%9A%94%EC%86%8C)
+
+## [DB 구조] (https://github.com/inuit57/ITWILL/tree/main/DB%EA%B5%AC%ED%98%84/DB%EA%B5%AC%EC%A1%B0#db-%EA%B5%AC%EC%A1%B0)
