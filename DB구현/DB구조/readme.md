@@ -35,7 +35,7 @@
         - 주 목적 : Datafile Recovery(데이터 파일 복구) 
             - 날아간 기간동안 일어난 변경작업 목록을 읽어서 다시 진행하는 것으로 복구를 진행할 수 있다. 
         - 순환형으로 관리되고 다중화 기능을 제공한다. (다중화 갯수에 제한없음)
-            - 한 Redo log group에 log가 가득찰 경우, 다른 Redo log group으로 넘어간다.
+            - 한 Redo log group에 log가 가득찰 경우, 다른 Redo log group으로 넘어간다. (이를 log switch라고 부른다.) 
             - 만약 모든 Redo log group에 log가 가득찰 경우, 제일 처음 작성한 Redo log group에 덮어쓰면서 작성한다. 
             - 보관 기간을 늘이고 싶다면 Redo log group의 갯수를 늘이거나 크기를 늘이는 수 밖에 없다. (영구보관은 불가능)
         - DB당 최소 2개 이상의 Redo log group이 존재해야 한다.
@@ -60,6 +60,11 @@
 
 - 옵션 요소
     - Archived log files
+        - redolog file 과 관련된 파일 , redolog 파일은 순환형 구조라서 앞 내용이 덮어씌워지면 복구가 불가능한 부분이 발생한다.
+        - 이를 log switch라고 부르는데, Archved log file을 운영할 경우, 덮어쓰기 전에 redolog file 내용을 복사해서 만들어놓는다.
+        - 이렇게 만들어진 log file들은 삭제하기 전까지 계속 남아있는다. 메모리를 좀더 사용하는 방법이지만 보다 오래된 기록에 대한 복구가 가능하다. 
+ 
+        - 옵션이기에 운영을 해도 되고 안해도 된다. ( 안한다면 redolog file만 사용하겠다.) 
     - 이외에도 많지만 이것 정도만 기억하기
 
 ## 인스턴스 구조
