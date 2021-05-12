@@ -118,6 +118,8 @@
         - 쿼리 작업에 필요한 행이 있는 block이 있는지 먼저 찾아본다. 
         - 있다면 hit 되고 넘어간다. 만약 없다면 Data dictionary Cache에서 정보수집한 것을 바탕으로 Datafiles 에서 찾아온다.
     - Redo Log Buffer   
+        - DB에서 발생된 변경 작업의 log 정보가 기록되는 곳 
+        - 순환형으로 관리된다. 
 - 옵션 요소 (알고만 있자) 
     - Streams Pool
     - Large Pool
