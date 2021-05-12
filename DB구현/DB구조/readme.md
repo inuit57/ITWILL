@@ -45,6 +45,8 @@
             - select group# , member from v$logfile order by group# ; // 이렇게 조회할 경우 member의 파일 위치를 확인가능하다. 
     - ----
     - Parameter file
+        - instance정의 정보가 기록된 곳 ( SGA 할당 정보 등 ) 
+        - DB의 여러 설정 정보가 기록된 곳 
     - Password file
 
 - 옵션 요소
