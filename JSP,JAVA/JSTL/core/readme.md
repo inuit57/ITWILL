@@ -22,12 +22,12 @@
 	<c:set var="num3" value="100" />
 	<c:set var="num4" value="200" />
   
-  <!--  
-		데이터 공유가 가능한 내장객체 : page , request, session , application.
-		
-		JSTL 변수 선언 -> jsp 내장 객체 속성(attribute) 선언과 동일하다.
-		기본적으로 page (pageContext) 에  저장된다.  
-	-->
+<!--  
+	데이터 공유가 가능한 내장객체 : page , request, session , application.
+
+	JSTL 변수 선언 -> jsp 내장 객체 속성(attribute) 선언과 동일하다.
+	기본적으로 page (pageContext) 에  저장된다.  
+-->
 ```
 
 ## 다른 영역에 속성 저장 및 전송 
