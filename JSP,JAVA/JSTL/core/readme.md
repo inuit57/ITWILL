@@ -43,12 +43,20 @@ ${ price + 1000  }
   알아서 형변환해서 적절한 사용형태로 만들어서 출력해준다. 
 -->
 ```
+## 속성 삭제 
+```
+<!-- 속성명은 동일한 이름 사용하지 말 것, 항상 생성/삭제시에는 scope를 명시해줄 것-->
+<c:remove var="model" scope="request"/>
+```
+
 ## 참고 : 다른 페이지로 데이터 전송
 ```
  <!--  request 영역의 데이터를 전달하기 위해서 
 	 		액션태그(forward) 사용
 	 		* 주소는 변경 X (set1.jsp) , 화면은 변경 O ( set2.jsp) 
 	 		추가로 request, response 객체 정보 전달 
-	  -->
-	<jsp:forward page="set2.jsp"/>
+ -->
+<jsp:forward page="set2.jsp"/>
  ```
+ 
+ 
