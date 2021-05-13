@@ -2,7 +2,7 @@
 ```
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> 
 
-상단에 taglib를 등록해줄 것. 
+<head>위에 taglib를 등록해줄 것. 
 ```
 
 ## 출력
