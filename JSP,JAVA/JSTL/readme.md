@@ -17,6 +17,8 @@ ${ 코드 작성 }
 
 ## JSTL ( JSP Standard Tag Library )
 : jsp 에서 자주 사용하는 기능을 모아놓은 태그
+
+### [core](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSTL/core#%EC%82%AC%EC%A0%84-%EC%A4%80%EB%B9%84)
 ```
 - 자카르타 회사에서 제공하는 커스텀 태그 라이브러리 
 
