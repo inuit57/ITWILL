@@ -136,6 +136,7 @@
         - 커밋 발생 시 Redo log buffer의 로그정보를 Redolog file로 기록함
    - CKPT(check point) 
         - 체크 포인트 발생 시 DBWR에게 알려주는 역할.
+        - Datafile Header와 Controlfile에 마지막 체크 포인트 번호 갱신함
 - 옵션 요소
     - ARC (Archive)
     - 이외에도 많다.  
