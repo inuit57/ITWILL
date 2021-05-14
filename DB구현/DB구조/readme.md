@@ -139,4 +139,6 @@
         - Datafile Header와 Controlfile에 마지막 체크 포인트 번호 갱신함
 - 옵션 요소
     - ARC (Archive)
+        - DB가 Archive log mode 일 때 활성화된다. (아닐 경우 비활성화된다.)
+        - Redo logfiles에서 log switching이 발생할 때마다 Archived log file을 생성한다. 
     - 이외에도 많다.  
