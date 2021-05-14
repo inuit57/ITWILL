@@ -126,8 +126,10 @@
     - Java Pool 
 ### Background Process
 - 필수 요소
-   - PMON
-   - SMON
+   - PMON ( Process Monitor ) 
+        - User Process Fail 발생시, 현재 진행 중이던 트랜젝션 rollback 및 선점하고 있던 자원/Lock 해제 
+   - SMON (System Monitor)
+        - Instance Fail (= DB 비정상 종료 ) 발생 후 DB 재시작 시 동기화 작업을 진행해준다.
    - DBWR(DB writer)
    - LGWR(log writer)
    - CKPT(check point) 
