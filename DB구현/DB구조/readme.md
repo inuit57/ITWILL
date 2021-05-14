@@ -133,9 +133,9 @@
    - DBWR(DB writer)
         -  체크 포인트 발생시 DB buffer Cache의 dirty block을 Datafile로 기록함
    - LGWR(log writer)
-        - 커밋 발생 시 Redo log buffer의 로그정보를 Redolog file로 
+        - 커밋 발생 시 Redo log buffer의 로그정보를 Redolog file로 기록함
    - CKPT(check point) 
-        - 
+        - 체크 포인트 발생 시 DBWR에게 알려주는 역할.
 - 옵션 요소
     - ARC (Archive)
     - 이외에도 많다.  
