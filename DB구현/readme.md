@@ -10,3 +10,7 @@
   - 이렇게 하면 현재 터미널 창에서만 DB명을 바꿀 수 있다.
   - .bash_profile 안에 있는 SID는 바뀌지 않는다. (여기에 설정하면 계속 Default DB를 그것으로 지정한다.) 
 - 이후로 접속하는 것은 동일하게 진행. 
+```
+select name from v$database; 
+현재 DB명 확인
+```
