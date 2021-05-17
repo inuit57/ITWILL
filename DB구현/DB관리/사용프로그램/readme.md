@@ -20,8 +20,10 @@
 - 웹 브라우저 환경의 Tool 
 - DB 관리를 도와주는 프로그램
 - DBA
+```
 - 주소 : https://localhost:1158/em 
-                ↑            ↑    
-                ↑          DB의 port#
+                  ↑         ↑    
+                  ↑        DB의 port#
               DB가 존재하는 
             Server의 Host명 또는 IP주소
+```
