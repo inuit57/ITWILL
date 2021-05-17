@@ -14,3 +14,7 @@
       - memory : 현재 DB에만 적용, spfile에는 변경X. DB 재시작시 파일에 있던 원래 값으로 되돌아간다.
       - both : 현재 DB와 spfile 모두에 변경내용을 적용하겠다. 
       - spfile : 현재 DB에는 적용X , spfile에만 적용. DB 재시작 시 적용된다.
+
+- EM
+  - Configuration > Initialize Parameters 
+  - 
