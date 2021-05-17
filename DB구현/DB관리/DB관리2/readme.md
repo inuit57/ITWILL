@@ -17,4 +17,4 @@
 
 - EM
   - Configuration > Initialize Parameters 
-  - 
+  - GUI 환경을 보면서 진행하면 된다. 
