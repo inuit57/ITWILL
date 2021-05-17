@@ -21,6 +21,8 @@
 	-->
 	<c:set var="num3" value="100" />
 	<c:set var="num4" value="200" />
+	
+	<c:set var="num4" value="${requestScope.memberList[0]  }" />
   
 <!--  
 	데이터 공유가 가능한 내장객체 : page , request, session , application.
@@ -60,3 +62,25 @@ ${ price + 1000  }
  ```
  
  
+## c:foreach
+- begin : 시작하는 지점
+- end : 끝나는 지점
+- step : 한 번에 증가하는 수치 
+- begin + step을 매번 반복한 숫자가 end보다 크거나 같아지면 종료. 
+
+### JSTL+EL 표현식 반복문
+```
+   <c:forEach begin="1" end="5" step="1" var="i">
+      <h2> ${i } </h2>
+   </c:forEach>
+```
+
+### 토큰 기준 반복문
+- items : 잘라먹을 문장
+- delims : 자르는 기준이 되는 토큰
+- var : 하나 자른 것을 넣어줄 대상
+```
+   <c:forTokens var="data" items="a.b.c.d.e.f.g.h.i.j" delims=".">
+          반복코드! ${data }<br>  
+   </c:forTokens>
+```
