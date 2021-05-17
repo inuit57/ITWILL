@@ -2,16 +2,21 @@
 - DB가 시작될 때 어떤 순서로 진행되는지에 대해서 서술한다. 
 - DB 상태를 조회하는 쿼리
 ```
-select status from v$instance ; 
+   select status from v$instance ; 
 ```
 - 상태 확인(status)
    - started (= nomount)
    - mounted 
    - open
-- DB 종료시키는 쿼리
+- DB 종료 : 종료 명령어가 입력된 상태 이후로는 추가적인 DB 접속을 허용하지 않는다.
 ```
-shut immediate
+   shut immediate
 ```
+   - shutdown abort : 비정상 종료 , 남아있는 세션이나 트랙젝션들을 기다리지 않고 모두 종료시킨다. 
+   - ---
+   - shutdown immediate : 
+   - shutdwon transactional : 
+   - shutdown normal : 
 
 ## &lt; Shutdown > 
 - DB가 꺼져있는 상태 
