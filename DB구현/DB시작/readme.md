@@ -9,10 +9,12 @@
    - mounted 
    - open
 - DB 종료 : 종료 명령어가 입력된 상태 이후로는 추가적인 DB 접속을 허용하지 않는다.
+   - shut이라고 줄여서 사용해도 동일하다.  
    - 정상종료
-      - shutdown immediate : 현재 진행중인 SQL을 모두 stop 시키고, 트랜젝션은 전부 rollback, 유저 접속종료를 기다리지 않고 종료시킨다.
-      - shutdwon transactional : 진행 중인 트랜젝션이 있다면 그것이 종료될 때까지 기다린 후 종료한다. (새로 트랜젝션을 추가X)
-      - shutdown normal(default) : 유저들이 연결종료를 할 때까지 기다린 후 종료합니다. 
+      - shutdown immediate : 현재 진행중인 SQL을 모두 stop 시키고, 트랜젝션은 전부 rollback,<br>
+                             유저 접속종료를 기다리지 않고 종료시킨다.
+      - shutdwon transactional : 진행 중인 트랜젝션이 있다면 그것이 종료될 때까지 기다린 후 종료한다. <br>(새로 트랜젝션을 추가X)
+      - shutdown [normal(default)] : 유저들이 연결종료를 할 때까지 기다린 후 종료합니다. <br> normal은 생략해도 된다.
     - shutdown abort : 비정상 종료 (강제종료) , 남아있는 세션이나 트랙젝션들을 기다리지 않고 모두 종료시킨다. 
 
 ## &lt; Shutdown > 
