@@ -1,6 +1,15 @@
 # 개요
 - DB가 시작될 때 어떤 순서로 진행되는지에 대해서 서술한다. 
-
+- DB 상태를 조회하는 쿼리
+```
+select status from v$instance ; 
+```
+  - started (= nomount)
+  - 
+- DB 종료시키는 쿼리
+```
+shut immediate
+```
 
 ## &lt; Shutdown > 
 - DB가 꺼져있는 상태 
