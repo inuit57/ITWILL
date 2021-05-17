@@ -9,14 +9,11 @@
    - mounted 
    - open
 - DB 종료 : 종료 명령어가 입력된 상태 이후로는 추가적인 DB 접속을 허용하지 않는다.
-```
-   shut immediate
-```
-   - shutdown abort : 비정상 종료 , 남아있는 세션이나 트랙젝션들을 기다리지 않고 모두 종료시킨다. 
-   - ---
-   - shutdown immediate : 
-   - shutdwon transactional : 
-   - shutdown normal : 
+   - 정상종료
+      - shutdown immediate : 
+      - shutdwon transactional : 
+      - shutdown normal : 
+    - shutdown abort : 비정상 종료 , 남아있는 세션이나 트랙젝션들을 기다리지 않고 모두 종료시킨다. 
 
 ## &lt; Shutdown > 
 - DB가 꺼져있는 상태 
