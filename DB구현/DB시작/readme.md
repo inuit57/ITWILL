@@ -4,8 +4,10 @@
 ```
 select status from v$instance ; 
 ```
-  - started (= nomount)
-  - 
+- 상태 확인(status)
+   - started (= nomount)
+   - mounted 
+   - open
 - DB 종료시키는 쿼리
 ```
 shut immediate
