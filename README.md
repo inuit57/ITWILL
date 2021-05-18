@@ -6,6 +6,20 @@
 
 ----
 # JSP
+```
+하나의 jsp 페이지에서 실행되지만 각각이 실행되는 공간과 순서가 다름
+	
+	서버에서 실행 : 스크립틀릿, jstl , el 
+	클라이언트(브라우저)에서 실행 : js 
+	
+	* 코드 실행 순서 
+	- JSP (java) 
+	- JSTL / EL 
+	- html 
+	- JavaScript 
+	
+	```
+
 ## [서블릿](https://github.com/inuit57/ITWILL/blob/main/JSP,JAVA/JSP/servlet/readme.md#%EC%84%9C%EB%B8%94%EB%A6%BF)
 ## [JSTL](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSTL#%EA%B0%9C%EC%9A%94)
 ## [AJAX](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSP/AJAX)
