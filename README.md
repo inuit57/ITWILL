@@ -1,5 +1,8 @@
 # ITWILL
 국비교육 배운 거 정리
+-----
+# JAVA 
+## [쓰레드](https://github.com/inuit57/ITWILL/blob/main/JSP,JAVA/JAVA/%EC%93%B0%EB%A0%88%EB%93%9C/readme.md#%EC%93%B0%EB%A0%88%EB%93%9C)
 
 ----
 # JSP
