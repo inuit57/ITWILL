@@ -31,3 +31,20 @@
 		     주소끝이 .t2로 끝나기만 하면 OK	-->
 	</servlet-mapping>
 ```
+
+## forwrading 방식 처리 
+```
+public class TestServlet2 extends HttpServlet{
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+		System.out.println("get방식 호출");
+				
+		// 값을 담아줍니다. 여기에서 전달할 값을. 
+		
+		RequestDispatcher dis = req.getRequestDispatcher("/el/array_collection.jsp"); 
+		dis.forward(req, resp); 
+	}
+}
+```
