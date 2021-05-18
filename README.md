@@ -18,7 +18,7 @@
 	- html 
 	- JavaScript 
 	
-	```
+```
 
 ## [서블릿](https://github.com/inuit57/ITWILL/blob/main/JSP,JAVA/JSP/servlet/readme.md#%EC%84%9C%EB%B8%94%EB%A6%BF)
 ## [JSTL](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSTL#%EA%B0%9C%EC%9A%94)
