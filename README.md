@@ -19,7 +19,7 @@
 	- JavaScript 
 	
 ```
-
+## [MVC 패턴](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSP/Model2#model2-%EB%B0%A9%EC%8B%9D%EC%9D%98-%EA%B0%9C%EB%B0%9C)
 ## [서블릿](https://github.com/inuit57/ITWILL/blob/main/JSP,JAVA/JSP/servlet/readme.md#%EC%84%9C%EB%B8%94%EB%A6%BF)
 ## [JSTL](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSTL#%EA%B0%9C%EC%9A%94)
 ## [AJAX](https://github.com/inuit57/ITWILL/tree/main/JSP%2CJAVA/JSP/AJAX)
