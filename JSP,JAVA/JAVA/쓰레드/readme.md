@@ -37,3 +37,82 @@
 - Runable 인터페이스를 사용하는 방식 
   - Black Box Pattern
   - 실제 개발시에는 이 방식을 더 많이 사용한다. (캡슐화할 수 있기 때문)
+
+
+#### Thread 클래스 사용 
+```
+public class ThreadEx01 extends Thread{
+	public ThreadEx01(String name) {
+//		this.name = name;
+		super(name); 
+	}
+	// callback Method : 개발자가 아닌 JVM이 자동으로 호출해주는 메소드 
+	// 작업 스레드 객체들이 해야할 일을 구현해 놓을 콜백 메소드 
+	@Override
+	public void run() {
+		// run() 메서드는 무조건 하나만 만든다. 
+		int sum =0 ; 
+		for(int i =0 ; i< 5 ; i++) {			
+			// 작업 스레드 2개 중 현재 작업중인 작업 스레이드에게 1초간 휴식 주기 			
+			try {
+				sleep(1000); // 단위 : ms , 1초간 휴식 
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			sum+= i ; 
+			System.out.println(super.getName() + " : " + sum);
+		}
+	}
+	public static void main(String[] args) throws InterruptedException 
+		ThreadEx01 t1,t2; 
+		t1 = new ThreadEx01("1번"); 
+		t2 = new ThreadEx01("2번"); 
+	
+		// 총 쓰레드는 3개. 메인  , 작업 스레드 1,2번 
+		// start() : 
+		// 직접적으로 run() 을 호출하지는 않지만
+		// JVM에게 자식 스레드가 일할 준비가 되었으니
+		// JVM에게 run() 메소드를 호출하라는 의미
+		t1.start();
+		//t1.join(); // join을 쓰면 이게 다 된 다음에 진행하게 할 수 있다.
+		t2.start();
+		// 번갈아가면서 호출되고 있다는 것을 알 수 있다.
+		// 실행할 때마다 순서가 조금씩 달라진다. 
+	}
+}
+```
+
+#### Runnable 인터페이스 사용 
+```
+public class Test implements Runnable{
+	// run() 메소드를 오버라이딩 해줘야 한다. 
+	// 현재 스레드 이름을 저장할 변수 
+	String name ; 
+	public Test(String name) {
+		this.name = name ; 
+	}
+	@Override
+	public void run() {
+		int sum = 0 ; 
+		for(int i =0 ; i < 5; i++) {
+			try {
+				Thread.sleep(1000);
+				sum+= i ;
+				System.out.println(name + " : " + sum);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	public static void main(String[] args) {
+		Test t1, t2 ; 
+		t1 = new Test("첫번째 스레드"); 
+		t2 = new Test("두번째 스레드"); 
+		Thread tt1 = new Thread(t1);
+		Thread tt2 = new Thread(t2);
+		//이를 스레드화 작업이라고 한다. 
+		tt1.start();
+		tt2.start();
+	}
+}
+```
