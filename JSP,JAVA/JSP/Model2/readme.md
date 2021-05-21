@@ -34,5 +34,19 @@
 			(POJO - Plain Old Java Object : 순수 자바 파일)  
 		View - 화면/디자인 페이지 구성 (JSP 파일) 
 		Controller - 두 개의 파일을 연결 구성(Servlet 파일)
-	```
- 
+```
+	
+	
+### Controller , Action 처리
+- DB 부분 제외하면 Action, Forward , Controller 정도로 정리가 된다. 
+
+#### Controller (주소이동)
+- 주소줄에서 적절히 잘라서 forward 객체를 만들어서 페이지 주소 이동을 시켜준다. 
+- 만약 잘라낸 주소에 action이 있는 경우, action 객체를 만들고 action.execute() 함수를 호출.
+- execute() 함수의 리턴 값으로 들어온 forward 객체를 받아서 처리를 수행하도록 한다. 
+- 주소 이동은 무조건 여기에서 다 수행한다. 
+
+#### Action (DB 로직 처리) 
+- DB 처리를 수행한다. 
+- 처리한 뒤 Forward 객체를 리턴해준다. 
+- 주소가 바뀌어야 하는 경우, 여기 안에서 처리를 해준다. (그리고 바뀐 주소로 controller에 접근한다.) 
