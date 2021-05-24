@@ -18,4 +18,5 @@
 ### DB의 저장영역 추가하는 방법
 1. 새로운 Table Space를 생성 
 2. 기존 Table Space에 Datafile을 추가 
-3. 
+3. 기존 Datafile 의 size 늘이기
+4. Datafile 의 자동확장 기능 사용 
