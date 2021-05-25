@@ -19,7 +19,7 @@ public class MemberJoinAction implements Action {
 	// 3) 페이지 이동(컨트롤러가 이동할 준비 ) 
 	
 	@Override
-	public ActionFoward exectue(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : MemberJoinAction_execute() 호출!!");
 		
 		//전달된 정보 (파라미터 저장) 
@@ -42,7 +42,7 @@ public class MemberJoinAction implements Action {
 		
 		// 페이지 이동 (ActionForward 객체) 
 		
-		ActionFoward af = new ActionFoward(); 
+		ActionForward af = new ActionForward(); 
 		af.setPath("./MemberLogin.me");
 		af.setRedirect(true);
 		

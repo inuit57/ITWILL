@@ -11,7 +11,7 @@ import com.member.db.MemberDAO;
 public class MemberLoginAction implements Action {
 
 	@Override
-	public ActionFoward exectue(HttpServletRequest request, HttpServletResponse response) throws Exception {
+	public ActionForward execute(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		System.out.println("M : MemberLoginAction_execute() 실행");
 		
 		// 전달 정보 저장 (id, pass) 
@@ -48,7 +48,7 @@ public class MemberLoginAction implements Action {
 			HttpSession session = request.getSession();
 			session.setAttribute("id", id);
 			
-			ActionFoward forward = new ActionFoward(); 
+			ActionForward forward = new ActionForward(); 
 			
 			forward.setPath("./Main.me");
 			forward.setRedirect(true);

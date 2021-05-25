@@ -45,7 +45,7 @@ public class MemberFrontController extends HttpServlet{
 		/******************************2. 페이지 주소 매핑(연결) ********************************/
 		
 		// DB 사용 여부에 따라서 페이지 구성 
-		ActionFoward forward = null ; 
+		ActionForward forward = null ; 
 		Action action = null ; 
 		
 		if(command.equals("/MemberJoin.me")){
@@ -60,7 +60,7 @@ public class MemberFrontController extends HttpServlet{
 //			dis.forward(request,response); 
 			
 			System.out.println("2 : memberjoin 페이지 호출 되었습니다. \n\n");
-			forward = new ActionFoward();
+			forward = new ActionForward();
 			forward.setPath("./member/insertForm.jsp");
 			forward.setRedirect(false);
 		}else if ( command.equals("/MemberJoinAction.me")){
@@ -71,8 +71,7 @@ public class MemberFrontController extends HttpServlet{
 				
 				action = new MemberJoinAction(); 
 				
-				action.exectue(request, response); 
-				forward = action.exectue(request, response); 
+				forward = action.execute(request, response); 
 			}catch (Exception e) {
 				e.printStackTrace(); 
 			}
@@ -82,7 +81,7 @@ public class MemberFrontController extends HttpServlet{
 			// 화면을 보여주기 => view 페이지로 이동 
 			
 			 
-			forward = new ActionFoward(); 
+			forward = new ActionForward(); 
 			forward.setPath("./member/loginForm.jsp");
 			forward.setRedirect(false);
 			
@@ -93,9 +92,8 @@ public class MemberFrontController extends HttpServlet{
 			action = new MemberLoginAction(); 
 
 			try {
-				forward = action.exectue(request, response);
-				
-				
+				forward = action.execute(request, response);
+							
 			} catch (Exception e) {
 				e.printStackTrace();
 			} 
@@ -103,9 +101,52 @@ public class MemberFrontController extends HttpServlet{
 		}else if(command.equals("/Main.me")){
 			System.out.println("C : /Main.me 호출");
 			
-			forward = new ActionFoward(); 
+			forward = new ActionForward(); 
 			forward.setPath("./main/main.jsp");
 			forward.setRedirect(false);
+		
+		}else if (command.equals("/MemberLogout.me")){
+			System.out.println("C : /MemberLogout.me 호출");
+			
+			action = new MemberLogoutAction() ; 
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
+			
+		}else if(command.equals("/MemberInfo.me")){
+			System.out.println(" C : /MemberInfo.me 호출");
+			// DB 정보를 가져와서 view 페이지에 출력 
+			
+			action = new MemberInfoAction(); 
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
+		}else if (command.equals("/MemberUpdate.me")){
+			System.out.println("C: /MemberUpdate.me 호출");
+			
+			action = new MemberUpdateAction(); 
+			
+			try {
+				forward = action.execute(request, response);
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
+		}else if (command.equals("/MemberUpdatePro.me")){
+			System.out.println("C: /MemberUpdatePro.me 호출");
+			action = new MemberUpdateProAction(); 
+			
+			try {
+				forward = action.execute(request, response);
+			} catch (Exception e) {
+				e.printStackTrace();
+			} 
 		}
 		
 		

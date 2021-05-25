@@ -104,5 +104,61 @@ public class MemberDAO {
 		// 0 : 비밀번호 오류 
 		return check ; 
 	}
+
+	public MemberDTO getMember(String id) {
+
+		MemberDTO mdto = new MemberDTO() ; 
+		try {
+			
+			conn = getConnection(); 
+			String sql = "select * from itwill_member where id = ? ";
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			ResultSet rs = pstmt.executeQuery();
+			
+			if(rs.next()){
+				mdto.setAge(rs.getInt("age"));
+				mdto.setEmail(rs.getString("email"));
+				mdto.setGender(rs.getString("gender"));
+				mdto.setId(rs.getString("id"));
+				mdto.setName(rs.getString("name"));
+				mdto.setPass(rs.getString("pass"));
+				mdto.setReg_date(rs.getTimestamp("reg_date"));
+			}
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			dbClose();
+		}
+		return mdto ; 
+	}
+
+	public int updateMemeber(MemberDTO mdto) {
+
+		int result = idCheck(mdto.getId(), mdto.getPass()); 
+
+		if( result == 1){
+			try {
+				conn = getConnection(); 
+				String sql = "update itwill_member set name = ? ,age = ? , gender = ? , email=?";
+				PreparedStatement pstmt = conn.prepareStatement(sql);
+				pstmt.setString(1, mdto.getName());
+				pstmt.setInt(2, mdto.getAge());
+				pstmt.setString(3, mdto.getGender());
+				pstmt.setString(4, mdto.getEmail());
+				
+				pstmt.executeUpdate();
+			} catch (SQLException e) {
+				e.printStackTrace();
+				result = -1 ; 
+			} finally {
+				dbClose();
+			}
+		}
+		
+		return result ; 
+	}
 	
 }
