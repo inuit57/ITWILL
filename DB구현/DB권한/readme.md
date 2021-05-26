@@ -33,6 +33,10 @@ to demo
   - 예를 들어서 위의 경우, create session, create table 권한만 다른 유저에게 부여 가능.  
   - 부여받지 않은 다른 권한은 불가능. 
 
+- create session 은 DBA 만 부여가능
+- with admin option을 부여받은 유저가 다른 유저에게 with admin option을 부여하는 것 가능. 
+
+
 ##### System 권한 회수
 ```
 revoke create table from demo ; 
