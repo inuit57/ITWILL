@@ -22,15 +22,23 @@ DCL (데이터 제어어) : grant , revoke
 
 ##### System 권한 부여 
 ```
-Grant create session , create table, create sequence , create view
-to demo ; 
+Grant create session , create table
+to demo 
+{with admin option}; 
 ```
 - demo 에게 system 권한을 부여 
+- {with admin option} 
+  - 부여받은 권한을 다른 유저에게 부여할 수 있게 된다.
+  - 예를 들어서 위의 경우, create session, create table 권한만 다른 유저에게 부여 가능.  
+  - 부여받지 않은 다른 권한은 불가능. 
 
 ##### System 권한 회수
 ```
 revoke create table from demo ; 
 ``` 
+- 권한을 회수하더라도 with admin option으로 인하여
+ 추가로 부여하였던 권한들까지 연쇄적으로 회수하지는 않는다. 
+- revoke에서 with admin option을 회수할 수는 없다.  
 
 ### Object 권한 ( Object 소유자가 부여가능)
 - 어떤 Object에 대해서 부여할지를 on 절에 작성해줘야 한다. 
@@ -39,8 +47,15 @@ revoke create table from demo ;
 ```
 grant select , update 
 on employees
-to demo ; 
+to demo 
+{with grant option}; 
 ```
+- with grant option을 함께 줄 경우, 다른 유저에게 자신이 가진 권한을 부여가능. 
+  - 단, 이렇게 해서 권한을 부여하게 될 경우. on절에 작성할 때 원래 사용자명을 붙여서 사용해야 한다. 
+  ```
+  grant select on hr.employees 
+  to ford ; 
+  ```
 
 #### Object 권한 회수
 ```
