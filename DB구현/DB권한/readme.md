@@ -16,7 +16,7 @@ DCL (데이터 제어어) : grant , revoke
 - System 권한 : DB를 조작할 수 있는 권한 ( 소유자 : DBA ) 
 - Object 권한 : Object를 조작할 수 있는 권한 ( Object 소유자 ) 
 
-### System 권한 
+### System 권한 (DBA만 부여 가능)
 - DB를 조작할 수 있는 권한, System 권한의 종류는 100개 정도 된다. 
 - 모든 System 권한은 DBA 가 소유한다. 
 
