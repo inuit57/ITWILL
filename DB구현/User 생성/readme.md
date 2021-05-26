@@ -5,19 +5,19 @@
 
 ### 유저 생성 시 공간할당까지 해주는 법
 ```
-create user test3 
-identified by test3 
+create user [유저명]
+identified by [비밀번호]
 
-default tablespace inventory 
-temporary tablesapce temp 
-quota 30M on inventory ;  // 여기가 공간 할당 해주는 부분 
-quota 20M on users ; // 이런 식으로 quota 를 여러 번 사용해서 다른 tablespace의 공간을 할당해줄 수 도 있다.  
+default tablespace [테이블스페이스명1] // 기본으로 사용할 테이블 스페이스를 지정
+temporary tablesapce [테이블스페이스명]
+quota 30M on [테이블스페이스명1] // 여기가 공간 할당 해주는 부분 
+quota 20M on [테이블스페이스명2] ; // 이런 식으로 quota 를 여러 번 사용해서 다른 tablespace의 공간을 할당해줄 수 도 있다.  
 ```
 
 ### 할당량 변경해주기 
 ```
-alter user test1
-quota 20M on users ; 
+alter user [유저명]
+quota 20M on [테이블스페이스명] ; 
 ```
 
 ### Default TableSpace가 아닌 다른 곳에 만들기 
