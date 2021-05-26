@@ -31,3 +31,18 @@ to demo ;
 ```
 revoke create table from demo ; 
 ``` 
+
+### Object 권한 ( Object 소유자가 부여가능)
+- 어떤 Object에 대해서 부여할지를 on 절에 작성해줘야 한다. 
+
+#### Object 권한 부여 
+```
+grant select , update 
+on employees
+to demo ; 
+```
+
+#### Object 권한 회수
+```
+revoke create on employees from demo ; 
+```
