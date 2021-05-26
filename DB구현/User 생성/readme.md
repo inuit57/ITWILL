@@ -12,3 +12,9 @@ default tablespace inventory
 temporary tablesapce temp 
 quota 30M on inventory ;  // 여기가 공간 할당 해주는 부분 
 ```
+
+### 할당량 변경해주기 
+```
+alter user test1
+quota 20M on users ; 
+```
