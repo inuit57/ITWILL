@@ -64,5 +64,5 @@ to demo
 ```
 revoke create on employees from demo ; 
 ```
-- 권한을 회수하더라도 with grant option으로 인하여
- 추가로 부여하였던 권한들까지 연쇄적으로 회수하지는 않는다. 
+- 권한을 회수할 경우 with grant option으로 인하여
+ 추가로 부여하였던 권한들까지 <b> 연쇄적으로 회수된다.</b>
