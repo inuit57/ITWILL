@@ -28,6 +28,7 @@ to demo
 ```
 - demo 에게 system 권한을 부여 
 - {with admin option} 
+  - 옵션으로 작성해도 되고 안해도 된다.  
   - 부여받은 권한을 다른 유저에게 부여할 수 있게 된다.
   - 예를 들어서 위의 경우, create session, create table 권한만 다른 유저에게 부여 가능.  
   - 부여받지 않은 다른 권한은 불가능. 
@@ -50,7 +51,9 @@ on employees
 to demo 
 {with grant option}; 
 ```
-- with grant option을 함께 줄 경우, 다른 유저에게 자신이 가진 권한을 부여가능. 
+- with grant option
+  - 옵션으로 작성해도 되고 안해도 된다.  
+  - 다른 유저에게 자신이 가진 권한을 부여가능. 
   - 단, 이렇게 해서 권한을 부여하게 될 경우. on절에 작성할 때 원래 사용자명을 붙여서 사용해야 한다. 
   ```
   grant select on hr.employees 
@@ -61,3 +64,5 @@ to demo
 ```
 revoke create on employees from demo ; 
 ```
+- 권한을 회수하더라도 with grant option으로 인하여
+ 추가로 부여하였던 권한들까지 연쇄적으로 회수하지는 않는다. 
