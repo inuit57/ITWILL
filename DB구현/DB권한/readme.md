@@ -1,3 +1,17 @@
+
+
+## DCL 구문
+- grant : 권한을 부여
+- revoke : 권한을 회수 
+
+```
+(참고)
+DQL (데이터 질의어) : select 
+DML (데이터 조작어) : update, delete , insert , (merge) 
+DDL (데이터 정의어) : create , alter, drop , truncate 
+DCL (데이터 제어어) : grant , revoke 
+```
+
 ## 권한 유형
 - System 권한 : DB를 조작할 수 있는 권한 ( 소유자 : DBA ) 
 - Object 권한 : Object를 조작할 수 있는 권한 ( Object 소유자 ) 
