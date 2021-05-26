@@ -64,6 +64,8 @@ to demo
   to ford ; 
   ```
 
+- with grant option 을 부여받은 유저가 다른 유저에게 with grant option을 다시 부여하는 것도 가능. 
+
 #### Object 권한 회수
 ```
 revoke create on employees from demo ; 
