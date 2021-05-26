@@ -12,3 +12,8 @@ Grant create session , create table, create sequence , create view
 to demo ; 
 ```
 - demo 에게 system 권한을 부여 
+
+##### System 권한 회수
+```
+revoke create table from demo ; 
+``` 
