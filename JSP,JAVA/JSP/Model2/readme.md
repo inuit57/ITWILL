@@ -57,3 +57,41 @@
 DB 처리가 필요한 경우, Action(java)을 만들어서 DB 처리와 이동할 경로를 설정. 
 
 그렇지 않을 경우 그냥 바로 페이지 이동. 
+
+
+### Controller 구현 
+```
+// doGet() , doPost() 오버라이딩. 
+// 내부에서 doProcess() 호출하도록 만든다. 
+// 어떤 방식으로 하든 doProcess()에서 처리할 수 있도록 처리를 일원화. 
+
+	protected void doProcess(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException { 
+		System.out.println("AdminGoods_doProcess() 호출");
+		
+		/************* 1. 페이지 주소 파싱 *******************/
+		//가상주소 전체 가지고 오기 
+		String requestURI = req.getRequestURI(); 
+		System.out.println("requestURI : " + requestURI);
+		
+		String contextPath = req.getContextPath(); 
+		
+		String command = requestURI.substring(contextPath.length()); 
+		System.out.println("command : " + command);
+		System.out.println("C : 1. 페이지 주소 파싱 완료 ");
+		/************* 1. 페이지 주소 파싱 *******************/
+		if( command.equals("/GoodsAdd.ag")){
+			
+			
+		}
+		/************* 2. 페이지 주소 매핑(연결) *******************/
+		
+		
+		/************* 2. 페이지 주소 매핑(연결) *******************/
+		
+		/************* 3. 페이지 주소 이동 *******************/
+		/************* 3. 페이지 주소 이동 *******************/
+	}
+```
+1. 페이지 파싱
+2. 페이지 주소 매핑(연결) 
+3. 페이지 주소 이동
