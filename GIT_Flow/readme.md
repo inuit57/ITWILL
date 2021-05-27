@@ -31,3 +31,7 @@
     - main 브랜치를 서비스 용도로 사용하지 않는 경우에 쓰는 브랜치. 
     - 이 경우 main은 latest 버전으로 생각하면 된다. 즉, 완전히 안전하게 완성되었다는 것을 보장하는 브랜치가 release 브랜치. 
     - main은 계속해서 작업해나가고 있는 가장 최선 버전을 뜻한다고 생각하면 된다. 
+
+## 자료참고
+- [자료1](https://velog.io/@aonee/%EC%B4%88%EC%8B%AC%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-Github-%ED%98%91%EC%97%85%EB%B0%A9%EB%B2%955-Git-Flow)
+- [자료2](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
