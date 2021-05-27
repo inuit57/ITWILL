@@ -79,16 +79,30 @@ DB 처리가 필요한 경우, Action(java)을 만들어서 DB 처리와 이동�
 		System.out.println("command : " + command);
 		System.out.println("C : 1. 페이지 주소 파싱 완료 ");
 		/************* 1. 페이지 주소 파싱 *******************/
-		if( command.equals("/GoodsAdd.ag")){
-			
-			
-		}
-		/************* 2. 페이지 주소 매핑(연결) *******************/
 		
+		Action action = null ; 
+		ActionForward forward = null ; 
+		
+		/************* 2. 페이지 주소 매핑(연결) *******************/
+				if( command.equals("/GoodsAdd.ag")){
+			System.out.println("C : /GoodsAdd.ag 호출");
+			// 정보를 입력받는 페이지 
+			// View 페이지로 이동해야 한다. 
+			
+			forward = new  ActionForward(); 
+			forward.setPath("./admingoods/admin_goods_write.jsp"); 
+			forward.setRedirect(false); // jsp 로 보낼 경우, forward 방식으로 이동. 
+		}
+		System.out.println("C : 2. 페이지 주소 매핑 완료");
 		
 		/************* 2. 페이지 주소 매핑(연결) *******************/
 		
 		/************* 3. 페이지 주소 이동 *******************/
+		if(forward != null){
+			if(forward.isRedirect()){
+				
+			}
+		}
 		/************* 3. 페이지 주소 이동 *******************/
 	}
 ```
