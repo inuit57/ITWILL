@@ -12,6 +12,7 @@ SELECT last_name, hire_date,
 FROM employees;
 ```
 - Ddspth 에 대한 공부 필요. 
+- fm : 앞에 있는 공백이나 0을 제거 
 
 3)
 ```
