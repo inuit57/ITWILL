@@ -7,7 +7,15 @@ order by salary desc ;
 
 2)
 ```
-select to_char(next_day (add_months(hire_date, 6) , 'mon') , 'DL') as res
-from employees 
+SELECT last_name, hire_date,
+ TO_CHAR(NEXT_DAY(ADD_MONTHS(hire_date, 6),'MONDAY'), 'fmDay, "the" Ddspth "of" Month, YYYY') REVIEW
+FROM employees;
 ```
-- 추가공부 필요 : 숫자를 영어로 출력하는 방법 'JSP' 
+- Ddspth 에 대한 공부 필요. 
+
+3)
+```
+SELECT last_name, NVL(TO_CHAR(commission_pct), 'No Commission') COMM
+FROM employees;
+```
+
