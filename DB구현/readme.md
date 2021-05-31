@@ -14,3 +14,14 @@
 select name from v$database; 
 현재 DB명 확인
 ```
+
+# 파라미터 값 제어 
+## 조회 
+```
+SQL > show parameter XXXX ; 
+```
+## 변경
+```
+SQL > alter system set OOO = XXXX
+      scope = {memory | both | spfile } ; 
+```
