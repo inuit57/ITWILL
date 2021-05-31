@@ -13,4 +13,18 @@
 - SYSDBA 권한이 있는 계정으로 로그인. 
 - v$session 테이블을 조회한다. 
 
+## v$session
+- 같은 이름으로도 동시 접근이 가능하기에 username만으로 구분하는 것은 어렵다.
+- 그래서 세션 생성 시에 부여받는 SID , SERIAL# 을 같이 조회할 것.
+
+```
+select username, sid, serial# , blocking_session
+from v$session
+where username is not null ; 
+
+// background process, server process를 안보고 싶다면 
+// 이렇게 조회하면 된다. 
+// user process만 출력하는 구문.
+
+```
 
