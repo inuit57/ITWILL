@@ -29,3 +29,7 @@ where username is not null ;
 ```
 - blocking session에 waiting의 원인이 되는 세션의 SID를 확인할 수 있다. 
 
+## Dead Lock
+- 서로가 계속 기다리고 있는 교착 상태 
+- Oracle에서는 Dead Lock이 발생되자마자 바로 해결되도록 한다. 
+- 작업량이 더 적은 세션 쪽으로 오류메시지를 날려보내고 죽여버린다. 
