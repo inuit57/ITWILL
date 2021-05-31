@@ -27,4 +27,5 @@ where username is not null ;
 // user process만 출력하는 구문.
 
 ```
+- blocking session에 waiting의 원인이 되는 세션의 SID를 확인할 수 있다. 
 
