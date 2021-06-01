@@ -32,4 +32,8 @@
 - 원인 : DBA가 DB를 비정상 종료한 경우 (shutdown abort) , 서버PC가 다운된 경우(예/정전) , Instance를 구성하는 필수 구성요소 중 하나에 문제가 있는 경우 
 - 해결 : DB를 다시 재시작 하면 된다. (재시작시 SMON이 동기화 작업 진행)
 
-6. Media fail
+## 6. Media fail
+- DB 를 구성하는 필수 물리적인 파일(Datafile, Controlfile, Redologfile) 중 하나가 손실된 경우 
+- 원인 : 운영체제에서 실수로 DB 관련 파일을 삭제한 경우
+- 해결 : Datafile => 백업파일로부터 복구 작업해야 한다.<br>
+        Controlfile , Redologfile => 다중화된 파일로부터 복구 
