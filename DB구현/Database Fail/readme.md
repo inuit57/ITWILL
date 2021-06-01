@@ -13,8 +13,11 @@
 - 해결 : SQL 구문 수정, 권한 부여, 저장 공간 추가 등 
 
 ## 2. User proc fail
-- 
-3. Network fail
+- DB에 접속되어 있던 User가 비정상적으로 접속을 종료한 경우
+- 원인 : user가 비정상 종료, DBA로부터 Kill 을 당한 경우, Client PC가 다운된 경우 등 
+- 해결 : User가 다시 접속하면 된다. (PMON이 User의 트랜젝션 rollback, Lock 해제함)
+
+## 3. Network fail
 4. User error
 5. Instance fail
 6. Media fail
