@@ -9,8 +9,11 @@
 
 ## 1. Statement fail
 - DB에서 실행한 SQL구문이 정상적으로 실행되지 않고 오류가 발생된 경우
-- 주요 원인 : 오타, 문법 오류 
-2. User proc fail
+- 원인 : 오타, 문법 오류 , 권한 부족, 저장 공간 부족 등
+- 해결 : SQL 구문 수정, 권한 부여, 저장 공간 추가 등 
+
+## 2. User proc fail
+- 
 3. Network fail
 4. User error
 5. Instance fail
