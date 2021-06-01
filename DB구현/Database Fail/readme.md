@@ -27,5 +27,9 @@
 - 원인 : 잘못된 DDL , 잘못된 DML 등
 - 해결 : 트랜젝션 진행 중이면 rollback하면 됨, 테이블을 잘못 삭제한 경우라면 flashback table 실행.
         - 트랜젝션이 종료된 경우라면 반대의 작업을 다시 진행하는 수밖에 없다. 
-5. Instance fail
+## 5. Instance fail
+- DB가 비정상적으로 종료된 경우 
+- 원인 : DBA가 DB를 비정상 종료한 경우 (shutdown abort) , 서버PC가 다운된 경우(예/정전) , Instance를 구성하는 필수 구성요소 중 하나에 문제가 있는 경우 
+- 해결 : DB를 다시 재시작 하면 된다. (재시작시 SMON이 동기화 작업 진행)
+
 6. Media fail
