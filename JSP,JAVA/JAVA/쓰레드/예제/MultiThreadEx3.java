@@ -8,9 +8,23 @@ public class MultiThreadEx3 {
 	// true : 입력함, false : 입력하지 않음.
 	public static void main(String[] args) {
 		
-		new Thread(new Work1()).start();
-		new Thread(new Work2()).start();
+		//카운터
+		Thread t1 = new Thread(new Work1()); 
+		t1.start();
 		
+		//입력창
+		Thread t2 = new Thread(new Work2()); 
+		t2.start();
+		
+		try {
+			t1.join();
+			if (!MultiThreadEx3.inputCheck) {
+				System.err.println("입력 시간 만료!");
+				t2.interrupt();
+			}
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
 
@@ -18,17 +32,20 @@ class Work1 implements Runnable{
 	@Override
 	public void run() {
 		for(int i = 10 ; i> 0 ; i--) {
+			//사용자가 10초 안에 다이얼로그 창에 데이터를 입력하면?
+			if(MultiThreadEx3.inputCheck) {
+				return;
+			}
+			
+			System.out.println(i);
+			
 			try {
 				Thread.sleep(1000);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
-			System.out.println(i);
 		}
-		if (!MultiThreadEx3.inputCheck) {
-			System.err.println("입력 시간 만료!");
-			System.exit(0);
-		}
+		MultiThreadEx3.inputCheck = false; 
 	}
 }
 
@@ -36,7 +53,9 @@ class Work2 implements Runnable{
 	@Override
 	public void run() {
 		String input = JOptionPane.showInputDialog("입력하세요~");
-		MultiThreadEx3.inputCheck = true; 
-		System.out.println("입력하신 값은 " + input + "입니다.");
+		if(input != null) {
+			System.out.println("입력하신 값은 " + input + "입니다.");
+			MultiThreadEx3.inputCheck = true;
+		}
 	}
 }
