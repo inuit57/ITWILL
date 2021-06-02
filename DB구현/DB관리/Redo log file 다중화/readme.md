@@ -13,11 +13,27 @@ select group#, members from v$log ;
 select group#, members, status from v$log ; 
 ```
 - status 가 current 인 그룹이 현재 기록되고 있는 그룹. 
-- 
 
 ## 그룹당 맴버 정보 조회 
 ```
 select group#, member 
 from v$logfile
 order by group# ; 
+```
+
+## Redo log Group 추가
+```
+alter database add logfile group 4 
+('/u01/app/oracle/oradata/ORCL/onlinelog/redo4a.log',
+'/u01/app/oracle/fast_recovery_area/orcl/ORCL/onlinelog/redo4b.log')
+size 50M ; 
+```
+
+## Redo log Member 추가
+```
+alter database add logfile member
+'/u01/app/oracle/oradata/ORCL/datafile/redo1c.log' to group 1, 
+'/u01/app/oracle/oradata/ORCL/datafile/redo2c.log' to group 2,
+'/u01/app/oracle/oradata/ORCL/datafile/redo3c.log' to group 3,
+'/u01/app/oracle/oradata/ORCL/datafile/redo4c.log' to group 4 ; 
 ```
