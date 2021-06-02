@@ -48,3 +48,24 @@ archive log list
 
 
 ## DB log mode 변경
+1) DB 종료
+```
+shut immediate
+```
+2) DB mount
+```
+startup mount
+```
+3) DB log mode 설정
+```
+alter database archivelog ; 
+// alter database noarchivelog; 
+```
+4) DB open 
+```
+alter database open ; 
+```
+5) 확인 
+```
+archive log list 
+```
