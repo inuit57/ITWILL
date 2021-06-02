@@ -69,3 +69,9 @@ alter database open ;
 ```
 archive log list 
 ```
+
+## 참고) 오프라인 복사본 생성 위치 설정
+```
+show parameter db_recovery_file_dest 
+```
+- 여기에 들어가는 값이 복사본 로그 파일이 쌓이는 위치 
