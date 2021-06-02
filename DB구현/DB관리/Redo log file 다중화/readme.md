@@ -56,7 +56,7 @@ shut immediate
 ```
 startup mount
 ```
-3) DB log mode 설정
+3) DB log mode 설정 ( mount 상태에서 설정할 것)
 ```
 alter database archivelog ; 
 // alter database noarchivelog; 
