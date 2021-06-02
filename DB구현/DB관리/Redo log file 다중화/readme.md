@@ -37,3 +37,14 @@ alter database add logfile member
 '/u01/app/oracle/oradata/ORCL/datafile/redo3c.log' to group 3,
 '/u01/app/oracle/oradata/ORCL/datafile/redo4c.log' to group 4 ; 
 ```
+
+## DB log mode 조회
+``` 
+select log_mode
+from v$database ; 
+
+archive log list 
+```
+
+
+## DB log mode 변경
