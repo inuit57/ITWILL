@@ -17,10 +17,10 @@ public class MultiThreadEx3 {
 		t2.start();
 		
 		try {
-			t1.join();
+			t1.join(); // 카운터 스레드가 종료될 때까지 대기, 종료된 후 동작. 
 			if (!MultiThreadEx3.inputCheck) {
 				System.err.println("입력 시간 만료!");
-				t2.interrupt();
+				t2.interrupt(); // 해당 스레드 강제 종료
 			}
 		} catch (InterruptedException e) {
 			e.printStackTrace();
