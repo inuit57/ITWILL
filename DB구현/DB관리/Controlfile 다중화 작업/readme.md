@@ -18,4 +18,19 @@ SQL > alter system set control_files =
 
 
 ## 2. DB 종료 
-- 
+```
+SQL > shut immediate
+```
+
+## 3. OS 추가
+```
+$] cd /u01/app/oracle/oradata/ORCL/controlfile
+$] cp o1_mf_fvwn95xm_.ctl /home/oracle/control_cjn.ctl
+$] cd /home/oracle
+$] ls => control_cjn.ctl 생성된 것 확인 
+```
+
+## 4. DB 시작
+```
+SQL > startup => error : mount X 
+```
