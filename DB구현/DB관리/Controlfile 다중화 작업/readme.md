@@ -32,5 +32,14 @@ $] ls => control_cjn.ctl 생성된 것 확인
 
 ## 4. DB 시작
 ```
-SQL > startup => error : mount X 
+SQL > startup 
 ```
+- ORA 00205 에러 : control 파일명이나 경로가 잘못되었을 경우 발생. 
+- show parameter control_files 입력해서 파일명이나 경로가 제대로 입력되었는지 확인
+- 그리고 1번부터 다시 반복. 
+
+## 5. 확인 작업
+```
+SQL > select name from v$controlfile ; 
+```
+- 앞서 작업한 controlfile들이 출력되는지 확인하면 된다. 
