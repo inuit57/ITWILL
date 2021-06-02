@@ -45,7 +45,7 @@ from v$database ;
 
 archive log list 
 ```
-
+- 실무에서는 보통 아래 방법을 많이 사용한다. 
 
 ## DB log mode 변경
 1) DB 종료
