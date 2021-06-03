@@ -8,6 +8,11 @@
     
 ```
 
+## String과의 차이점. 
+- String의 경우 함수를 호출하더라도 원본이 바뀌지 않지만, StringBuffer의 경우 원본이 변경된다. 
+- 또한 StringBuffer가 보다 많은 함수를 지원해준다. (예 / reverse() ) 
+
+
 ## 연산속도 비교 
 ```
 String:13949700
