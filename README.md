@@ -34,7 +34,7 @@
 이메일로 신청하고 하면 된다고 한다.  <br>
 
 # SQL - ER 다이어그램 공유 가능한 사이트 
-: [링크](aquerytool.com) <br>
+: [링크](https://aquerytool.com) <br>
 
 ----
 
