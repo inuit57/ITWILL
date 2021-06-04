@@ -36,6 +36,8 @@
 # SQL - ER 다이어그램 공유 가능한 사이트 
 : [링크](https://aquerytool.com) <br>
 
+# NDC 컨퍼런스 
+- 여러 가지 자료들이 있다. 보고 좀 공부하는 것도 좋다. 
 ----
 
 # Database
