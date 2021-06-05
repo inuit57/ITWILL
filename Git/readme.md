@@ -16,3 +16,4 @@
 # Giv 블로그 만들기 
 - 기술 블로그 느낌으로 관리할 수 있는 방법. 
 - [참고](https://velog.io/@zawook/Github-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-1)
+- [참고2](https://velog.io/@shg4821/%EA%B9%83%ED%97%88%EB%B8%8C-%EB%B8%94%EB%A1%9C%EA%B7%B8-%EB%A7%8C%EB%93%A4%EA%B8%B0-3-%EA%B8%80%EC%93%B0%EA%B8%B0)
