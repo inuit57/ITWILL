@@ -8,3 +8,32 @@
 1) XML 코드로 작성
 2) JAVA 코드로 작성
 3) XML , JAVA 코드를 동시에 사용 
+
+## 2. JAVA 코드로 작성
+```
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+
+        // Linear Layout 객체 생성
+        LinearLayout container = new LinearLayout(this);
+        container.setOrientation(LinearLayout.VERTICAL);
+
+        //버튼 객체 생성
+        Button b1 = new Button(this);
+        b1.setText("첫번째 버튼");
+        //버튼 객체를 LinearLayout 내부에 추가
+        container.addView(b1);
+
+        Button b2 = new Button(this);
+        b2.setText("두번째 버튼");
+
+        container.addView(b2);
+
+        setContentView(container);
+        //setContentView(R.layout.activity_main);
+    }
+}
+```
