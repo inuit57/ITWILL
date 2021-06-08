@@ -88,3 +88,11 @@ android:id="@+id/button1"
 - visible (기본) : 0 , 화면에 보이게 설정한다.
 - invisible : 1, 보이지 않지만 공간을 차지한다.
 - gone : 2, 보이지 않고, 공간도 차지하지않는다. 
+
+## margin, padding 
+### android:layout_margin 속성
+- 바깥쪽 여백을 설정한다. 위,아래,좌,우 등등 특정 위치에 대한 margin만 별도로 부여하는 것도 가능.
+- 그냥 margin 속성을 사용할 경우 전체에 동일한 margin을 부여한다. 
+
+### android:padding 속성
+- 안쪽 여백을 설정한다. 
