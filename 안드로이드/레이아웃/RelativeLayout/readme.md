@@ -3,5 +3,8 @@
 - 만약 설정해주지 않을 경우 모든 요소들이 겹쳐져서 보여지게 된다. 
 
 ## 설정방법
-- android:layout_below = "@id/{id값}" 
+```
+ android:layout_below = "@id/{id값}"  //아래
+ android:layout_toRightOf = "@id/{id값}"  //오른쪽.
+```
 - id값을 설정하고 어떤 id 값 밑에 위치시킬 것인지로 설정하는 식으로 처리. 
