@@ -83,3 +83,8 @@ Button b1 = (Button)findViewById(R.id.button1);
 android:id="@+id/button1" 
 // 이렇게 하면 button1이라는 id 값을 부여 가능. 
 ```
+
+## android:visibility 속성
+- visible (기본) : 0 , 화면에 보이게 설정한다.
+- invisible : 1, 보이지 않지만 공간을 차지한다.
+- gone : 2, 보이지 않고, 공간도 차지하지않는다. 
