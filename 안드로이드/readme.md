@@ -49,7 +49,10 @@ public class MainActivity extends AppCompatActivity {
 ## 3. XML, JAVA 코드를 같이 사용
 - 기본적인 화면 구성은 xml에서 작업하고 java 코드 상에서 화면 구성물에 대한 제어를 처리하는 방식
 - 특정 조건 상에서 버튼 색상이나 크기를 변경한다던지 하는 식의 작업이 가능하다. 
-
+```
+Button b1 = (Button)findViewById(R.id.button1);
+```
+- findViewById(R.id.{id값} ) ; 함수를 통해서 객체를 가져올 수 있다. 
 
 # 속성 값들 
 ## 크기 관련
