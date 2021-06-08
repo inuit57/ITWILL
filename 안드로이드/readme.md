@@ -49,3 +49,18 @@ public class MainActivity extends AppCompatActivity {
 ## 3. XML, JAVA 코드를 같이 사용
 - 기본적인 화면 구성은 xml에서 작업하고 java 코드 상에서 화면 구성물에 대한 제어를 처리하는 방식
 - 특정 조건 상에서 버튼 색상이나 크기를 변경한다던지 하는 식의 작업이 가능하다. 
+
+
+# 속성 값들 
+## 크기 관련
+- android:layout_width , android:layout_height : 각각 너비와 높이를 지정한다.
+- "wrap_content" : 안의 내용물에 맞춰서 크기를 지정한다.
+- "match_parent" : 부모의 크기를 따라가도록 한다. (가장 기본이 되는 부모는 화면이 된다.) 
+
+## 아이디값 
+- android:id : 구분할 수 있는 독립적인 id 값을 부여한다. id값은 중복이 불가능하다.
+- 예시
+```
+android:id="@+id/button1" 
+// 이렇게 하면 button1이라는 id 값을 부여 가능. 
+```
