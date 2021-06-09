@@ -4,10 +4,17 @@
 - 상대적인 위치로 설정 가능. 
 
 ## 설정방법
+- id값을 설정하고 어떤 id 값 밑에 위치시킬 것인지로 설정하는 식으로 처리. 
+### layout_toXXX
 ```
  android:layout_below = "@id/{id값}"  //아래
  android:layout_toRightOf = "@id/{id값}"  //오른쪽.
- android:layout_alignParentRight="true" // 부모기준으로 오른쪽 끝에 붙이기
  android:layout_toLeftOf="@id/{id값}" // 왼쪽
 ```
-- id값을 설정하고 어떤 id 값 밑에 위치시킬 것인지로 설정하는 식으로 처리. 
+
+### layout_alignXXX 
+```
+android:layout_alignParentRight="true" // 부모기준으로 오른쪽 끝에 붙이기
+android:layout_alignBaseline="@id/textview3" // 특정 객체와 나란히 놓기. 
+```
+
