@@ -10,6 +10,12 @@ select name from v$controlfile ;
 ```
 - 백업할 파일들을 조회하기. 
 
+```
+cp *.dbf /home/oracle/backup/.
+```
+- 원본파일명으로 파일 여러 개를 복사하기
+- 마지막에 복사할 파일명을 적는 대신 "."을 적는다. 
+
 ## RMAN 방식의 백업
 - 오라클에서 제공하는 프로그램. recovery manager을 사용한 백업
 - RMAN 명령어를 사용한 백업 
