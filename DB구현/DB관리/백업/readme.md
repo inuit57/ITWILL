@@ -22,6 +22,13 @@
 
 # 백업 전략
 ## 전체 DB 백업
-- Datafiles(전부) + Control files(1개+)
+- Datafiles(전부) + Control files(1개 이상)
 - 다른 파일들은 다시 만드는 것이 어렵지 않기에 굳이 백업을 받아놓지는 않는다. 
 ## 부분 DB 백업
+- 특정 Datafile만 또는 Controlfile만 백업
+
+----
+
+# 백업 유형
+## Full 백업 : Datafile의 모든 block을 포함하는 백업
+## incremental 백업 (증분 백업) : 마지막 백업 이후, 변경된 block만을 포함하는 백업
