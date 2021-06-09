@@ -13,5 +13,7 @@
 # 백업 모드 
 
 ## Offline 백업 (= cold backup)
-- 
+- DB가 꺼진 상태의 백업
+  - shut, nomount, mount 상태에서 이뤄지는 백업
 ## Online 백업  (= hot backup)
+- DB까 켜져있는 상태에서 진행되는 백업 (open 상태)
