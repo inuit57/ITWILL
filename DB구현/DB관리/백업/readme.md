@@ -30,8 +30,10 @@
 ----
 
 # 백업 유형
-## Full 백업 : Datafile의 모든 block을 포함하는 백업
-## incremental 백업 (증분 백업) : 마지막 백업 이후, 변경된 block만을 포함하는 백업
+## Full 백업 
+- Datafile의 모든 block을 포함하는 백업
+## incremental 백업 (증분 백업) 
+- 마지막 백업 이후, 변경된 block만을 포함하는 백업
 
 ---
 
