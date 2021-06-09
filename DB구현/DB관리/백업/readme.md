@@ -17,3 +17,10 @@
   - shut, nomount, mount 상태에서 이뤄지는 백업
 ## Online 백업  (= hot backup)
 - DB까 켜져있는 상태에서 진행되는 백업 (open 상태)
+
+----- 
+
+# 백업 전략
+## 전체 DB 백업
+
+## 부분 DB 백업
