@@ -37,5 +37,6 @@
 
 # 백업파일 유형
 ## iamge copy
-
+- 복사본 형태의 백업 파일
 ## backupset 
+- 
