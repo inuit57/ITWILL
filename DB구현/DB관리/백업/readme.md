@@ -4,6 +4,12 @@
 - 운영체제 명령어를 사용한 백업
 - 물리적으로 데이터를 복사해서 백업(cp)
 
+```
+select name from v$datafile ; 
+select name from v$controlfile ; 
+```
+- 백업할 파일들을 조회하기. 
+
 ## RMAN 방식의 백업
 - 오라클에서 제공하는 프로그램. recovery manager을 사용한 백업
 - RMAN 명령어를 사용한 백업 
