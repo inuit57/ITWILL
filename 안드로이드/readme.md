@@ -84,6 +84,14 @@ android:id="@+id/button1"
 // 이렇게 하면 button1이라는 id 값을 부여 가능. 
 ```
 
+```
+edit3 = (EditText) findViewById(R.id.edit3);
+
+// findViewByID(int)
+// R.id.{객체ID명} : final로 생성된 int형 id 값을 반환.
+```
+
+
 ## android:visibility 속성
 - visible (기본) : 0 , 화면에 보이게 설정한다.
 - invisible : 1, 보이지 않지만 공간을 차지한다.
