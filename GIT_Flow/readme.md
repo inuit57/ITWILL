@@ -35,3 +35,14 @@
 ## 자료참고
 - [자료1](https://velog.io/@aonee/%EC%B4%88%EC%8B%AC%EC%9E%90%EB%A5%BC-%EC%9C%84%ED%95%9C-Github-%ED%98%91%EC%97%85%EB%B0%A9%EB%B2%955-Git-Flow)
 - [자료2](https://gmlwjd9405.github.io/2018/05/11/types-of-git-branch.html)
+
+--------- 
+
+### 기타 추가
+- Github branch 
+  - develop 브랜치를 사용하지 않고 master 브랜치만 사용하는 방식.
+  - 단, 이렇게 사용할 경우 master 브랜치에 대해서는 좀더 꼼꼼하게 작업해줄 필요가 있다. 
+
+- master 브랜치를 쓰는 이유
+  - develop 브랜치를 작업하다가 아예 통째로 갈아엎거나 해야 하는 경우가 발생할 때.
+  - master 브랜치에서 다시 develop 브랜치를 새로 따서 작업을 진행해도 된다. 
