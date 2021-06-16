@@ -73,8 +73,13 @@ to group 2 ;
   3. DB open 
     - SQL > alter database open; 
     - 우선은, 모든 기능을 사용하지는 못하더라도 다른 사용자들이 사용할 수 있도록 열어주기
-  4. restore
-  5. recover
+  4. restore : 손실된 Datafile만 복원
+    - $] cd /home/oracle/backup (backup파일 저장 경로로 이동)
+    - $] cp user01.dbf /u01/app/oracle/oradata/ORCL/datafile/user01.dbf (백업해둔 파일을 복사&붙여넣기로 복원 진행)
+  5. recover : 복원된 Datafile만 복구 (부분 DB 복구) 
+    - SQL > recover datafile 3 ; 
+  6. Datafile Online으로 변경
+    - SQL > alter database datafile 3 online ; 
 ```
 ##### (DB 켜져 있는 상태)
 ```
@@ -83,8 +88,13 @@ to group 2 ;
     - 특정 DB 에 대한 작업이 계속 실패할 때, 의심해봄직 하다. 
   2. 손실된 Datafile만 Offline으로 변경 (굳이 DB를 끌 필요는 없다.)
     - SQL> alter database datafile 3 offline immediate; 
-  3. restore
-  4. recover
+  3. restore : 손실된 Datafile만 복원
+    - $] cd /home/oracle/backup (backup파일 저장 경로로 이동)
+    - $] cp user01.dbf /u01/app/oracle/oradata/ORCL/datafile/user01.dbf (백업해둔 파일을 복사&붙여넣기로 복원 진행)
+  4. recover : 복원된 Datafile만 복구 (부분 DB 복구) 
+    - SQL > recover datafile 3 ; 
+  5. Datafile Online으로 변경
+    - SQL > alter database datafile 3 online ; 
 ```
 
 ### Critical Datafile의 복구
