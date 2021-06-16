@@ -66,4 +66,4 @@ to group 2 ;
 - 
 ### Critical Datafile의 복구
 - 필수 Datafile을 의미한다. 
-- 
+  - system, undo 
