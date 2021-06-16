@@ -5,18 +5,18 @@
 
 - 그래서 대부분의 기업은 무조건 Controlfile을 다중화해서 사용한다. 
 
-
-1) DB 종료
+## 복구 절차
+### 1) DB 종료
 - SQL > shut abort 
-2) 손실된 Controlfile을 남아있는 member를 사용해서 복구 (복사해서 생성)
+### 2) 손실된 Controlfile을 남아있는 member를 사용해서 복구 (복사해서 생성)
 - SQL > ! 
 - $] cd /u01/app/oracle/oradata/ORCL/controlfile
 - $] cp o1_mf_fwvn95xm.ctl u01/app/oracle/fast_recovery_area/orcl/ORCL/contolfile/o1_mf_fwvn96cd_.ctl 
 
-3) DB 재시작
+### 3) DB 재시작
 - SQL > startup => error(mount X) => 1번부터 다시 작업 
 
-4) Open이 잘 된 경우 복구 끝. 
+### 4) Open이 잘 된 경우 복구 끝. 
 - SQL > select name from v$controlfile ; 
 
 ## Redo log file 복구 방법
@@ -27,3 +27,19 @@
 - Control 파일과는 달리 남아있는 Member를 사용해서 복원하는 것이 불가능하다. (Redo log file은 재사용 불가)
   - 굳이 안의 내용을 살릴 필요가 없다. 
   - 손실된 Member를 삭제하고 새로 다중화한다. 
+
+## 복구 절차
+### 1) 손실된 Member를 삭제 
+```
+alter database
+drop logfile member '오류난 Member 파일 경로' ; 
+```
+
+### 2) 새로운 Member를 해당 위치에 추가 
+- 한 바퀴 돌고나면 결국 이상이 없어진다. 
+```
+alter database
+add logfile member '새로운 Member 파일 경로'  // 단, 기존에 사용한 것과 동일한 이름은 사용 불가
+to group 2 ; 
+```
+- 
