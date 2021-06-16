@@ -18,3 +18,11 @@
 
 4) Open이 잘 된 경우 복구 끝. 
 - SQL > select name from v$controlfile ; 
+
+## Redo log file 복구 방법
+- Redo log file은 Group 내 Member가 하나라도 정상이면 DB 작동에 영향을 미치지 않는다.
+- 그래서 이것에 오류가 생겼는지 알아채는 것이 늦어질 수 있다. 겉으로 보여지는 문제는 없으므로. 
+  - DB 관리자는 운영체제 단에서 파일이 정상적으로 있는지를 확인하는 것도 업무 중 하나 
+  - Group 내 Member가 모두 죽어버리면 DB가 멈춘다. 
+- Control 파일과는 달리 남아있는 Member를 사용해서 복원하는 것이 불가능하다. (Redo log file은 재사용 불가)
+- 손실된 Member를 삭제하고 새로 다중화한다. 
