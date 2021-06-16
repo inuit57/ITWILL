@@ -64,7 +64,7 @@ to group 2 ;
 ### Non-critical Datafile의 복구
 - 일반 Datafile을 의미한다.
 
-#### user01.def(file# : 3) 손실 시 복구 절차
+#### [예시] user01.def(file# : 3) 손실 시 복구 절차
 ##### (DB 켜는 중)
 ```
   1. DB mount 상태(open 실패)
@@ -78,14 +78,13 @@ to group 2 ;
 ```
 ##### (DB 켜져 있는 상태)
 ```
-  1. DB mount 상태(open 실패)
-  2. 손실된 Datafile만 Offline으로 변경  
-    - SQL> alter database datafile 3 offline ; 
-  3. DB open 
-    - SQL > alter database open; 
-    - 우선은, 모든 기능을 사용하지는 못하더라도 다른 사용자들이 사용할 수 있도록 열어주기
-  4. restore
-  5. recover
+  1. DB open 상태
+    - open 상태에서 Datafile 손실된 경우.
+    - 특정 DB 에 대한 작업이 계속 실패할 때, 의심해봄직 하다. 
+  2. 손실된 Datafile만 Offline으로 변경 (굳이 DB를 끌 필요는 없다.)
+    - SQL> alter database datafile 3 offline immediate; 
+  3. restore
+  4. recover
 ```
 
 ### Critical Datafile의 복구
