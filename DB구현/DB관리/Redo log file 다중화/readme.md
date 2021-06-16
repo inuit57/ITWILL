@@ -4,6 +4,9 @@
 - DB 당 최소 2개 이상의 Redo log Group 존재해야함. 
 - 권장되는 갯수는 그룹 3개, 그룹당 맴버는 2개
 
+## 목적
+- Database 작동을 멈추지 않고 계속 운영하기 위해서 
+
 ## 그룹당 맴버 갯수 조회 
 ```
 select group#, members from v$log ; 
