@@ -57,4 +57,13 @@ alter database
 add logfile member '새로운 Member 파일 경로'  // 단, 기존에 사용한 것과 동일한 이름은 사용 불가
 to group 2 ; 
 ```
+
+## Datafile 손실 시 복구
+- 가장 먼저 확인해야 하는 것은 손실된 데이터 파일이 Critical 한 지를 확인해야 한다.
+
+### Non-critical Datafile의 복구
+- 일반 Datafile을 의미한다.
+- 
+### Critical Datafile의 복구
+- 필수 Datafile을 의미한다. 
 - 
