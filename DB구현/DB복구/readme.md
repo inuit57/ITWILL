@@ -1,3 +1,18 @@
+# 복구 용어
+- Datafile recovery = restore + recover 
+- 2단계로 진행이 이뤄진다.
+
+## Restore(복원)
+- 백업 파일로부터 손실된 파일을 되살리는 작업 
+- 데이터 손실이 발생한다. 
+- 작업 방법 : $] cp ----- 
+
+## Recover(복구)
+- Datafile만 해당되는 작업
+- 복원된 Datafile에 Redo log file , Archived log file의 Redo data를 재적용하는 작업 
+- 데이터 손실을 줄일 수 있다.
+- 작업 방법 : SQL> recover ------ ; 
+
 ## Controlfile 복구 방법
 - Controlfile은 다중화된 Member 하나라도 이상이 있으면 DB 작동이 멈추게 된다. 
 - 반드시 DB를 종료한 상태에서 남아있는 Member를 사용해서 복구해야 한다. (백업파일 사용 X) 
