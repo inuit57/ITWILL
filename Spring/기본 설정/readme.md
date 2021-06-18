@@ -1,3 +1,7 @@
+# market place에서 설정
+- spring 검색 : 3버전 지원하도록 다운 받기
+- jsp 검색 : ee 지원하도록 다운 받기 
+
 # pom.xml 설정
 ```
  	<properties>
