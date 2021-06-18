@@ -1,3 +1,15 @@
+# pom.xml 설정
+```
+ <properties>
+		<java-version>1.8</java-version>
+		<org.springframework-version>4.3.8.RELEASE</org.springframework-version>
+		<org.aspectj-version>1.6.10</org.aspectj-version>
+		<org.slf4j-version>1.6.6</org.slf4j-version>
+	</properties>
+```
+- 1.8 로 변경
+- 4.3.8 로 변경
+
 # dependency 설치
 - [maven사이트](https://mvnrepository.com/)에 접속
 - 필요한 jar 파일 명을 검색
