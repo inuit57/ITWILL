@@ -1,14 +1,25 @@
 # pom.xml 설정
 ```
- <properties>
+ 	<properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>4.3.8.RELEASE</org.springframework-version>
 		<org.aspectj-version>1.6.10</org.aspectj-version>
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 ```
-- 1.8 로 변경
-- 4.3.8 로 변경
+- 자바 버전 1.8 로 변경
+- 스프링 버전 4.3.8 로 변경
+
+```
+		<!-- Test -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+			<scope>test</scope>
+		</dependency>      
+```
+- junit 버전 4.12로 변경
 
 # dependency 설치
 - [maven사이트](https://mvnrepository.com/)에 접속
