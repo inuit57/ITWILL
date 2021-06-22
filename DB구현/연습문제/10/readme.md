@@ -14,3 +14,13 @@ on avg = max
 - select department_id, max(avg(salary)) 와 같은 식으로 조회는 불가능하다. 
 - 구문이 대단히 모호해지기 때문 
 - [참고자료](https://keep-cool.tistory.com/37?category=720231)
+
+## 모범풀이
+```
+SELECT department_id, MIN(salary)
+FROM employees
+GROUP BY department_id
+HAVING AVG(salary) = (SELECT MAX(AVG(salary))
+ FROM employees
+ GROUP BY department_id);
+ ```
