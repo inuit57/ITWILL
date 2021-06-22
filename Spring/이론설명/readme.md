@@ -82,26 +82,28 @@
 	
 	
 	* 스프링 MVC ( model2 방식 )
-	
+	```
 	[기존 MVC] 
 	요청 -> Controller <-> Model <-> DB
 	          ||
 	         View
-     
+     	```
+	```
 	[Front Controller 패턴을 사용한 MVC]
 	요청 ->    Front    <-> Controller <-> Model <-> DB  
 	       Controller 
 	           ||
 	          View
+	```
 	- View 와 DB로 가는 처리를 분리 
 	- Controller의 역할을 위임했다고도 표현한다.
-	
+	```
 	[Spring]              |                                         |              
 	요청 ->    Front    <->| Controller <-> Service(Model)<-> DAO <->| MyBatis <-> DB  
 	       Controller     |                                         |      
 	           ||         |                                         |    
 	          View        |                 Spring MVC              |
-	             
+	 ```            
     - 안쪽의 Controller ~ Model은 Spring에서 제공되는 기능을 활용 
     - Spring MVC에서 처리하는 작업
        - URI를 분석해서 적당한 컨트롤러를 매핑 
