@@ -87,17 +87,16 @@
 	요청 -> Controller <-> Model <-> DB
 	          ||
 	         View
-     	```
-	```
+     	
 	[Front Controller 패턴을 사용한 MVC]
 	요청 ->    Front    <-> Controller <-> Model <-> DB  
 	       Controller 
 	           ||
 	          View
-	```
+	
 	- View 와 DB로 가는 처리를 분리 
 	- Controller의 역할을 위임했다고도 표현한다.
-	```
+	
 	[Spring]              |                                         |              
 	요청 ->    Front    <->| Controller <-> Service(Model)<-> DAO <->| MyBatis <-> DB  
 	       Controller     |                                         |      
