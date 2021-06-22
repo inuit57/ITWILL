@@ -110,9 +110,10 @@ to group 2 ;
 - SQL > startup mount 
 
 #### 3) restore : 손실된 Datafile만 복원
+```
 $] cd /home/oracle/backup
 $] cp system01.dbf /u01/app/oracle/oradata/ORCL/datafile/system01.dbf 
-
+```
 #### 4) recover : 모든 Datafile 복구 (전체 DB 복구) 
 - Non - critical datafile과의 가장 큰 차이점, 모든 DB를 복구해야만 한다. 
 - 
