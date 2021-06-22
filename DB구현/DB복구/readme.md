@@ -100,3 +100,19 @@ to group 2 ;
 ### Critical Datafile의 복구
 - 필수 Datafile을 의미한다. 
   - system, undo 
+
+### system01.dbf(file# : 1 ) 손실 시 복구 절차 
+
+#### 1) DB 종료
+- SQL > shut abort 
+
+#### 2) DB mount 시키기
+- SQL > startup mount 
+
+#### 3) restore : 손실된 Datafile만 복원
+$] cd /home/oracle/backup
+$] cp system01.dbf /u01/app/oracle/oradata/ORCL/datafile/system01.dbf 
+
+#### 4) recover : 모든 Datafile 복구 (전체 DB 복구) 
+- Non - critical datafile과의 가장 큰 차이점, 모든 DB를 복구해야만 한다. 
+- 
