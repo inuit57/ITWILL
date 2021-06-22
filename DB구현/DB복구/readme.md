@@ -116,4 +116,5 @@ $] cp system01.dbf /u01/app/oracle/oradata/ORCL/datafile/system01.dbf
 ```
 #### 4) recover : 모든 Datafile 복구 (전체 DB 복구) 
 - Non - critical datafile과의 가장 큰 차이점, 모든 DB를 복구해야만 한다. 
-- 
+- SQL > recover database ; 
+- 모든 데이터 파일을 대상으로 log를 다시 적용한다. 
