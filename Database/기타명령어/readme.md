@@ -25,7 +25,8 @@ DECODE( col | expression , search1, result1,
                          [,search2, result2,]
                          [,search3, result3,]
                          default)
-                         ```
+  ```
+     
 - 이것도 같은 경우인지만 비교가 가능하기에 비교연산자를 사용하려면 CASE 식을 써야 한다. 
 
 # JOIN
