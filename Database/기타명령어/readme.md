@@ -30,7 +30,7 @@ DECODE( col | expression , search1, result1,
 - 이것도 같은 경우인지만 비교가 가능하기에 비교연산자를 사용하려면 CASE 식을 써야 한다. 
 
 # JOIN
-## Natual JOIN (자연조인)
+## Natural JOIN (자연조인)
 - 2개의 테이블에서 컬럼명과 데이터 타입이 모두 동일할 때 사용가능한 JOIN 
 
 ## Using Join 
@@ -39,3 +39,10 @@ DECODE( col | expression , search1, result1,
 
 ## On JOIN 
 - 컬럼명이 달라도, 데이터 타입이 달라도 상관 없다. 
+
+```
+         from employees natural join jobs 
+         from employees join jobs using(job_id) 
+         from employees join jobs on (employees.job_id = jobs.job_id)
+```
+- 모두 동일한 결과가 나옵니다. 
