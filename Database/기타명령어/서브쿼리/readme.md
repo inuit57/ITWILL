@@ -75,4 +75,8 @@ where (salary , department_id) in
       group by department_id) 
  order by department_id ; 
  ```
- 
+- 다중 행의 경우 컬럼 갯수만큼 일치하게 만들어서 비교를 해줘야 한다. 
+
+# Null 주의 
+- 서브 쿼리에서 반환되는 값 중 하나가 Null 이면 서브쿼리가 행을 반환하지 않는다. 
+- 따라서 서브쿼리를 조회할 때 null 이 아닌 값을 조회하도록 where 절을 걸어주는 것도 방법이다. 
