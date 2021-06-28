@@ -3,7 +3,6 @@
 (어떤 값과 비교해야하는지 모호하기 때문) 
 - 단일행 서브쿼리를 사용해야만 한다. 
 
-
 예) 
 ```
 select last_name , job_id, salary 
@@ -24,3 +23,21 @@ ORA-01427 에러 발생
 ## 해결 방법
 - "=" 대신 "IN" 연산자를 사용하면 된다. 
 - IN : 안에 포함된 값이 있으면 True를 리턴한다. 
+
+
+# Multiple-Row subquery
+
+## ANY 연산자 사용 (OR)
+```
+select employee_id , last_name, job_id, salary
+from employees 
+where salary < ANY 
+(select salary from employees where job_id = 'IT_PROG') 
+and job_id <> 'IT_PROG' ; 
+```
+
+- < ANY(9000 , 6000 , 4200) : 최댓값 보다 작으면 된다. 
+- > ANY(9000 , 6000 , 4200) : 최솟값보다 크면 된다.
+- = ANY : IN과 동일하다. 
+     - <> ANY : 모든 값이 true가 되므로 연산자로서 의미가 없어서 사용되지 않는다. 
+
