@@ -18,3 +18,12 @@ where employee_id not in (select manager_id from employees where manger_id is no
 ```
 
 #3
+```
+select department_id , department_name 
+from departemnts
+where department_id 
+not in 
+(select department_id 
+from employees
+where department_id is not null) ; 
+```
