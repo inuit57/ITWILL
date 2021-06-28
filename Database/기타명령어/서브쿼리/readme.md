@@ -58,8 +58,21 @@ and job_id <> 'IT_PROG' ;
 
 ------ 
 
-- 단일컬럼 서브쿼리 (비쌍비교) 
+- 단일컬럼 서브쿼리 (비쌍 비교) 
      - 단일행 비교연산자
      
-- 다중컬럼 서브쿼리(쌍비교) 
+- 다중컬럼 서브쿼리(쌍 비교) 
      - 다중행 비교연산자   
+
+
+# 다중행 서브쿼리 (쌍 비교)
+```
+select first_name , department_id, salary 
+from employees 
+where (salary , department_id) in 
+     (select min(salary) , department_id 
+      from employees 
+      group by department_id) 
+ order by department_id ; 
+ ```
+ 
