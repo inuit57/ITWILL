@@ -26,7 +26,7 @@ ORA-01427 에러 발생
 
 
 # Multiple-Row subquery
-
+- 서브 쿼리에서 여러 행을 반환하는 경우의 처리 
 ## ANY 연산자 사용 (OR)
 ```
 select employee_id , last_name, job_id, salary
@@ -41,3 +41,13 @@ and job_id <> 'IT_PROG' ;
 - = ANY : IN과 동일하다. 
      - <> ANY : 모든 값이 true가 되므로 연산자로서 의미가 없어서 사용되지 않는다. 
 
+## ALL 연산자 사용 (and) 
+```
+select employee_id , last_name, job_id, salary
+from employees 
+where salary < ANY 
+(select salary from employees where job_id = 'IT_PROG') 
+and job_id <> 'IT_PROG' ; 
+```
+
+- < ALL(
