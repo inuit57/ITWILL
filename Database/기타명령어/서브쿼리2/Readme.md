@@ -33,3 +33,12 @@ WHERE salary >
 - 존재하는 값이 확인되면 더이상 수행하지 않고 True를 리턴한다. 
 - 그렇지 않을 경우 끝까지 수행하고 없다면 False를 리턴한다. 
 
+- 예시
+ ```
+ SELECT employee_id, last_name, job_id, department_id
+FROM employees outer
+WHERE EXISTS ( SELECT NULL
+ FROM employees
+ WHERE manager_id =
+ outer.employee_id);
+```
