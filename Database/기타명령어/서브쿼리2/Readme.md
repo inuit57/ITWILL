@@ -37,6 +37,15 @@ set column = (select expression
               from table2 alias 2
               where alias1.column = alias2.column) ; 
 ```
+- 예시
+```
+update emp21 e 
+set department_name = 
+(select department_name 
+from departments d
+where e.department_id = d.department_id ) ; 
+```
+
 
 ## EXISTS 연산자 (반대 : NOT EXISTS) 
 - 서브쿼리의 결과 집합에 행이 있는지 테스트한다. 
