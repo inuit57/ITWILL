@@ -54,3 +54,16 @@ where employee_id in (select manager_id from employees) ;
 - 복합 쿼리에서 서브쿼리를 여러 번 사용해야 할 때 서브쿼리를 저장해놓고 여러 번 사용 가능하다. 
 - with 절은 서브쿼리 결과를 유저의 임시 테이블 스페이스에 저장한다. 
 
+```
+with 
+dept_costs as (select d.department_name , sum(e.salary) as dept_total 
+               from employees e join departments d 
+               on e.department_id = d.department_id
+               group by d.department_name), 
+avg cost as ( select sum(dept_total)/count(*) as dept_avg from dept_costs)
+
+select * 
+from dept_costs 
+where dept_total > (select dept_avg from avg_cost)
+order by department_name ; 
+```
