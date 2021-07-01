@@ -27,7 +27,7 @@ WHERE salary >
  outer_table.department_id);
 ```
 
-## EXISTS 연산자 
+## EXISTS 연산자 (반대 : NOT EXISTS) 
 - 서브쿼리의 결과 집합에 행이 있는지 테스트한다. 
 - 존재 유무만 판단한다. 
 - 존재하는 값이 확인되면 더이상 수행하지 않고 True를 리턴한다. 
