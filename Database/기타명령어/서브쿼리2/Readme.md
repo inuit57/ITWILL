@@ -42,4 +42,9 @@ WHERE EXISTS ( SELECT 'X'
  FROM employees
  WHERE manager_id =
  outer.employee_id);
+ ---------------------------------------------------
+ //같은 결과를 도출하는 쿼리
+SELECT employee_id, last_name, job_id, department_id
+FROM employees  
+where employee_id in (select manager_id from employees) ; 
 ```
