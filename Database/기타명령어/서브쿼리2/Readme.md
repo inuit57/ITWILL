@@ -27,6 +27,17 @@ WHERE salary >
  outer_table.department_id);
 ```
 
+
+## Correlated update 
+- 한 테이블의 행에 준하여 다른 테이블의 행을 갱신할 때 사용한다. 
+- 앞서 말한 무조건 써야만 하는 경우. 
+```
+update table1 alias 1
+set column = (select expression
+              from table2 alias 2
+              where alias1.column = alias2.column) ; 
+```
+
 ## EXISTS 연산자 (반대 : NOT EXISTS) 
 - 서브쿼리의 결과 집합에 행이 있는지 테스트한다. 
 - 존재 유무만 판단한다. 
