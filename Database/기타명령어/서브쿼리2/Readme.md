@@ -4,6 +4,28 @@
 
 - 하지만 이 쿼리를 써야만 하는 경우가 있기 때문에 사용되곤 한다.
 
+- 예시
+```
+//각 부서에서 급여가 가장 높은 사원의 세부 정보를 표시합니다
+SELECT department_id, employee_id, salary
+FROM EMPLOYEES e
+WHERE 1 =
+ (SELECT COUNT(DISTINCT salary)
+ FROM EMPLOYEES
+ WHERE e.department_id = department_id
+ AND e.salary <= salary)
+```
+
+```
+//자신의 부서의 평균 급여보다 많은 급여를 받는 사원을 모두 찾습니다.
+SELECT last_name, salary, department_id
+FROM employees outer_table
+WHERE salary >
+ (SELECT AVG(salary)
+ FROM employees inner_table
+ WHERE inner_table.department_id =
+ outer_table.department_id);
+```
 
 ## EXIST 연산자 
 - 서브쿼리의 결과 집합에 행이 있는지 테스트한다. 
