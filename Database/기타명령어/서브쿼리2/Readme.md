@@ -28,8 +28,9 @@ WHERE salary >
 ```
 
 
-## Correlated update 
-- 한 테이블의 행에 준하여 다른 테이블의 행을 갱신할 때 사용한다. 
+## Correlated update / Correlated delete
+- 한 테이블의 행에 준하여 다른 테이블의 행을 갱신(삭제)할 때 사용한다. 
+- 테이블에 많은 갯수의 행을 추가하거나 지울 때 유용하게 사용될 수 있다. 
 - 앞서 말한 무조건 써야만 하는 경우. 
 ```
 update table1 alias 1
