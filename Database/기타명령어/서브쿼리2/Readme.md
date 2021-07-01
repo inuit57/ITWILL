@@ -48,3 +48,9 @@ SELECT employee_id, last_name, job_id, department_id
 FROM employees  
 where employee_id in (select manager_id from employees) ; 
 ```
+
+
+## With 절
+- 복합 쿼리에서 서브쿼리를 여러 번 사용해야 할 때 서브쿼리를 저장해놓고 여러 번 사용 가능하다. 
+- with 절은 서브쿼리 결과를 유저의 임시 테이블 스페이스에 저장한다. 
+
