@@ -35,7 +35,7 @@ from
 where (10<= rank) and (rank <=20) ; 
 ```
 - 주의사항 : 마지막 where 조건문에서 (10<=rownum) and (rownum <=20) 으로 조건식을 주면 안된다.
-- 이렇게 할 경우 다시 현재 조회하는 컬럼에서 rownum을 생성하기 때문에 의미가 없어지므로 
+- 이렇게 할 경우 다시 현재 조회하는 컬럼에서 rownum을 생성하기 때문에 의미가 없어지므로 <br>
 내부 select 문에서 rank로 alias해준 rownum으로 연산을 수행해야 한다. 
 
 
